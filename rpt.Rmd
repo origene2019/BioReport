@@ -4,8 +4,8 @@ output:
       includes:
         in_header: head.html
       navigation: horizontal
-      logo: log.png
-      titlegraphic: log.png
+      #logo: log.png
+      #titlegraphic: log.png
       mathjax: "http://example.com/MathJax.js"
       theme: united
       highlight: tango
@@ -25,17 +25,17 @@ output:
 
 <div class="fluid-row" id="header">
   <h1 class="title toc-ignore"><center>
-  <strong>ŵ����Դҽѧת¼���������</strong>
+  <strong>源医学转录组分析报告</strong>
     </center></h1>
 </div>
 <br>
 
 &emsp;  |  &emsp;
 ------- | --------
-<strong>��Ŀ���</strong> | <strong>X101SC19041540-Z01-F001</strong>
-<strong>��Ŀ����</strong> | <strong>½����ҽ��ѧ100��С��ת¼����������������ί�У���ͬ</strong>
-<strong>����ʱ��</strong> | <strong>2019-05-14</strong>
-<strong>������</strong> | <strong>X101SC19041540-Z01-F001-B1-16</strong>
+<strong>项目编号</strong> | <strong>X101SC19041540-Z01-F001</strong>
+<strong>项目名称</strong> | <strong>100个小鼠转录组测序分析技术服务（委托）合同</strong>
+<strong>报告时间</strong> | <strong>2019-05-14</strong>
+<strong>报告编号</strong> | <strong>X101SC19041540-Z01-F001-B1-16</strong>
 &emsp;   | &emsp;
 
 </div>
@@ -43,50 +43,50 @@ output:
 
 <br>
 
-&emsp;&emsp;ת¼����ָ�ض���֯��ϸ����ĳ��ʱ���ĳ��״̬��ת¼����������RNA���ܺͣ���Ҫ����mRNA�ͷǱ���RNA��ת¼���о����о������ܺͽṹ�Ļ�������������ķ����ͼ����ķ���������Ҫ���á����Ż��������ؼ����ķ�չ�Լ�����ɱ��Ľ��ͣ�RNA-seqƾ���ͨ�����������ȡ�Ӧ�÷�Χ������ƣ��ѳ�Ϊת¼���о�����Ҫ������RNA-seq����������Ҫ�����������֣������������ݷ�����
+&emsp;&emsp;转录组是指特定组织或细胞在某个时间或某个状态下转录出来的所有RNA的总和，主要包括mRNA和非编码RNA。转录组研究是研究基因功能和结构的基础，对生物体的发育和疾病的发生具有重要作用。随着基因测序相关技术的发展以及测序成本的降低，RNA-seq凭借高通量、高灵敏度、应用范围广等优势，已成为转录组研究的主要方法。RNA-seq技术流程主要包含两个部分，建库测序和数据分析。
 ```{r echo=FALSE, fig.align='center', fig.cap='', out.width='30%'}
 knitr::include_graphics('images/library_RNAseq.png')
 ```
 
 *****
-# �������  
-&emsp;&emsp;��RNA��Ʒ��ȡ���������ݻ�ã���Ʒ��⡢���⡢�����ÿһ���ڶ���ֱ��Ӱ�����ݵ��������������Ӷ�Ӱ��������ݷ����Ľ����Ϊ��Դͷ��֤��������׼ȷ�ɿ���ŵ����Դ�����ݵ������������ڶ��ϸ�ѹأ��Ӹ�Դ��ȷ�����������ݵĲ�����������������ͼ������ʾ��
+# 建库测序  
+&emsp;&emsp;从RNA样品提取到最终数据获得，样品检测、建库、测序等每一环节都会直接影响数据的数量和质量，从而影响后续数据分析的结果。为从源头保证测序数据准确可靠，诺禾致源在数据的所有生产环节都严格把关，从根源上确保高质量数据的产出。建库测序的流程图如下所示。
 
 
 
 
 
 *****
-## RNA��ȡ����  
-&emsp;&emsp;ŵ����Դ���ñ�׼��ȡ��������֯��ϸ������ȡRNA������RNA��Ʒ�����ϸ��ʿأ��ʿر�׼��Ҫ��������3�����档
+## RNA提取与检测  
+&emsp;&emsp;诺禾致源采用标准提取方法从组织或细胞中提取RNA，随后对RNA样品进行严格质控，质控标准主要包括以下3个方面。
 
-- ��֬��������Ӿ��������ƷRNA�����Լ��Ƿ����DNA��Ⱦ��
-- NanoPhotometer spectrophotometer�����RNA���ȣ�OD260/280��OD260/230��ֵ����
-- Agilent 2100 bioanalyzer����ȷ���RNA�����ԡ�
+- 琼脂糖凝胶电泳：分析样品RNA完整性及是否存在DNA污染。
+- NanoPhotometer spectrophotometer：检测RNA纯度（OD260/280及OD260/230比值）。
+- Agilent 2100 bioanalyzer：精确检测RNA完整性。
 
 
 *****
-## �Ŀ⹹�����ʼ�  
-&emsp;&emsp;mRNA�Ļ�ȡ��Ҫ�����ַ�ʽ��һ�������������󲿷�mRNA������polyAβ�Ľṹ������ͨ��Oligo(dT)���鸻������polyAβ��mRNA�����Ǵ���RNA��ȥ��������RNA���Ӷ��õ�mRNA�������NEB Fragmentation Buffer���ö��������ӽ��õ���mRNA�����ϣ�����NEB��ͨ���ⷽʽ���������Խ��ⷽʽ���н��⡣  
+## 文库构建与质检  
+&emsp;&emsp;mRNA的获取主要有两种方式：一是利用真核生物大部分mRNA都带有polyA尾的结构特征，通过Oligo(dT)磁珠富集带有polyA尾的mRNA。二是从总RNA中去除核糖体RNA，从而得到mRNA。随后在NEB Fragmentation Buffer中用二价阳离子将得到的mRNA随机打断，按照NEB普通建库方式或链特异性建库方式进行建库。  
 <blockquote>
-  <p><font size="2"><strong>NEB��ͨ����</strong>����Ƭ�λ���mRNAΪģ�棬����Ѻ�����Ϊ�����M-MuLV��ת¼ø��ϵ�кϳ�cDNA��һ�����������RNaseH����RNA��������DNA polymerase I ��ϵ�£���dNTPsΪԭ�Ϻϳ�cDNA�ڶ��������������˫��cDNA����ĩ���޸�����Aβ�����Ӳ����ͷ����AMPure XP beadsɸѡ250-300bp���ҵ�cDNA������PCR�������ٴ�ʹ��AMPure XP beads����PCR������ջ���Ŀ⡣����ԭ����������ͼ��ʾ��</font></p>
+  <p><font size="2"><strong>NEB普通建库</strong>：以片段化的mRNA为模版，随机寡核苷酸为引物，在M-MuLV逆转录酶体系中合成cDNA第一条链，随后用RNaseH降解RNA链，并在DNA polymerase I 体系下，以dNTPs为原料合成cDNA第二条链。纯化后的双链cDNA经过末端修复、加A尾并连接测序接头，用AMPure XP beads筛选250-300bp左右的cDNA，进行PCR扩增并再次使用AMPure XP beads纯化PCR产物，最终获得文库。建库原理如下面左图所示。</font></p>
   
-  <p><font size="2"><strong>�������Խ���</strong>����ת¼�ϳ�cDNA��һ����������NEB��ͨ���ⷽ����ͬ����֮ͬ�����ںϳɵڶ�����ʱ��dNTPs�е�dTTP��dUTPȡ����֮��ͬ������cDNAĩ���޸�����Aβ�����Ӳ����ͷ�ͳ���ɸѡ��Ȼ����ʹ��USERø���⺬U��cDNA�ڶ����ٽ���PCR����������Ŀ⡣���������Ŀ����������ƣ�����ͬ�������¿ɻ�ȡ������Ч��Ϣ���ܻ�ø���׼�Ļ���������λ��ע����Ϣ�����ṩ����ת¼����ÿһisoform�е�һexon�ı���ˮƽ������ԭ����������ͼ��ʾ��</font></p>
+  <p><font size="2"><strong>链特异性建库</strong>：逆转录合成cDNA第一条链方法与NEB普通建库方法相同，不同之处在于合成第二条链时，dNTPs中的dTTP由dUTP取代，之后同样进行cDNA末端修复、加A尾、连接测序接头和长度筛选，然后先使用USER酶降解含U的cDNA第二链再进行PCR扩增并获得文库。链特异性文库具有诸多优势，如相同数据量下可获取更多有效信息；能获得更精准的基因定量、定位与注释信息；能提供反义转录本及每一isoform中单一exon的表达水平。建库原理如下面右图所示。</font></p>
 </blockquote>
 
 ```{r echo=FALSE, fig.align='center', fig.cap='', out.width='100%'}
 knitr::include_graphics('images/strand.png')
 ```
 
-<p class="text-muted">&emsp;&emsp;ע�������ͷ������P5/P7��index��Rd1/Rd2 SP�������֣�����ͼ��ʾ��������P5/P7��PCR�������Ｐflow cell�������ϵĲ��֣�index�ṩ���ֲ�ͬ�Ŀ����Ϣ��Rd1/Rd2 SP��read1/read2 sequence primer���ǲ������������򣬲��������������Rd1/Rd2 SP���ʼ���С�  </p>
+<p class="text-muted">&emsp;&emsp;注：测序接头：包括P5/P7，index和Rd1/Rd2 SP三个部分（如上图所示）。其中P5/P7是PCR扩增引物及flow cell上引物结合的部分，index提供区分不同文库的信息，Rd1/Rd2 SP即read1/read2 sequence primer，是测序引物结合区域，测序过程理论上由Rd1/Rd2 SP向后开始进行。  </p>
 
-&emsp;&emsp;�Ŀ⹹����ɺ���ʹ��Qubit2.0 Fluorometer���г���������ϡ���Ŀ���1.5ng/ul�����ʹ��Agilent 2100 bioanalyzer���Ŀ��insert size���м�⣬insert size����Ԥ�ں�qRT-PCR���Ŀ���ЧŨ�Ƚ���׼ȷ�������Ŀ���ЧŨ�ȸ���2nM�����Ա�֤�Ŀ�������  
+&emsp;&emsp;文库构建完成后，先使用Qubit2.0 Fluorometer进行初步定量，稀释文库至1.5ng/ul，随后使用Agilent 2100 bioanalyzer对文库的insert size进行检测，insert size符合预期后，qRT-PCR对文库有效浓度进行准确定量（文库有效浓度高于2nM），以保证文库质量。  
 
 
 
 *****
-## �ϻ�����  
-&emsp;&emsp;���ϸ�󣬰Ѳ�ͬ�Ŀⰴ����ЧŨ�ȼ�Ŀ���»�������������pooling�����Illumina���򡣲���Ļ���ԭ���Ǳߺϳɱ߲���Sequencing by Synthesis�����ڲ����flow cell�м�������ӫ���ǵ�dNTP��DNA�ۺ�ø�Լ���ͷ���������������ÿһ����������컥����ʱ��ÿ����һ����ӫ���ǵ�dNTP�����ͷų����Ӧ��ӫ�⣬������ͨ������ӫ���źţ���ͨ����������������ź�ת��Ϊ����壬�Ӷ���ô���Ƭ�ε�������Ϣ�������������ͼ��ʾ��
+## 上机测序  
+&emsp;&emsp;库检合格后，把不同文库按照有效浓度及目标下机数据量的需求pooling后进行Illumina测序。测序的基本原理是边合成边测序（Sequencing by Synthesis）。在测序的flow cell中加入四种荧光标记的dNTP、DNA聚合酶以及接头引物进行扩增，在每一个测序簇延伸互补链时，每加入一个被荧光标记的dNTP就能释放出相对应的荧光，测序仪通过捕获荧光信号，并通过计算机软件将光信号转化为测序峰，从而获得待测片段的序列信息。测序过程如下图所示。
 
 ```{r echo=FALSE, fig.align='center', fig.cap='', out.width='100%'}
 knitr::include_graphics('images/NGS.png')
@@ -95,8 +95,8 @@ knitr::include_graphics('images/NGS.png')
 
 
 *****
-# ��Ϣ��������  
-&emsp;&emsp;RNA-seq�ĺ����ǻ���������������Է�����ʹ��ͳ��ѧ�������Ƚ������������������µĻ��������죬�����ҳ���������ص������Ի���Ȼ���һ��������Щ�����Ի��������ѧ���壬�������̰����ʿء��ȶԡ����������������Է��������ܸ����Ȼ��ڣ�����ͼ��ʾ������ɱ���ӣ�����λ�㣬�ںϻ���Ҳ��RNA-seq����Ҫ�������ݡ�  
+# 信息分析流程  
+&emsp;&emsp;RNA-seq的核心是基因表达差异的显著性分析，使用统计学方法，比较两个条件或多个条件下的基因表达差异，从中找出与条件相关的特异性基因，然后进一步分析这些特异性基因的生物学意义，分析过程包括质控、比对、定量、差异显著性分析、功能富集等环节，如下图所示。另外可变剪接，变异位点，融合基因也是RNA-seq的重要分析内容。  
 
 ```{r echo=FALSE, fig.align='center', fig.cap='', out.width='100%'}
 knitr::include_graphics('images/workflow.png')
@@ -105,13 +105,13 @@ knitr::include_graphics('images/workflow.png')
 
 
 *****
-## �����ʿ�  
+## 数据质控  
 
 *****
-### ��������˵��  
-&emsp;&emsp;����Ƭ�α���ͨ�������ǲ�õ�ͼ�����ݾ�CASAVA���ʶ��ת��Ϊ�������ݣ�reads�����ļ�Ϊfastq��ʽ��������Ҫ��������Ƭ�ε�������Ϣ�Լ����Ӧ�Ĳ���������Ϣ��  
+### 测序数据说明  
+&emsp;&emsp;测序片段被高通量测序仪测得的图像数据经CASAVA碱基识别转化为序列数据（reads），文件为fastq格式，其中主要包含测序片段的序列信息以及其对应的测序质量信息。  
 
-&emsp;&emsp;fastq��ʽ�ļ���ÿ��read������������Ϣ��ɣ�������ʾ��  
+&emsp;&emsp;fastq格式文件中每个read由四行描述信息组成，如下所示：  
 
 <blockquote>
 <p class="text-muted">  
@@ -122,29 +122,29 @@ AA&lt-FJFJ7J&ltJJFFJJFJJJ&ltFJJJJJJJJFJJJJFJJJJJAFJ7FJJJJ
 </p>
 </blockquote>
 
-&emsp;&emsp;�����ļ��е�һ���ԡ�@����ͷ�����ΪIllumina�����ʶ��(Squence Identifiers)���������֣��ڶ����ǲ���Ƭ�εļ�����У��������ԡ�+����ͷ�����ΪIllumina�����ʶ��(Ҳ��Ϊ��)���������ǲ���Ƭ��ÿ��������Ӧ�Ĳ�������ֵ��������ÿ���ַ���Ӧ��ASCIIֵ��ȥ33����Ϊ�ü���Ĳ�������ֵ��  
+&emsp;&emsp;上述文件中第一行以“@”开头，随后为Illumina测序标识符(Squence Identifiers)和描述文字；第二行是测序片段的碱基序列；第三行以“+”开头，随后为Illumina测序标识符(也可为空)；第四行是测序片段每个碱基相对应的测序质量值，该行中每个字符对应的ASCII值减去33，即为该碱基的测序质量值。  
 
 
 
 *****
-### �������ݹ���  
-&emsp;&emsp;�����õ�ԭʼ�����а����������в����ͷ����������ϵ͵�reads������ͼ��ʾ��Ϊ�˱�֤���ݷ������������ɿ��ԣ���Ҫ��ԭʼ���ݽ��й��ˣ������������¡�  
+### 测序数据过滤  
+&emsp;&emsp;测序获得的原始数据中包含少量带有测序接头或测序质量较低的reads，如下图所示。为了保证数据分析的质量及可靠性，需要对原始数据进行过滤，过滤内容如下。  
 
-- ȥ������ͷ(adapter)��reads��  
-- ȥ����N(N��ʾ�޷�ȷ�������Ϣ)��reads��  
-- ȥ��������reads(Qphred<=20�ļ����ռ����read���ȵ�50�����ϵ�reads)��  
+- 去除带接头(adapter)的reads；  
+- 去除含N(N表示无法确定碱基信息)的reads；  
+- 去除低质量reads(Qphred<=20的碱基数占整个read长度的50％以上的reads)。  
 
-&emsp;&emsp;ÿ�������Ĳ������ݹ��������������ļ���QC/3.Filter������ͼ��ʾ��  
+&emsp;&emsp;每个样本的测序数据过滤情况，见结果文件：QC/3.Filter，如下图所示。  
 
 <div>
 <ul class="btn-group">
   <li class="dropdown active">
-      <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">���˱���<span class="caret"></span>
+      <a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">过滤比例<span class="caret"></span>
       </a>
     <ul class="dropdown-menu">
-      <li class=""><a href="#dropdown1" data-toggle="tab" aria-expanded="false">ͼƬ1</a></li>
-      <li class=""><a href="#dropdown2" data-toggle="tab" aria-expanded="false">ͼƬ2</a></li>
-      <li class=""><a href="#dropdown3" data-toggle="tab" aria-expanded="false">ͼƬ3</a></li>
+      <li class=""><a href="#dropdown1" data-toggle="tab" aria-expanded="false">图片1</a></li>
+      <li class=""><a href="#dropdown2" data-toggle="tab" aria-expanded="false">图片2</a></li>
+      <li class=""><a href="#dropdown3" data-toggle="tab" aria-expanded="false">图片3</a></li>
     </ul>
   </li>
 </ul>
@@ -168,24 +168,24 @@ knitr::include_graphics('images/GATK.png')
 </div>
 
 
-&emsp;&emsp;ͼ�в�ͬ��ɫ�����ֱ������ͬ��ֵı�����������ʾ��  
+&emsp;&emsp;图中不同颜色比例分别代表不同组分的比例，如下所示。  
 
-- <strong>Adapter related</strong>������ͷ��reads��ռ������  
-- <strong>Containing N</strong>����N�����reads��ռ������  
-- <strong>Low quality</strong>�����������͵�reads��ռ������  
-- <strong>Clean reads</strong>��clean reads��ռ������  
+- <strong>Adapter related</strong>：带接头的reads所占比例。  
+- <strong>Containing N</strong>：带N碱基的reads所占比例。  
+- <strong>Low quality</strong>：测序质量低的reads所占比例。  
+- <strong>Clean reads</strong>：clean reads所占比例。  
 
 
 *****
-### ��������ʷֲ�  
-&emsp;&emsp;������̱������ڻ�������Ŀ����ԣ���������ʷֲ������Է�ӳ�������ݵ�������������Ϣ��ÿ������Ĳ�������ֵ������fastq�ļ��С���������������e��ʾ��Illumina�ļ������ֵ��Qphred��ʾ�����У�Qphred=-10log10(e)��Illumina Casava 1.8�汾���ʶ����Phred��ֵ֮��ļ�����Ӧ��ϵ���±���  
+### 测序错误率分布  
+&emsp;&emsp;测序过程本身存在机器错误的可能性，测序错误率分布检查可以反映测序数据的质量，序列信息中每个碱基的测序质量值保存在fastq文件中。如果测序错误率用e表示，Illumina的碱基质量值用Qphred表示，则有：Qphred=-10log10(e)。Illumina Casava 1.8版本碱基识别与Phred分值之间的简明对应关系见下表。  
 
 <table class="table table-striped table-hover ">
   <thead>
     <tr>
-      <th align="center">Phred��ֵ</th>
-      <th align="center">����ȷ�ļ��ʶ��</th>
-      <th align="center">�����ȷʶ����</th>
+      <th align="center">Phred分值</th>
+      <th align="center">不正确的碱基识别</th>
+      <th align="center">碱基正确识别率</th>
       <th align="center">Q-sorce</th>
     </tr>
   </thead>
@@ -223,16 +223,16 @@ knitr::include_graphics('images/GATK.png')
   </tbody>
 </table> 
 
-&emsp;&emsp;��ǰRNA-seq����������������ʷֲ�������������������  
+&emsp;&emsp;当前RNA-seq测序技术，测序错误率分布存在以下两个特征。  
 
-������������Ų�������(Sequenced   Reads)���ȵ����Ӷ����ߡ������ɲ�������л�ѧ�Լ������ĵ��µģ�ΪIllumina��ͨ������ƽ̨�����е�������
-ǰ6��������нϸߵĲ�������ʣ��˳���ǡ��ΪRNA-seq��������з�ת¼�����������ﳤ�ȡ�ǰ6�������������ʽϸ�����Ϊ��������RNAģ��Ĳ���ȫ���(Jiang et al.)��
-&emsp;&emsp;������Ϊillumina��ͨ������ƽ̨�Ĺ�������������Ŀ�������ݵĴ����ʷֲ�ͼ������ʾ��ͼ�к�����Ϊreads�ļ��λ�ã�������Ϊ����������ʣ�������ļ���QC/2.Error��  
+测序错误率随着测序序列(Sequenced   Reads)长度的增加而升高。这是由测序过程中化学试剂的消耗导致的，为Illumina高通量测序平台所具有的特征。
+前6个碱基具有较高的测序错误率，此长度恰好为RNA-seq建库过程中反转录所需的随机引物长度。前6个碱基测序错误率较高是因为随机引物和RNA模版的不完全结合(Jiang et al.)。
+&emsp;&emsp;此特征为illumina高通量测序平台的共有特征。本项目测序数据的错误率分布图如下所示。图中横坐标为reads的碱基位置，纵坐标为单碱基错误率，见结果文件：QC/2.Error。  
 
 <div>
 <ul class="btn-group">
 <li class="dropdown active">
-<a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">�����ʷֲ�<span class="caret"></span> </a>
+<a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">错误率分布<span class="caret"></span> </a>
 <ul class="dropdown-menu">
 <li class>
 <a href="#gc1" data-toggle="tab" aria-expanded="false">image1</a>
@@ -259,19 +259,19 @@ knitr::include_graphics('images/GATK.png')
 </div>
 </div>
 
-<center><p class="text-muted">ͼ�к�����Ϊreads�ļ��λ�ã�������Ϊ�����������</p></center>
+<center><p class="text-muted">图中横坐标为reads的碱基位置，纵坐标为单碱基错误率</p></center>
 
 
 
 
 *****
-### GC�����ֲ�  
-&emsp;&emsp;������������������(G)�Ͱ����(C)��ռ�ı�����ΪGC������GC���������ּ����һ�������ԣ������ڷ�ת¼��������ʹ�õ�6bp������������ǰ��λ����ں������������һ��ƫ���ԣ�������������������������ȶ�������NEB��ͨ���ⷽ�����������е�����Դ�Ϻ�˫��������ԭ�������ϲ��������ÿ��λ�õ�GC��AT����Ӧ�ֱ���ȣ���������������̻����ȶ����䣬��ˮƽ�ߡ��������������Խ�����ԣ�����ֻ�����˵�����Ϣ�����ܻ����AT�����GC�������󡣱���Ŀ����������GC�����ֲ�����ͼ��ʾ��������ļ���QC/1.GC��  
+### GC含量分布  
+&emsp;&emsp;核苷酸序列中鸟嘌呤(G)和胞嘧啶(C)所占的比例称为GC含量。GC含量在物种间存在一定特异性，但由于反转录过程中所使用的6bp随机引物，会引起前几位碱基在核苷酸组成上有一定偏好性，产生正常波动，随后则趋于稳定。对于NEB普通建库方法，由于序列的随机性打断和双链互补等原则，理论上测序读段在每个位置的GC及AT含量应分别相等，且在整个测序过程基本稳定不变，呈水平线。而对于链特异性建库而言，由于只保留了单链信息，可能会出现AT分离或GC分离现象。本项目各个样本的GC含量分布如下图所示，见结果文件：QC/1.GC。  
 
 <div>
 <ul class="btn-group">
 <li class="dropdown active">
-<a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">�����ʷֲ�<span class="caret"></span> </a>
+<a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">错误率分布<span class="caret"></span> </a>
 <ul class="dropdown-menu">
 <li class>
 <a href="#error1" data-toggle="tab" aria-expanded="false">image1</a>
@@ -298,12 +298,12 @@ knitr::include_graphics('images/GATK.png')
 </div>
 </div>
 
-<center><p class="text-muted">ͼ�к�����Ϊreads�ļ��λ�ã�������ΪATGCN���ּ�����͵İٷֱ�</p></center>
+<center><p class="text-muted">图中横坐标为reads的碱基位置，纵坐标为ATGCN五种碱基类型的百分比</p></center>
 
 
 *****
-### ������������  
-&emsp;&emsp;����ԭʼ���ݹ��ˡ���������ʼ�顢GC�����ֲ���飬��ú�������ʹ�õ�clean reads�����ݻ������±���ʾ��������ļ���QC/5.Stat/data_table.xls��  
+### 数据质量汇总  
+&emsp;&emsp;经过原始数据过滤、测序错误率检查、GC含量分布检查，获得后续分析使用的clean reads，数据汇总如下表所示，见结果文件：QC/5.Stat/data_table.xls。  
 
 Show  entriesSearch:
 sample	library	raw_reads	clean_reads	clean_bases	error_rate	Q20	Q30	GC_pct
@@ -317,34 +317,34 @@ btbr3	FRAS190032806-1a	75510142	73208334	10.98G	0.03	97.89	94.03	48.93
 btbr4	FRAS190032807-1a	61133792	59071894	8.86G	0.03	97.52	93.17	48.86
 Showing 1 to 8 of 8 entriesPrevious1Next  
 
-- <strong>sample</strong>����Ʒ����  
-- <strong>library</strong>���Ŀ���  
-- <strong>raw_reads</strong>��ԭʼ�����е�reads��  
-- <strong>clean_reads</strong>��ԭʼ���ݹ��˺��reads��  
-- <strong>clean_bases</strong>��ԭʼ���ݹ��˺�ļ����  
-- <strong>error_rate</strong>������������������  
-- <strong>Q20</strong>��Phred��ֵ����20�ļ��ռ�ܼ���İٷֱ�  
-- <strong>Q30</strong>��Phred��ֵ����30�ļ��ռ�ܼ���İٷֱ�  
-- <strong>GC_pct</strong>��clean reads��G��Cռ���ּ���İٷֱ�  
+- <strong>sample</strong>：样品名称  
+- <strong>library</strong>：文库编号  
+- <strong>raw_reads</strong>：原始数据中的reads数  
+- <strong>clean_reads</strong>：原始数据过滤后的reads数  
+- <strong>clean_bases</strong>：原始数据过滤后的碱基数  
+- <strong>error_rate</strong>：数据整体测序错误率  
+- <strong>Q20</strong>：Phred数值大于20的碱基占总碱基的百分比  
+- <strong>Q30</strong>：Phred数值大于30的碱基占总碱基的百分比  
+- <strong>GC_pct</strong>：clean reads中G与C占四种碱基的百分比  
 
 
 
 *****
-### �ȶ���ͳ��  
-&emsp;&emsp;����Ƭ�Σ�fragments����mRNA�����ϵģ�Ϊ��ȷ����ЩƬ������Щ����ת¼��������Ҫ���ʿغ��clean reads�ȶԵ��ο��������ϡ�HISAT2�ȶ���������Լ�����ս�˹��ѧ��һ��ʵ���ҿ���������ȫ�ֺ;ֲ������ķ��������ô���FM�������������������飬�ܹ���RNA-seq��õ�reads���������п��پ�ȷ�ıȶԣ�ͬʱ֧�ֻ������ر������֡���ͼΪHISAT2����spliced reads�ȶԵ��㷨ʾ��ͼ��  
+### 比对率统计  
+&emsp;&emsp;测序片段（fragments）是mRNA随机打断的，为了确定这些片段由哪些基因转录而来，需要将质控后的clean reads比对到参考基因组上。HISAT2比对软件是由约翰霍普金斯大学的一个实验室开发，采用全局和局部搜索的方法，利用大量FM索引，覆盖整个基因组，能够将RNA-seq测得的reads与基因组进行快速精确的比对，同时支持基因组特别大的物种。下图为HISAT2进行spliced reads比对的算法示意图。  
 
 ```{r echo=FALSE, fig.align='center', fig.cap=''}
 knitr::include_graphics('images/HISAT2.jpg')
 ```
 
 
-&emsp;&emsp;HISAT2���㷨��Ҫ��Ϊ�������֣�  
+&emsp;&emsp;HISAT2的算法主要分为三个部分：  
 
-- �������������αȶԵ������鵥������  
-- ���������зֶαȶԵ��������������������  
-- ���������зֶαȶԵ��������������ϣ���������������  
+- 将测序序列整段比对到基因组单外显子  
+- 将测序序列分段比对到基因组的两个外显子上  
+- 将测序序列分段比对到基因组三个以上（含三个）外显子  
 
-&emsp;&emsp;����ο���������װ�Ľ�Ϊ���ƣ���������������ο�������һ�£������ʵ�鲻������Ⱦ����ôʵ���������Ĳ���reads�ɹ��ȶԵ�������ı��������70% (Total Mapped Reads or Fragments)������Ŀÿ�������ıȶ�������±���ʾ��ע��Ϊ��ͳ��read1��read2���Ե�mapping�ʣ��±��е�total_reads����read1��read2���ܺͣ�Ҳ�������������������ܱ�����clean_reads����������ʵreads��ĿӦ�������������ܱ���Ϊ׼��������ļ���QC/5.Stat/align_pct.xls��
+&emsp;&emsp;如果参考基因组组装的较为完善，而且所测物种与参考基因组一致，且相关实验不存在污染，那么实验所产生的测序reads成功比对到基因组的比例会高于70% (Total Mapped Reads or Fragments)。本项目每个样本的比对情况如下表所示。注：为了统计read1和read2各自的mapping率，下表中的total_reads数是read1和read2的总和，也就是上面数据质量汇总表格中clean_reads的两倍，真实reads数目应以数据质量汇总表格为准，见结果文件：QC/5.Stat/align_pct.xls。
 
 Show  entriesSearch:
 sample	total_reads	total_map	unique_map	multi_map	read1_map	read2_map	positive_map	negative_map	splice_map	unsplice_map	proper_map
@@ -358,29 +358,29 @@ btbr3	73208334	70086814(95.74%)	67247238(91.86%)	2839576(3.88%)	33369600(45.58%)
 btbr4	59071894	56110652(94.99%)	53832855(91.13%)	2277797(3.86%)	26658196(45.13%)	27174659(46.0%)	26903939(45.54%)	26928916(45.59%)	18421177(31.18%)	35411678(59.95%)	51428846(87.06%)
 Showing 1 to 8 of 8 entriesPrevious1Next  
 <div>
-- sample����Ʒ����  
-- total_reads�������������ʿغ��clean reads��  
-- total_map���ȶԵ��������ϵ�reads������ٷֱ�  
-- unique_map: �ȶԵ��ο�������Ψһλ�õ�reads������ٷֱ�  
-- multi_map���ȶԵ��ο���������λ�õ�reads������ٷֱ�  
-- read1_map���ȶԵ��ο��������read1������ٷֱ�  
-- read2_map���ȶԵ��ο��������read2������ٷֱ�  
-- positive_map���ȶԵ��ο������������ϵ�reads������ٷֱ�  
-- negative_map���ȶԵ��ο������鸺���ϵ�reads������ٷֱ�  
-- splice_map����ֱȶԵ��������ϵ�reads������ٷֱ�  
-- unsplice_map��δ��ֱȶԵ��������ϵ�reads������ٷֱ�  
-- proper_map���ɶԵ�read1��read2ͬʱ�ȶԵ��������reads������ٷֱ�  
+- sample：样品名称  
+- total_reads：测序数据在质控后的clean reads数  
+- total_map：比对到基因组上的reads数及其百分比  
+- unique_map: 比对到参考基因组唯一位置的reads数及其百分比  
+- multi_map：比对到参考基因组多个位置的reads数及其百分比  
+- read1_map：比对到参考基因组的read1数及其百分比  
+- read2_map：比对到参考基因组的read2数及其百分比  
+- positive_map：比对到参考基因组正链上的reads数及其百分比  
+- negative_map：比对到参考基因组负链上的reads数及其百分比  
+- splice_map：拆分比对到基因组上的reads数及其百分比  
+- unsplice_map：未拆分比对到基因组上的reads数及其百分比  
+- proper_map：成对的read1和read2同时比对到基因组的reads数及其百分比  
 </div>
 
 
 *****
-### �ȶ�����ֲ�  
-&emsp;&emsp;���ݱȶԽ�����ֱ�ͳ��reads�ڻ����������������ں��������Լ����������ռ�ı�����һ��ģʽ���ֵĻ���ע�ͽ�Ϊ���ƣ����˺�С�󣩣���ȶԵ�����������ı����ܸߡ��ȶԵ��ں��������reads������Դ��ǰ��mRNA��ɱ�����¼��������ں��ӡ��ȶԵ����������reads��������Դ��ncRNA������DNAƬ����Ⱦ��Ҳ�����ǻ���ע�ͻ��������ơ����������Ĳ���reads�ڻ���������ֲ��������ͼ��ʾ��������ļ���results\2.Mapping\1.Region��
+### 比对区域分布  
+&emsp;&emsp;根据比对结果，分别统计reads在基因组外显子区域，内含子区域以及基因间区所占的比例。一般模式物种的基因注释较为完善（如人和小鼠），其比对到外显子区域的比例很高。比对到内含子区域的reads可能来源于前体mRNA或可变剪接事件滞留的内含子。比对到基因间区的reads，可能来源于ncRNA或少许DNA片段污染，也可能是基因注释还不够完善。所有样本的测序reads在基因组区域分布情况如下图所示，见结果文件：results\2.Mapping\1.Region。
 
 <div>
 <ul class="btn-group">
 <li class="dropdown active">
-<a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">�����ʷֲ�<span class="caret"></span> </a>
+<a href="#" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">错误率分布<span class="caret"></span> </a>
 <ul class="dropdown-menu">
 <li class>
 <a href="#error1" data-toggle="tab" aria-expanded="false">image1</a>
@@ -409,8 +409,8 @@ Showing 1 to 8 of 8 entriesPrevious1Next
 
 
 *****
-### �ȶԿ��ӻ�  
-&emsp;&emsp;�ȶԽ��BAM�ļ���ѹ���Ķ������ļ����鿴������Ϊ���ѣ���ͨ��IGV�������п��ӻ�����ʾreads�ڸ�Ⱦɫ���ϵķֲ����ڻ�������ע�͵������ӡ��ں��ӡ���������ȹ�������ķֲ�������ͼ��ʾ�������ʹ�÷����ɲο�ŵ����Դ�ṩ��ʹ��˵���ĵ�IGVQuickStart
+### 比对可视化  
+&emsp;&emsp;比对结果BAM文件是压缩的二进制文件，查看起来较为困难，可通过IGV软件进行可视化，显示reads在各染色体上的分布及在基因组中注释的外显子、内含子、基因间区等功能区域的分布，如下图所示，具体的使用方法可参考诺禾致源提供的使用说明文档IGVQuickStart
 
 ```{r echo=FALSE, fig.align='center', fig.cap=''}
 knitr::include_graphics('images/igv.png')
@@ -419,20 +419,20 @@ knitr::include_graphics('images/igv.png')
 
 
 *****
-### �ʿس�������ͽ��  
+### 质控常见问题和解答  
 
   
 <div class="panel panel-info">
   <div class="panel-heading">
-������ʽ���
+相关名词解释
   </div>
   <div class="panel-body">  
-- <strong>adapter</strong>����ͷ�������ϻ����򡣽���ʱ����Ľ�ͷ���������оƬ��flow cell���Ϲ̶��Ľ�ͷ�໥ʶ��  
-- <strong>index</strong>������ı�ǩ�����ڲⶨ���������ͨ��ÿ���������ӵĲ�ͬ��ǩ�����������֣����������Ʒ  
-- <strong>Q20</strong>��Phred��ֵ����20�ļ��ռ�������İٷֱȣ�����Phred=-10log10(e)  
-- <strong>Q30</strong>��Phred��ֵ����30�ļ��ռ�������İٷֱȣ�����Phred=-10log10(e)  
-- <strong>Single-read</strong>�����˲���,���Ƚ�RNA�����ϣ������������ӵ����Ƭ�ε�һ�ˣ�Ȼ��ĩ�˼��Ͻ�ͷ����Ƭ�ι̶���flowcell������DNA�أ��ϻ����򵥶˶�ȡ���У��»�����ֻ��һ��read��  
-- <strong>Paied-end</strong>��˫�˲��򣬹����Ŀ�ʱ�����˵Ľ�ͷ�϶����ϲ���������λ�㣬��������ɲ�����ºϳɵĲ���������Ա�ȥ����3���˽�⣬˫��DNA��ͨ����ʽ�����������γɡ��������������Ļ������룬�������ºϳɵķ�������оƬ��ϣ����γ������������֮ǰ�Է����������»������гɶԵ�read1��read2��
+- <strong>adapter</strong>：接头，用于上机测序。建库时引入的接头序列与测序芯片（flow cell）上固定的接头相互识别  
+- <strong>index</strong>：测序的标签，用于测定混合样本，通过每个样本添加的不同标签进行数据区分，鉴别测序样品  
+- <strong>Q20</strong>：Phred数值大于20的碱基占总体碱基的百分比，其中Phred=-10log10(e)  
+- <strong>Q30</strong>：Phred数值大于30的碱基占总体碱基的百分比，其中Phred=-10log10(e)  
+- <strong>Single-read</strong>：单端测序,首先将RNA随机打断，引物序列连接到随机片段的一端，然后末端加上接头，将片段固定在flowcell上生成DNA簇，上机测序单端读取序列，下机数据只有一个read。  
+- <strong>Paied-end</strong>：双端测序，构建文库时在两端的接头上都加上测序引物结合位点，正向链完成测序后，新合成的部分链因变性被去除，3’端解封，双链DNA簇通过桥式扩增而重新形成。正向链在其链的基部切离，仅留下新合成的反向链与芯片结合，在形成配对序列数据之前对反向链测序。下机数据有成对的read1和read2。
 
   </div>
 </div>
@@ -442,50 +442,50 @@ knitr::include_graphics('images/igv.png')
 
 <div class="panel panel-info">
   <div class="panel-heading">
-��������ʻ����Ų��򳤶ȵ����Ӷ����ߣ��������ڶ����ǿ��Խ��ܵķ�Χ��  
+测序错误率会随着测序长度的增加而升高，错误率在多少是可以接受的范围？  
   </div>
   <div class="panel-body">
-ŵ�̵Ĳ��������ϸ�����������ѿء�һ������£��������λ�õĲ��������Ӧ�õ���1%����߲�����6%��  
+诺禾的测序会进行严格的数据质量把控。一般情况下，单个碱基位置的测序错误率应该低于1%，最高不超过6%。  
   </div>
 </div>
 
 
 <div class="panel panel-info">
   <div class="panel-heading">
-RNA���ݵıȶ���������DNA���ݵıȶ������к�����    
+RNA数据的比对软件，和DNA数据的比对软件有何区别？    
   </div>
   <div class="panel-body">
-����ת¼�����д��ڿɱ���ӣ���õ�reads�кܴ�һ���ֿ�Խ��ͬ�����ӣ�����RNA���ݵıȶ�����Ҫ֧��reads��splice�ȶԡ�  
+由于转录过程中存在可变剪接，测得的reads有很大一部分跨越不同外显子，所有RNA数据的比对软件要支持reads的splice比对。  
   </div>
 </div>
 
 <div class="panel panel-info">
   <div class="panel-heading">
-���mapping�ʽϵ͵�ԭ���������Щ��  
+造成mapping率较低的原因可能有哪些？  
   </div>
   <div class="panel-body">
-- �ο���������װ����  
-- ����������ο����������Ե��ϵ��Զ  
-- ��Ʒ�����⴦������Դ��Ⱦ  
+- 参考基因组组装不好  
+- 所测物种与参考基因组的亲缘关系较远  
+- 样品的特殊处理或外源污染  
   </div>
 </div>
 
 <div class="panel panel-info">
   <div class="panel-heading">
-mappingʱ�õ���readȫ��������ͷβ�д�����  
+mapping时用的是read全长，还是头尾有处理？  
   </div>
   <div class="panel-body">
-ʵ�鷽�棬����ʹ�ñ�׼��RNA-seq�Լ��У���index����Adapter�м䣬�ڲ�������Index read��ɣ��ɴ˲���õ���read1��read2�ĸ������ȫ�������������У����mappingʱ��ͷβ���Բ��ô���������read���⴩�����н�ͷ���е������ļ��������Ҳ�ǽ�����readȥ����  
+实验方面，我们使用标准的RNA-seq试剂盒，其index处于Adapter中间，在测序中由Index read完成，由此测序得到的read1和read2的各个碱基全都是样本的序列，因此mapping时，头尾可以不用处理。即便read被测穿而带有接头或含有低质量的碱基，我们也是将整条read去掉。  
   </div>
 </div>
 
 
 
 *****
-## ��������  
-&emsp;&emsp;�ȶ���ɺ󣬸��ݻ����ڲο��������ϵ�λ����Ϣ�����ͳ��ÿ���������ʼ����ֹ��Χ�ڸ��ǵ�reads��Ŀ�����ǲ���subread�����е�featureCounts���߶Ի�����б���ˮƽ�Ķ�����featureCounts��Ҫʹ��-Q 10 -B -C�������ֱ���˵��ȶ�����ֵ����10��reads���ǳɶԱȶ��ϵ�reads���ȶԵ��������������reads��  
+## 定量分析  
+&emsp;&emsp;比对完成后，根据基因在参考基因组上的位置信息，便可统计每个基因从起始到终止范围内覆盖的reads数目。我们采用subread软件中的featureCounts工具对基因进行表达水平的定量，featureCounts主要使用-Q 10 -B -C参数，分别过滤掉比对质量值低于10的reads，非成对比对上的reads，比对到基因组多个区域的reads。  
 
-&emsp;&emsp;featureCounts���ø�Ч��Ⱦɫ���ֺ�����ģ��ļ������ȶ�Ⱦɫ���ֳ�bin����bin�в��blocks����blocks�в��feature������������Ҫ������ֵ��features��meta-features������featuresͨ���Ƕ�Ӧ�ڻ���ע���ļ�(GTF)��exon��meta-featuresͨ���Ƕ�Ӧ��ע���ļ���gene����ÿ��Ⱦɫ���ϵ�features������ʼλ�ý������򣬽�Ⱦɫ��ֳɴ�СΪ128kb��û���ص���bins������feaatures����ʼλ�÷��䵽��Ӧ��bin�У�����ͼ�е�ʵ�߱�ʾ��features����ÿһ��bin��������features��������ȵķ������ͬ��ģ��(Block)��������ÿһ��bin��Block���������������bin��features����Ŀ��ƽ������ȡ�ͼ��������reads������������bins���бȽϣ�Ȼ������bin�е�blocks�Ƚϣ������blocks�е�features���бȽϣ����յ�read�Ķ�λ����Ƕ�λ���˵�i��bin�еĵ�һ��blocks�У���read��blocks�е�����features���ص�����junction read��  
+&emsp;&emsp;featureCounts利用高效的染色体拆分和特征模块的技术，先对染色体拆分成bin，在bin中拆分blocks，在blocks中拆分feature。它有两种重要的特征值：features和meta-features。其中features通常是对应于基因注释文件(GTF)的exon，meta-features通常是对应于注释文件的gene。在每个染色体上的features根据起始位置进行排序，将染色体分成大小为128kb的没有重叠的bins，根据feaatures的起始位置分配到对应的bin中，其中图中的实线表示的features。在每一个bin中连续的features中数量相等的分类成相同的模块(Block)，其中在每一个bin中Block的数量是与在这个bin中features的数目的平方根相等。图中搜索的reads首先与基因组的bins进行比较，然后再与bin中的blocks比较，最后与blocks中的features进行比较，最终的read的定位结果是定位到了第i个bin中的第一个blocks中，且read与blocks中的两个features有重叠，即junction read。  
 
 ```{r echo=FALSE, fig.align='center', fig.cap=''}
 knitr::include_graphics('images/SE.png')
@@ -494,8 +494,8 @@ knitr::include_graphics('images/SE.png')
 
 
 *****
-### ������ﶨ��  
-&emsp;&emsp;���Ƕ�ÿ�������ֱ���л������ˮƽ�Ķ����������ٺϲ��õ����������ı�����󣬵�һ��Ϊ�����ID��������Ϊ��������ԭʼread countֵ�����±���ʾ��������ļ���Quant/gene_count.xls��  
+### 基因表达定量  
+&emsp;&emsp;我们对每个样本分别进行基因表达水平的定量分析，再合并得到所有样本的表达矩阵，第一列为基因的ID，其余列为各样本的原始read count值，如下表所示，见结果文件：Quant/gene_count.xls。  
 
 Show  entriesSearch:  
 gene_id	wt1	wt2	wt3	wt4	btbr1	btbr2	btbr3	btbr4	gene_name	gene_chr	gene_start	gene_end	gene_strand	gene_length	gene_biotype	gene_description	tf_family
@@ -511,150 +511,150 @@ ENSMUSG00000064363	52147	39082	44560	54388	50403	56260	56284	47897	mt-Nd4	MT	101
 ENSMUSG00000029309	50670	36431	41230	50856	53000	49929	63425	49799	Sparcl1	5	104079111	104113733	-	2937	protein_coding	SPARC-like 1 [Source:MGI Symbol;Acc:MGI:108110]	-
 Showing 1 to 10 of 29 entriesPrevious123Next  
 
-- gene_id��������  
-- sample���������������õ�ԭʼread countֵ  
-- gene_name����������  
-- gene_chr���������ڵ�Ⱦɫ������  
-- gene_start����������Ⱦɫ�����ʼλ��  
-- gene_end����������Ⱦɫ�����ֹλ��  
-- gene_strand����������Ⱦɫ�����������Ϣ  
-- gene_length�����򳤶ȣ�������ʼ����ֹ����exon���ص�������ܺ�  
-- gene_biotype���������ͣ�����뵰�׻��򣬳����Ǳ�������  
-- gene_description������������  
-- gene_tf_family������ת¼���Ӽ���ע��  
+- gene_id：基因编号  
+- sample：各样本定量所得的原始read count值  
+- gene_name：基因名称  
+- gene_chr：基因所在的染色体名称  
+- gene_start：基因所在染色体的起始位置  
+- gene_end：基因所在染色体的终止位置  
+- gene_strand：基因所在染色体的正负链信息  
+- gene_length：基因长度，基因起始到终止所有exon非重叠区域的总和  
+- gene_biotype：基因类型，如编码蛋白基因，长链非编码基因等  
+- gene_description：基因功能描述  
+- gene_tf_family：基因转录因子家族注释  
 
 
 *****
-### �������ֲ�  
-&emsp;&emsp;���ڲ�����Ⱥͻ��򳤶ȵ�Ӱ�죬RNA-seq�Ļ������ֵһ�㲻��read count����ʾ��������FPKM��FPKM�Ⱥ�Բ�����Ⱥͻ��򳤶Ƚ�����У�������Ǽ�����������л���ı���ֵ(FPKM)��ͨ������ͼչʾ��ͬ�����������ˮƽ�ķֲ����������ͼ��ʾ��ͼ�к�����Ϊ��Ʒ���ƣ�������Ϊlog2(FPKM+1)��ÿ������ĺ���ͼ�����ͳ����(���϶��·ֱ�Ϊ���ֵ�����ķ�λ������λ�������ķ�λ������Сֵ)��������ļ���Quant/boxplot.svg��  
+### 基因表达分布  
+&emsp;&emsp;由于测序深度和基因长度的影响，RNA-seq的基因表达值一般不用read count来表示，而是用FPKM，FPKM先后对测序深度和基因长度进行了校正。我们计算各样本所有基因的表达值(FPKM)后，通过盒形图展示不同样本基因表达水平的分布情况，如下图所示。图中横坐标为样品名称，纵坐标为log2(FPKM+1)，每个区域的盒形图对五个统计量(至上而下分别为最大值，上四分位数，中位数，下四分位数和最小值)，见结果文件：Quant/boxplot.svg。  
 
 
 
-ͼ�к�����Ϊ��Ʒ���ƣ�������Ϊlog2(FPKM+1)  
-
-
-
-*****
-### �����������  
-&emsp;&emsp;����ѧ�ظ�ͨ�����κ�����ѧʵ��������ģ�Ŀǰ�����ڿ�Ҳ����Ҫ������ѧ�ظ�������ѧ�ظ���Ҫ��������;��һ����֤�����漰������ѧʵ���������żȻ�����ǿ��ظ��ġ���һ����Ϊ��ȷ�������Ĳ����������õ����ɿ��Ľ������Ʒ��������ˮƽ������Ǽ���ʵ��ɿ��Ժ�����ѡ���Ƿ��������Ҫָ�ꡣ���ϵ��Խ�ӽ�1��������Ʒ֮�����ģʽ�����ƶ�Խ�ߡ�Encode�ƻ�����Ƥ��ѷ���ϵ����ƽ��(R2)����0.92(�����ȡ����ʵ��������)���������Ŀ�����У�����Ҫ������ѧ�ظ���Ʒ��R2����Ҫ����0.8��������Ҫ����Ʒ�������ʵĽ��ͣ��������½���ʵ�顣���ݸ��������л����FPKMֵ�������ڼ���������������ϵ�������Ƴ���ͼ����ֱ����ʾ����������켰���������ظ�����������������ϵ��Խ�ߣ������ģʽԽΪ�ӽ��������������ͼ����ͼ��ʾ��������ļ���Quant/correlation.svg��  
-
-
-
-ͼ�к�������Ϊ���������ϵ����ƽ��  
+图中横坐标为样品名称，纵坐标为log2(FPKM+1)  
 
 
 
 *****
-### ���ɷַ���  
-&emsp;&emsp;���ɷַ�����PCA��Ҳ���������������켰���������ظ������PCA�������Դ����ļ��㷽������������ƵĻ���������н�ά�����ɷ���ȡ�����Ƕ����������Ļ������ֵ��FPKM������PCA����������ͼ��ʾ�����������£�PCAͼ�У��������Ӧ�÷�ɢ����������Ӧ�þ���һ�𣬼�����ļ���Quant/pca.svg��  
+### 样本间相关性  
+&emsp;&emsp;生物学重复通常是任何生物学实验所必须的，目前主流期刊也基本要求生物学重复。生物学重复主要有两个用途：一个是证明所涉及的生物学实验操作不是偶然，而是可重复的。另一个是为了确保后续的差异基因分析得到更可靠的结果。样品间基因表达水平相关性是检验实验可靠性和样本选择是否合理的重要指标。相关系数越接近1，表明样品之间表达模式的相似度越高。Encode计划建议皮尔逊相关系数的平方(R2)大于0.92(理想的取样和实验条件下)。具体的项目操作中，我们要求生物学重复样品间R2至少要大于0.8，否则需要对样品做出合适的解释，或者重新进行实验。根据各样本所有基因的FPKM值计算组内及组间样本的相关性系数，绘制成热图，可直观显示组间样本差异及组内样本重复情况。样本间相关性系数越高，其表达模式越为接近，样本相关性热图如下图所示，见结果文件：Quant/correlation.svg。  
 
 
 
-ͼ�к�����Ϊ��һ���ɷ֣�������Ϊ�ڶ����ɷ�  
+图中横纵坐标为各样本相关系数的平方  
 
 
 
 *****
-### ���������������⼰���  
+### 主成分分析  
+&emsp;&emsp;主成分分析（PCA）也常用来评估组间差异及组内样本重复情况，PCA采用线性代数的计算方法，对数以万计的基因变量进行降维及主成分提取。我们对所有样本的基因表达值（FPKM）进行PCA分析，如下图所示。理想条件下，PCA图中，组间样本应该分散，组内样本应该聚在一起，见结果文件：Quant/pca.svg。  
+
+
+
+图中横坐标为第一主成分，纵坐标为第二主成分  
+
+
+
+*****
+### 定量分析常见问题及解答  
 
 <div class="panel panel-success">
   <div class="panel-heading">  
-���������У��ȶԵ���������λ�õ�reads��multi mapped������δ����ģ�
+定量过程中，比对到基因组多个位置的reads（multi mapped）是如何处理的？
   </div>
   <div class="panel-body">
-��Щreads�ȶԵ���������λ�ã��޷�ȷ�������ĸ�����ת¼�����������ⲿ��reads�ڶ���������ֱ�ӱ����˵���  
+这些reads比对到基因组多个位置，无法确定是由哪个基因转录而来，所以这部分reads在定量过程中直接被过滤掉。  
   </div>
 </div>
 
 <div class="panel panel-success">
   <div class="panel-heading">
-���ص���������������ص������reads�ڶ���ʱ��η��䣿
+有重叠区域的两个基因，重叠区域的reads在定量时如何分配？
   </div>
   <div class="panel-body">  
-�����ص������readsҲ�޷�ȷ�����ĸ�����ת¼�������ⲿ�ֵ�readsҲ�Ǳ����˴�����  
+基因重叠区域的reads也无法确定由哪个基因转录而来，这部分的reads也是被过滤处理。  
   </div>
 </div>
 
 <div class="panel panel-success">
   <div class="panel-heading">
-�������������У������ת¼���Ӽ���ע������ν��еģ� 
+定量分析表格中，基因的转录因子家族注释是如何进行的？ 
   </div>
   <div class="panel-body">   
-һ����ͨ��ת¼�������ݿ⣨AnimalTFDB/PlantTFDB������ע�ͣ�������ݿ�����¼�����֣���һ����ͨ��Pfam/SUPERFAMILY�ȵ��׽ṹ�����ݿ����Ԥ��  
+一方面通过转录因子数据库（AnimalTFDB/PlantTFDB）进行注释（针对数据库已收录的物种），一方面通过Pfam/SUPERFAMILY等蛋白结构域数据库进行预测  
   </div>
 </div>
 
 <div class="panel panel-success">
   <div class="panel-heading">
-FPKM����μ���ģ� 
+FPKM是如何计算的？ 
   </div>
   <div class="panel-body">    
-FPKM(expected number of Fragments Per Kilobase of transcript sequence per Millions base pairs sequenced)��ָÿ����fragments������ĳһ����ÿǧ������ȵ�fragments�����ɶԵ�reads��Ŀ����ͬʱ�����˲�����Ⱥͻ��򳤶ȶ�fragments������Ӱ�죬��Ŀǰ���õĻ������ˮƽ���㷽��(Trapnell, Cole, et al., 2010)��  
+FPKM(expected number of Fragments Per Kilobase of transcript sequence per Millions base pairs sequenced)是指每百万fragments中来自某一基因每千碱基长度的fragments——成对的reads数目，其同时考虑了测序深度和基因长度对fragments计数的影响，是目前常用的基因表达水平估算方法(Trapnell, Cole, et al., 2010)。  
   </div>
 </div>
 
 <div class="panel panel-success">
   <div class="panel-heading">
-����������ֵ�Ƕ��٣�Ϊʲô����Ϊ�����ֵ��
+基因表达的阈值是多少？为什么设置为这个阈值？
   </div>
   <div class="panel-body">      
-һ����ΪFPKM����1ʱ�����������ֵ��������־�Ƽ��ġ�  
+一般认为FPKM大于1时基因表达，这个阈值是主流杂志推荐的。  
   </div>
 </div>
 
 <div class="panel panel-success">
   <div class="panel-heading">
-��Ʒ���������к����壿��μ���? 
+样品间的相关性有何意义？如何计算? 
   </div>
   <div class="panel-body">       
-��Ʒ�������Է�Ӧ����Ʒ��������ģʽ�����Ƴ̶ȣ���һ���̶��Ͽɷ�Ӧ����ѧ�ظ��ĺû������ϵ��Խ�ӽ�1����Ʒ������ƶ�Խ�ߡ������ϣ�����ѧ�ظ������Ʒ�����ϵ��Ӧ��������ѧ�ظ������Ʒ�����ϵ�������ϵ���ļ��㷽�������������֣�A. Pearson correlation; B. Spearman rank correlation; C. Kendall��s �ӡ�����ʹ��Pearson���ϵ�����м��㡣  
+样品间的相关性反应了样品间基因表达模式的相似程度，在一定程度上可反应生物学重复的好坏。相关系数越接近1，样品间的相似度越高。理论上，生物学重复间的样品的相关系数应大于生物学重复外的样品的相关系数。相关系数的计算方法常见的有三种：A. Pearson correlation; B. Spearman rank correlation; C. Kendall’s τ。我们使用Pearson相关系数进行计算。  
   </div>
 </div>
 
 <div class="panel panel-success">
   <div class="panel-heading">
-���ɷַ�����ʲô? 
+主成分分析是什么? 
   </div>
   <div class="panel-body">        
-���ɷַ��� (Principal Component Analysis, PCA)   ��һ�ֶ�Ԫ��ά����������PCA�ĺ���˼�����ڣ��ھ����ܱ������ݵĲ����ǰ���£��������ݵ�ά�ȣ�Ҳ���ǳ�������ٵĻ�����صı��������������ݡ����ݼ���һȺ�ڶ�ά�ռ��еĵ㣬�ڱ�����һȺ�����Կռ�λ�ò��������£���ת��һ���µ�����ϵ����������Ǹ�PC����ʹ�ø������µ��������ϵ����꣨ͶӰ���ķ�����󣬶�ͶӰ�������������ἴΪPC1�����ΪPC2��  
+主成分分析 (Principal Component Analysis, PCA)   是一种多元降维分析方法。PCA的核心思想在于，在尽可能保留数据的差异的前题下，降低数据的维度，也就是抽象出更少的互不相关的变量来描述各数据。数据集是一群在多维空间中的点，在保持这一群点的相对空间位置不变的情况下，旋转到一个新的坐标系（坐标轴就是各PC），使得各点在新的坐标轴上的坐标（投影）的方差最大，而投影方差最大的坐标轴即为PC1，其次为PC2。  
   </div>
 </div>
 
 
 *****
-## �������  
-&emsp;&emsp;������ﶨ����ɺ���Ҫ����������ݽ���ͳ��ѧ������ɸѡ�����ڲ�ͬ״̬�±���ˮƽ��������Ļ��򡣲��������Ҫ��Ϊ�������衣  
+## 差异分析  
+&emsp;&emsp;基因表达定量完成后，需要对其表达数据进行统计学分析，筛选样本在不同状态下表达水平显著差异的基因。差异分析主要分为三个步骤。  
 
-���ȶ�ԭʼ��readcount���б�׼����normalization������Ҫ�ǶԲ�����ȵ�У����  
-Ȼ��ͳ��ѧģ�ͽ��м��������ʣ�pvalue���ļ���  
-�����ж��ؼ������У�����õ�FDRֵ����������)��  
-&emsp;&emsp;��Բ�ͬ��ʵ�����������ѡ�ú��ʵ��������л��������������Է������������±���ʾ��  
+首先对原始的readcount进行标准化（normalization），主要是对测序深度的校正。  
+然后统计学模型进行假设检验概率（pvalue）的计算  
+最后进行多重假设检验校正，得到FDR值（错误发现率)。  
+&emsp;&emsp;针对不同的实验情况，我们选用合适的软件进行基因表达差异显著性分析，具体如下表所示。  
 
 <table class="table table-striped table-hover ">
   <thead>
     <tr>
-      <th align="center">����</th>
-      <th align="center">����</th>
-      <th align="center">��׼������</th>
-      <th align="center">pvalue����ģ��</th>
-	    <th align="center">FDR���㷽��</th>
-	    <th align="center">�������ɸѡ��׼</th>
+      <th align="center">类型</th>
+      <th align="center">软件</th>
+      <th align="center">标准化方法</th>
+      <th align="center">pvalue计算模型</th>
+	    <th align="center">FDR计算方法</th>
+	    <th align="center">差异基因筛选标准</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td align="center" style="vertical-align: middle;">������ѧ�ظ�</td>
+      <td align="center" style="vertical-align: middle;">有生物学重复</td>
       <td align="center" style="vertical-align: middle;">DESeq2<br/>(Anders et al, 2014)</td>
       <td align="center" style="vertical-align: middle;">DESeq</td>
-      <td align="center" style="vertical-align: middle;">������ֲ�</td>
+      <td align="center" style="vertical-align: middle;">负二项分布</td>
       <td align="center" style="vertical-align: middle;">BH</td>
       <td align="center" style="vertical-align: middle;">|log2(FoldChange)| > 0 & padj < 0.05</td>
     </tr>
     <tr>
-      <td align="center" style="vertical-align: middle;">������ѧ�ظ�</td>
+      <td align="center" style="vertical-align: middle;">无生物学重复</td>
       <td align="center" style="vertical-align: middle;">edgeR<br/>(Robinson et al, 2010)</td>
       <td align="center" style="vertical-align: middle;">TMM</td>
-      <td align="center" style="vertical-align: middle;">������ֲ�</td>
+      <td align="center" style="vertical-align: middle;">负二项分布</td>
       <td align="center" style="vertical-align: middle;">BH</td>
       <td align="center" style="vertical-align: middle;">|log2(FoldChange)| > 0 & padj < 0.05</td>
     </tr>
@@ -669,12 +669,12 @@ FPKM(expected number of Fragments Per Kilobase of transcript sequence per Millio
   </tbody>
 </table> 
 
-&emsp;&emsp;���������ϱ�׼ɸѡ�õ��Ĳ��������٣�����100�������п��ܵ��º���Ĺ��ܸ�������û�������Խ�������ԣ����ǻ������Ŀ�ľ���������ʵ��ؽ���ɸѡ����������ֵ��׼������Ŀʵ��ֻ��עĳ��������ı��������������ó����������⸻�������������Ĳ������������ɸѡ��ע���Ǽ������򼴿ɡ�  
+&emsp;&emsp;若按照以上标准筛选得到的差异基因过少（低于100），很有可能导致后面的功能富集分析没有显著性结果，所以，我们会根据项目的具体情况，适当地降低筛选差异基因的阈值标准。若项目实验只关注某几个基因的表达情况（如基因敲除），不在意富集结果，从下面的差异分析表格中筛选关注的那几个基因即可。  
 
 
 *****
-### ��������б�  
-&emsp;&emsp;ÿ���Ƚ���ϵĲ��������Է������±���ʾ������չʾ���ǵ�һ���Ƚ���ϵ����л���Ĳ��������Խ����ǰ30�У�������ļ���Differential/1.deglist��  
+### 差异基因列表  
+&emsp;&emsp;每个比较组合的差异显著性分析如下表所示，表格展示的是第一个比较组合的所有基因的差异显著性结果的前30行，见结果文件：Differential/1.deglist。  
 
 Show  entriesSearch:  
 gene_id	wt1	wt2	wt3	wt4	btbr1	btbr2	btbr3	btbr4	WT	BTBR	log2FoldChange	pvalue	padj	gene_name	gene_chr	gene_start	gene_end	gene_strand	gene_length	gene_biotype	gene_description	tf_family
@@ -690,25 +690,25 @@ ENSMUSG00000028648	2723.53644740819	2508.18760741884	2584.84443116304	2824.79988
 ENSMUSG00000021091	176.815978784615	151.792333590189	177.324420079786	182.558397452441	1321.18290023005	1136.36511585321	1243.87666312781	1331.43438474973	172.122782476758	1258.2147659902	-2.86552064146598	1.07193311142581e-191	2.37872676756501e-188	Serpina3n	12	104406729	104414329	+	2064	protein_coding	serine (or cysteine) peptidase inhibitor, clade A, member 3N [Source:MGI Symbol;Acc:MGI:105045]	-
 Showing 1 to 10 of 29 entriesPrevious123Next  
 
-- gene_id��������  
-- sample����������׼�����readcountֵ  
-- group������readcount��ֵ  
-- log2FoldChange���������������������ˮƽ�ı�ֵ���پ������������������ģ�ʹ����������2Ϊ��ȡ����  
-- pvalue�������Լ����ֵ  
-- padj�����ؼ������У�����pֵ  
-- gene_name����������  
-- gene_chr���������ڵ�Ⱦɫ������  
-- gene_start��������Ⱦɫ�����ʼλ��  
-- gene_end��������Ⱦɫ�����ֹλ��  
-- gene_strand����������Ⱦɫ�����������Ϣ  
-- gene_length�����򳤶ȣ�������ʼ����ֹ����exon���ص�������ܺ�  
-- gene_biotype���������ͣ�����뵰�׻��򣬳����Ǳ�������  
-- gene_description������������  
-- gene_tf_family������ת¼���Ӽ���ע��  
+- gene_id：基因编号  
+- sample：各样本标准化后的readcount值  
+- group：各组readcount均值  
+- log2FoldChange：处理组与对照组基因表达水平的比值，再经过差异分析软件收缩模型处理，最后以2为底取对数  
+- pvalue：显著性检验的值  
+- padj：多重假设检验校正后的p值  
+- gene_name：基因名称  
+- gene_chr：基因所在的染色体名称  
+- gene_start：基因在染色体的起始位置  
+- gene_end：基因在染色体的终止位置  
+- gene_strand：基因所在染色体的正负链信息  
+- gene_length：基因长度，基因起始到终止所有exon非重叠区域的总和  
+- gene_biotype：基因类型，如编码蛋白基因，长链非编码基因等  
+- gene_description：基因功能描述  
+- gene_tf_family：基因转录因子家族注释  
 
 
 
-&emsp;&emsp;ÿ�����������бȽ���ϵĲ��������Է������±���ʾ��������ļ���Differential/1.deglist/all_compare.xls��
+&emsp;&emsp;每个基因在所有比较组合的差异显著性分析如下表所示，见结果文件：Differential/1.deglist/all_compare.xls。
 
 Show  entriesSearch:  
 gene_id	wt1_count	wt2_count	wt3_count	wt4_count	btbr1_count	btbr2_count	btbr3_count	btbr4_count	wt1_fpkm	wt2_fpkm	wt3_fpkm	wt4_fpkm	btbr1_fpkm	btbr2_fpkm	btbr3_fpkm	btbr4_fpkm	WTvsBTBR_WT	WTvsBTBR_BTBR	WTvsBTBR_log2FoldChange	WTvsBTBR_pvalue	WTvsBTBR_padj	gene_name	gene_chr	gene_start	gene_end	gene_strand	gene_length	gene_biotype	gene_description	tf_family
@@ -724,147 +724,147 @@ ENSMUSG00000064363	52147	39082	44560	54388	50403	56260	56284	47897	1518.52209112
 ENSMUSG00000029309	50670	36431	41230	50856	53000	49929	63425	49799	692.289844813259	630.781396727039	673.574715159647	709.765123872374	736.205047320518	675.603642749408	743.039247103717	735.866637596201	47076.6206709631	50282.484608985	-0.0950027320966083	0.07919885517468	0.331791919044992	Sparcl1	5	104079111	104113733	-	2937	protein_coding	SPARC-like 1 [Source:MGI Symbol;Acc:MGI:108110]	-
 Showing 1 to 10 of 29 entriesPrevious123Next  
 
-- gene_id��������  
-- sample_count����������ԭʼreadcountֵ  
-- sample_fpkm����������fpkmֵ  
-- compare_treat��ĳ���Ƚ���ϴ������׼��readcount�ľ�ֵ  
-- compare_control��ĳ���Ƚ���϶������׼��readcount�ľ�ֵ  
-- compare_log2FoldChange��ĳ���Ƚ���ϴ������������������ˮƽ�ı�ֵ������2Ϊ��ȡ����  
-- compare_pvalue��ĳ���Ƚ���������Լ����pֵ  
-- compare_padj��ĳ���Ƚ���϶��ؼ������У�����pֵ  
-- gene_name����������  
-- gene_chr���������ڵ�Ⱦɫ������  
-- gene_start��������Ⱦɫ�����ʼλ��  
-- gene_end��������Ⱦɫ�����ֹλ��  
-- gene_strand����������Ⱦɫ�����������Ϣ  
-- gene_length�����򳤶ȣ�������ʼ����ֹ����exon���ص�������ܺ�  
-- gene_biotype���������ͣ�����뵰�׻��򣬳����Ǳ�������  
-- gene_description������������  
-- gene_tf_family������ת¼���Ӽ���ע��  
+- gene_id：基因编号  
+- sample_count：各样本的原始readcount值  
+- sample_fpkm：各样本的fpkm值  
+- compare_treat：某个比较组合处理组标准化readcount的均值  
+- compare_control：某个比较组合对照组标准化readcount的均值  
+- compare_log2FoldChange：某个比较组合处理组与对照组基因表达水平的比值，再以2为底取对数  
+- compare_pvalue：某个比较组合显著性检验的p值  
+- compare_padj：某个比较组合多重假设检验校正后的p值  
+- gene_name：基因名称  
+- gene_chr：基因所在的染色体名称  
+- gene_start：基因在染色体的起始位置  
+- gene_end：基因在染色体的终止位置  
+- gene_strand：基因所在染色体的正负链信息  
+- gene_length：基因长度，基因起始到终止所有exon非重叠区域的总和  
+- gene_biotype：基因类型，如编码蛋白基因，长链非编码基因等  
+- gene_description：基因功能描述  
+- gene_tf_family：基因转录因子家族注释  
 
 
 *****
-### �������ͳ��  
-&emsp;&emsp;ÿ���Ƚ���ϵĲ�����򣨰����ϵ����µ�����Ŀͳ���Լ�ɸѡ����ı�׼���±���ʾ��������ļ���Differential/1.deglist/diff_stat.xls��  
+### 差异基因统计  
+&emsp;&emsp;每个比较组合的差异基因（包括上调和下调）数目统计以及筛选差异的标准如下表所示，见结果文件：Differential/1.deglist/diff_stat.xls。  
 
 Show  entriesSearch:  
 compare	all	up	down	threshold
 WTvsBTBR	2470	1420	1050	DESeq2 padj<0.05 |log2FoldChange|>0.0
 Showing 1 to 1 of 1 entriesPrevious1Next  
 
-- compare���Ƚ��������  
-- all���ñȽ���ϲ����������  
-- up���ñȽ���ϲ�������ϵ�����Ŀ  
-- down���ñȽ���ϲ�������µ�����Ŀ  
-- threshold���ñȽ���Ͻ��в������ɸѡ����������ֵ  
+- compare：比较组合名称  
+- all：该比较组合差异基因总数  
+- up：该比较组合差异基因上调的数目  
+- down：该比较组合差异基因下调的数目  
+- threshold：该比较组合进行差异基因筛选的软件及阈值  
 
-&emsp;&emsp;��ɽͼ��ֱ��չʾÿ���Ƚ���ϵĲ������ֲ����������ͼ��ʾ��ͼ�к������ʾ�����ڴ����Ͷ��������еı��ﱶ���仯(log2FoldChange)���������ʾ�����ڴ����Ͷ��������б�������������ˮƽ(-log10padj��-log10pvalue)��Ϊ�ϵ������ú�ɫ���ʾ���µ���������ɫ���ʾ��������ļ���Differential/1.deglist/{�Ƚ����}/_volcano.png��  
-
-
-ͼ�к�����Ϊlog2FoldChangeֵ��������Ϊ-log10padj��-log10pvalue  
+&emsp;&emsp;火山图可直观展示每个比较组合的差异基因分布情况，如下图所示。图中横坐标表示基因在处理和对照两组中的表达倍数变化(log2FoldChange)，纵坐标表示基因在处理和对照两组中表达差异的显著性水平(-log10padj或-log10pvalue)。为上调基因用红色点表示，下调基因用绿色点表示，见结果文件：Differential/1.deglist/{比较组合}/_volcano.png。  
 
 
-
-*****
-### �������Τ��ͼ  
-&emsp;&emsp;Τ��ͼ��չʾ��ͬ�Ƚ���ϼ���������ص������ͨ��Τ��ͼ����ɸѡĳ�����Ƚ���Ϲ��л���еĲ��������ֻ��һ������Ƚ���ϣ�����Ĭ�ϻ��ƸñȽ���ϴ������������Ĺ��������Τ��ͼ��Τ��ͼ��Ȧ����������֮�ʹ����ñȽ���ϲ�������������ص������ʾ��ϼ乲�еĲ�������������������ͼ��ʾ��������ļ���Differential/2.venn��  
-
+图中横坐标为log2FoldChange值，纵坐标为-log10padj或-log10pvalue  
 
 
 
 *****
-### ����������  
-&emsp;&emsp;�������ϵ�ʵ�飬�ɶԲ�����򼯽��о��������������ģʽ����Ļ������һ����Щ������ܾ��й�ͬ�Ĺ��ܻ���뵽��ͬ�Ĵ�л;�����ź�ͨ·�С����ǲ��������Ĳ�ξ���Ի������ֵ���о���������Ա������ݵ��н��о�һ����������ͼ�б���ģʽ����Ļ���������ᱻ�ۼ���һ��ÿ�������е���ɫ��ӳ�Ĳ��ǻ������ֵ�����Ǳ������ݵ��н��о�һ��������õ�����ֵ��������ͼ�е���ɫֻ�ܺ���Ƚϣ�ͬһ�����ڲ�ͬ�����еı��������������������Ƚϣ�ͬһ������ͬ����ı��������������Ƚ�ʱ����ɫ��ʾ����߱����ɫ��ʾ����ͱ������ļ��м������ľ��࣬Ҳ����Ʒ��ľ��ࡣ���ⱨ��չʾ������Ʒ��ľ��࣬��������ͼ��ʾ��������ļ���Differential/3.cluster/cluster1/cluster1_heatmap.png  
-
-
-ͼ�к�����Ϊ��Ʒ����������Ϊ�������FPKM��һ�������ֵ  
-
-
-
-&emsp;&emsp;������H-cluster������������򼯷�Ϊ����cluster��ͬһcluster�еĻ����ڲ�ͬ�Ĵ��������¾������Ƶı���ģʽ����ͬʵ�������ģʽ��������ͼ����ͼ��ʾ������ͼ�к�����Ϊ��������������Ϊ����ֵȡ�������Ļ�У�������ֵ��������ļ���Differential/3.cluster/cluster1/cluster1_line.png  
-
-
-ͼ�к�����Ϊ��������������Ϊ����ֵȡ�������Ļ�У�������ֵ  
-
-
-
-*****
-### ��������������⼰��� 
-
-
-<div class="panel panel-warning">
-  <div class="panel-heading">
-�ܷ���FPKM���в��������  
-  </div>
-  <div class="panel-body">
-�󲿷ֲ������������DESeq��DESeq2��edgeR����ԭʼ��read   count��Ϊ�����ļ���ʹ�ø�����ֲ�ģ�����������������������ĸ��ʡ���Щ���������Ի�read   count��һЩУ������Ҫ�ǲ�����ȣ�����FPKM��У����ı���ֵ��������FPKM����������൱����������У�����ǲ������ġ�  
-  </div>
-</div>
-
-<div class="panel panel-warning">
-  <div class="panel-heading">
-ΪʲôҪ�����ؼ���������padjֵ��������ֱ��ʹ��pvalue��ɸѡ�������  
-  </div>
-  <div class="panel-body">
-���μ������ʹ��pvalueû�����⣬���ڲ�����������У�����Ҫ��ÿ���������һ�μ�����飬һ�����������м��������Ҳ��Ҫ������μ�����飬���������Ծʹ�����ӡ�����pvalueΪ0.05��һ�ٸ��������ֻ������Ǽ����ԣ�����һ�������������Ļ�����˵������׼ȷ���ǹ��ˣ�����������ļ��������׼ȷ�Ծ�ԶԶ�����ˣ���Ϊÿ����һ������򣬾ͻ���500���Ǽ����ԡ�Ϊ�˺������ƣ��б�Ҫ����һ�������ϸ��ָ�꣬Ҳ����У�����pvalue����Ȼ�����ǲ��������٣�Ҳ�����˶������ʹ��pvalue��������ѧ���岢��ͨ��ʵ����֤���ɡ�  
-  </div>
-</div>
-
-<div class="panel panel-warning">
-  <div class="panel-heading">
-�������ɸѡ��������������ֵ�Ƕ��٣��ʵ�������ֵ��׼������  
-  </div>
-  <div class="panel-body">
-һ����˵���ȼ��ϸߵ�������ֵ�����û�Ƚ��ϸ񣻶���ĳЩ�����У��������ɸѡ��ֵ���ʵ��ſ�������һЩ������ѧ�ظ��������У�ֻ��padj��Ϊ�������ɸѡ��׼��������log2foldchange���е�������pvalue��Ϊ��������ɸѡ��׼��  
-  </div>
-</div>
-
-<div class="panel panel-warning">
-  <div class="panel-heading">
-��ζԲ���������ʵ����֤�أ�  
-  </div>
-  <div class="panel-body">
-�ɲο�����������ʵ����֤�ĵ���  
-  </div>
-</div>
-
-<div class="panel panel-warning">
-  <div class="panel-heading">
-�����������Щ���裿  
-  </div>
-  <div class="panel-body">
-�ȶ����������Ļ������ֵ��FPKM������󣩽��ж���ת����ʹ���ݽ������������̬�ֲ�������ȷ�������������һ����ǰ���裺����Ҫ�������뻯��ͳ�Ʒֲ���ͨ������̬�ֲ������ٶ�ת������������ݵ���о�����㣨ŷʽ���룩�����ͨ����ξ����е�complete���෽������N��������ൽk����Ⱥ��ÿ����Ⱥ�еĶ���˴����ơ���ξ����㷨��Ҫ��Ϊ�������裬������ʾ��  
-
-��ʼʱ�̣����е㱾����һ������  
-�ҵ�����������������ࣨ�տ�ʼҲ���������㣩���γ�һ�����࣬��������ľ���ָ���Ǿ����������������֮��ľ���  
-�ظ��ڶ�����ֱ�����е㶼�����ൽ������  
-��������о�һ������μ���ģ�  
-
-�������ÿ�����ݵĸ�����ֵ��ȥÿ�����ݵľ�ֵ���ٳ���ÿ�����ݵı�׼���һ�����������ֵ��Χһ����[-2,2]������  ��
-  </div>
-</div>
-
-<div class="panel panel-warning">
-  <div class="panel-heading">
-ת¼�������Ԥ�⣿  
-  </div>
-  <div class="panel-body">
-����ת¼���Ӽ���ʹ�ö���ת¼�������ݿ�-animalTFDB 3.0��ֲ��ת¼���Ӽ���ʹ��ֲ��ת¼�������ݿ�-PlantTFDB 4.0���������ݿ�������¼�����֣������Ensembl geneid��ֱ��ɸѡת¼���ӣ���Ensembl geneid�Ļ���ͨ��interproscan��������SUPERFAMILY��Pfamע�ͣ��õ�ÿ�������SUPERFAMILY��Pfam��ID��Ȼ������DBD��Transcription factor prediction database�����ݿ����Ѿ�ע�ͺõ�ÿ��SUPERFAMILY��Pfam��Ӧ��ת¼���Ӽ������Ϣ����Ԥ�⡣���ת¼����Ԥ��ͨ��interproscan��������SUPERFAMILY��Pfamע�ͣ��õ�ÿ�������SUPERFAMILY��Pfam��ID��Ȼ������DBD��Transcription factor prediction database�����ݿ����Ѿ�ע�ͺõ�ÿ��SUPERFAMILY��Pfam��Ӧ��ת¼���Ӽ������Ϣ����Ԥ�⡣  
-  </div>
-</div>
-
-
-*****
-## ��������  
-&emsp;&emsp;ͨ���Բ�����򼯽��и��������������ҵ���ͬ�����µĲ����������Щ����ѧ���ܻ�ͨ·��������ء����ǲ���clusterProfiler�����Բ�����򼯽���GO���ܸ���������KEGGͨ·���������ȡ������������ڳ����ηֲ�ԭ��������ͼ��ʾ�����в������Ϊ���������������ò������ע�͵�GO��KEGG���ݿ�Ļ��򼯣���������Ϊ���н��в������������Ļ���ע�͵�GO��KEGG���ݿ�Ļ��򼯡�������������Ƕ�ÿ������Ƚ���ϵ����в�����򼯡��ϵ�������򼯡��µ�������򼯽��и�������������չʾ�ı�����ѡȡ��һ���Ƚ���ϵ����в��������Ի���ĸ������������ͼƬ��������ϵ����в��������Ի���ĸ������������  
-
+### 差异基因韦恩图  
+&emsp;&emsp;韦恩图可展示不同比较组合间差异基因的重叠情况，通过韦恩图，可筛选某几个比较组合共有或独有的差异基因。若只有一个差异比较组合，我们默认绘制该比较组合处理组与对照组的共表达基因韦恩图。韦恩图中圈内所有数字之和代表该比较组合差异基因总数，重叠区域表示组合间共有的差异基因个数，具体如下图所示，见结果文件：Differential/2.venn。  
 
 
 
 
 *****
-### GO���ܸ�������  
-&emsp;&emsp;GO(Gene Ontology)�����������ܵ��ۺ������ݿ⣬�ɷ�Ϊ������̣�biological process����ϸ����ɣ�cellular component�����ӹ��ܣ�Molecular Function���������֡�GO���ܸ�����padjС��0.05��ΪΪ�����Ը�������ֵ������������±���ʾ��������ļ���Enrichment/GO��  
+### 差异基因聚类  
+&emsp;&emsp;两组以上的实验，可对差异基因集进行聚类分析，将表达模式相近的基因聚在一起，这些基因可能具有共同的功能或参与到共同的代谢途径及信号通路中。我们采用主流的层次聚类对基因表达值进行聚类分析，对表达数据的行进行均一化处理。热图中表达模式相近的基因或样本会被聚集在一起，每个方格中的颜色反映的不是基因表达值，而是表达数据的行进行均一化处理后得到的数值，所以热图中的颜色只能横向比较（同一基因在不同样本中的表达情况），而不能纵向比较（同一样本不同基因的表达情况）。横向比较时，红色表示基因高表达，蓝色表示基因低表达。结果文件中既有组间的聚类，也有样品间的聚类。结题报告展示的是样品间的聚类，具体如下图所示。见结果文件：Differential/3.cluster/cluster1/cluster1_heatmap.png  
+
+
+图中横坐标为样品名，纵坐标为差异基因FPKM归一化后的数值  
+
+
+
+&emsp;&emsp;我们用H-cluster方法将差异基因集分为若干cluster，同一cluster中的基因在不同的处理条件下具有相似的表达模式。不同实验组表达模式聚类折线图如下图所示，折线图中横坐标为样本名，纵坐标为表达值取对数中心化校正后的数值。见结果文件：Differential/3.cluster/cluster1/cluster1_line.png  
+
+
+图中横坐标为样本名，纵坐标为表达值取对数中心化校正后的数值  
+
+
+
+*****
+### 差异分析常见问题及解答 
+
+
+<div class="panel panel-warning">
+  <div class="panel-heading">
+能否用FPKM进行差异分析？  
+  </div>
+  <div class="panel-body">
+大部分差异分析软件（DESeq，DESeq2和edgeR）用原始的read   count作为输入文件，使用负二项分布模型来估算样本间基因差异表达的概率。这些软件自身对会read   count做一些校正（主要是测序深度），而FPKM是校正后的表达值，所以用FPKM做差异分析相当于做了两次校正，是不合理的。  
+  </div>
+</div>
+
+<div class="panel panel-warning">
+  <div class="panel-heading">
+为什么要做多重假设检验计算padj值，而不是直接使用pvalue来筛选差异基因？  
+  </div>
+  <div class="panel-body">
+单次假设检验使用pvalue没有问题，但在差异分析过程中，我们要对每个基因进行一次假设检验，一个物种往往有几万个基因，也就要做几万次假设检验，那样假阳性就大大增加。假设pvalue为0.05（一百个差异基因只有五个是假阳性），对一个被做假设检验的基因来说，这种准确性是够了，但对于整体的几万个基因，准确性就远远不够了，因为每检验一万个基因，就会有500个是假阳性。为了合理控制，有必要引入一个更加严格的指标，也就是校正后的pvalue。当然，若是差异基因过少，也可以退而求其次使用pvalue，有生物学意义并能通过实验验证即可。  
+  </div>
+</div>
+
+<div class="panel panel-warning">
+  <div class="panel-heading">
+差异基因筛选条件最大能设的阈值是多少？适当降低阈值标准可以吗？  
+  </div>
+  <div class="panel-body">
+一般来说，等级较高的文章阈值的设置会比较严格；而在某些文章中，差异基因筛选阈值会适当放宽：如在一些无生物学重复的文章中，只将padj作为差异基因筛选标准，不考虑log2foldchange；有的文章则将pvalue作为差异基因的筛选标准。  
+  </div>
+</div>
+
+<div class="panel panel-warning">
+  <div class="panel-heading">
+如何对差异基因进行实验验证呢？  
+  </div>
+  <div class="panel-body">
+可参考我们整理的实验验证文档。  
+  </div>
+</div>
+
+<div class="panel panel-warning">
+  <div class="panel-heading">
+聚类分析有哪些步骤？  
+  </div>
+  <div class="panel-body">
+先对所有样本的基因表达值（FPKM表达矩阵）进行对数转换，使数据近似于理想的正态分布（聚类等分析技术依赖于一个提前假设：数据要服从理想化的统计分布，通常是正态分布），再对转换后的所有数据点进行距离计算（欧式距离），最后通过层次聚类中的complete聚类方法，将N个对象分类到k个类群，每个类群中的对象彼此相似。层次聚类算法主要分为三个步骤，如下所示。  
+
+初始时刻，所有点本身是一个聚类  
+找到距离最近的两个聚类（刚开始也就是两个点），形成一个聚类，两个聚类的距离指的是聚类中最近的两个点之间的距离  
+重复第二步，直到所有点都被聚类到聚类中  
+聚类分析中均一化是如何计算的？  
+
+表达矩阵每行数据的各个数值减去每行数据的均值，再除以每行数据的标准差，均一化处理后的数值范围一般在[-2,2]区间内  。
+  </div>
+</div>
+
+<div class="panel panel-warning">
+  <div class="panel-heading">
+转录因子如何预测？  
+  </div>
+  <div class="panel-body">
+动物转录因子鉴定使用动物转录因子数据库-animalTFDB 3.0；植物转录因子鉴定使用植物转录因子数据库-PlantTFDB 4.0。对于数据库中有收录的物种，如果是Ensembl geneid则直接筛选转录因子；非Ensembl geneid的基因，通过interproscan软件进行SUPERFAMILY和Pfam注释，得到每个基因的SUPERFAMILY和Pfam的ID，然后利用DBD（Transcription factor prediction database）数据库中已经注释好的每个SUPERFAMILY和Pfam对应的转录因子家族的信息进行预测。真菌转录因子预测通过interproscan软件进行SUPERFAMILY和Pfam注释，得到每个基因的SUPERFAMILY和Pfam的ID，然后利用DBD（Transcription factor prediction database）数据库中已经注释好的每个SUPERFAMILY和Pfam对应的转录因子家族的信息进行预测。  
+  </div>
+</div>
+
+
+*****
+## 富集分析  
+&emsp;&emsp;通过对差异基因集进行富集分析，可以找到不同条件下的差异基因与哪些生物学功能或通路显著性相关。我们采用clusterProfiler软件对差异基因集进行GO功能富集分析，KEGG通路富集分析等。富集分析基于超几何分布原理，如下图所示。其中差异基因集为差异显著分析所得差异基因并注释到GO或KEGG数据库的基因集，背景基因集为所有进行差异显著分析的基因并注释到GO或KEGG数据库的基因集。富集分析结果是对每个差异比较组合的所有差异基因集、上调差异基因集、下调差异基因集进行富集。本报告中展示的表格是选取第一个比较组合的所有差异显著性基因的富集分析结果，图片是所有组合的所有差异显著性基因的富集分析结果。  
+
+
+
+
+
+*****
+### GO功能富集分析  
+&emsp;&emsp;GO(Gene Ontology)是描述基因功能的综合性数据库，可分为生物过程（biological process）和细胞组成（cellular component）分子功能（Molecular Function）三个部分。GO功能富集以padj小于0.05作为为显著性富集的阈值，富集结果如下表所示，见结果文件：Enrichment/GO。  
 
 Show  entriesSearch:  
 Category	GOID	Description	GeneRatio	BgRatio	pvalue	padj	geneID	geneName	Count	Up	Up_Gene_names	Down	Down_Gene_names
@@ -880,46 +880,46 @@ BP	GO:0097205	renal filtration	8/1911	19/17301	0.000537116312207273	0.2663239176
 BP	GO:0072521	purine-containing compound metabolic process	77/1911	482/17301	0.000546914555714727	0.266323917689611	ENSMUSG00000059040/ENSMUSG00000015656/ENSMUSG00000000628/ENSMUSG00000015961/ENSMUSG00000041741/ENSMUSG00000035885/ENSMUSG00000039474/ENSMUSG00000030647/ENSMUSG00000017390/ENSMUSG00000030652/ENSMUSG00000021373/ENSMUSG00000042761/ENSMUSG00000026817/ENSMUSG00000020444/ENSMUSG00000030659/ENSMUSG00000027823/ENSMUSG00000041624/ENSMUSG00000023961/ENSMUSG00000063558/ENSMUSG00000028785/ENSMUSG00000024213/ENSMUSG00000024524/ENSMUSG00000023979/ENSMUSG00000039662/ENSMUSG00000061518/ENSMUSG00000024248/ENSMUSG00000037370/ENSMUSG00000022220/ENSMUSG00000032478/ENSMUSG00000025220/ENSMUSG00000024553/ENSMUSG00000000088/ENSMUSG00000022354/ENSMUSG00000027639/ENSMUSG00000041697/ENSMUSG00000003541/ENSMUSG00000020622/ENSMUSG00000049649/ENSMUSG00000040675/ENSMUSG00000020475/ENSMUSG00000029310/ENSMUSG00000015243/ENSMUSG00000028937/ENSMUSG00000022840/ENSMUSG00000006362/ENSMUSG00000017778/ENSMUSG00000031818/ENSMUSG00000025781/ENSMUSG00000063229/ENSMUSG00000040133/ENSMUSG00000015790/ENSMUSG00000023019/ENSMUSG00000054958/ENSMUSG00000045730/ENSMUSG00000053965/ENSMUSG00000025204/ENSMUSG00000064354/ENSMUSG00000032558/ENSMUSG00000026313/ENSMUSG00000021520/ENSMUSG00000030302/ENSMUSG00000063882/ENSMUSG00000032294/ENSMUSG00000022407/ENSMUSG00000004267/ENSMUSG00000024462/ENSMUSG00000050856/ENSMUSG00000001755/ENSMUSG00000048776/ENSMUSG00000003623/ENSMUSG00000048482/ENSMUSG00000020534/ENSMUSG00000020267/ENSMUSG00000036362/ENSMUSG00000041881/ENSMUSG00000053647/ENSMUSG00000024208	Eno1b/Hspa8/Hk2/Adss/Pde3a/Cox8a/Wfs1/Ndufc2/Aldoc/Coq7/Cap2/Mrap2/Ak1/Guk1/Nucb2/Gmps/Gucy1a2/Enpp4/Aox1/Hpca/Nudt3/Gnal/Guca1b/Icmt/Cox5b/Cox7a2l/Enpp1/Adcy4/Nme6/Mgea5/Galr1/Cox5a/Ndufb9/Samhd1/Cox6a1/Ier3/Nt5c1b/Gpr3/Mthfd1l/Pgam2/Nudt9/Abca1/Acot7/Adcy5/Cbfa2t3/Cox7c/Cox4i1/Atp5c1/Ldha/Gpr176/Surf1/Gpd1/Nt5c1a/Adrb2/Pde5a/Ndufb8/mt-Co2/Nphp3/Hdac4/Uqcrb/Atp2b2/Uqcrh/Pkm/Adsl/Eno2/Gabbr1/Atp5k/Coasy/Pthlh/Crot/Bdnf/Shmt1/Hint1/P2ry13/Ndufa7/Gper1/Uqcc2	77	31	ENSMUSG00000015656/ENSMUSG00000041741/ENSMUSG00000039474/ENSMUSG00000017390/ENSMUSG00000021373/ENSMUSG00000041624/ENSMUSG00000023961/ENSMUSG00000024213/ENSMUSG00000024524/ENSMUSG00000023979/ENSMUSG00000039662/ENSMUSG00000024248/ENSMUSG00000037370/ENSMUSG00000022220/ENSMUSG00000032478/ENSMUSG00000025220/ENSMUSG00000024553/ENSMUSG00000027639/ENSMUSG00000028937/ENSMUSG00000022840/ENSMUSG00000006362/ENSMUSG00000040133/ENSMUSG00000053965/ENSMUSG00000032294/ENSMUSG00000022407/ENSMUSG00000004267/ENSMUSG00000024462/ENSMUSG00000001755/ENSMUSG00000048776/ENSMUSG00000020534/ENSMUSG00000053647	46	ENSMUSG00000059040/ENSMUSG00000000628/ENSMUSG00000015961/ENSMUSG00000035885/ENSMUSG00000030647/ENSMUSG00000030652/ENSMUSG00000042761/ENSMUSG00000026817/ENSMUSG00000020444/ENSMUSG00000030659/ENSMUSG00000027823/ENSMUSG00000063558/ENSMUSG00000028785/ENSMUSG00000061518/ENSMUSG00000000088/ENSMUSG00000022354/ENSMUSG00000041697/ENSMUSG00000003541/ENSMUSG00000020622/ENSMUSG00000049649/ENSMUSG00000040675/ENSMUSG00000020475/ENSMUSG00000029310/ENSMUSG00000015243/ENSMUSG00000017778/ENSMUSG00000031818/ENSMUSG00000025781/ENSMUSG00000063229/ENSMUSG00000015790/ENSMUSG00000023019/ENSMUSG00000054958/ENSMUSG00000045730/ENSMUSG00000025204/ENSMUSG00000064354/ENSMUSG00000032558/ENSMUSG00000026313/ENSMUSG00000021520/ENSMUSG00000030302/ENSMUSG00000063882/ENSMUSG00000050856/ENSMUSG00000003623/ENSMUSG00000048482/ENSMUSG00000020267/ENSMUSG00000036362/ENSMUSG00000041881/ENSMUSG00000024208
 Showing 1 to 10 of 29 entriesPrevious123Next  
 
-- Category��GO���ݿ���࣬�����������BP��ϸ�����CC�����ӹ���MF  
-- GOID��GO���  
-- Description��GO��Ŷ�Ӧ�Ĺ�������  
-- GeneRatio��ע�͵�GO����ϵĲ���������������������ı�ֵ  
-- BgRatio��ע�͵�GO����ϵı����������뱳�����������ı�ֵ  
-- pvalue�������Լ���pֵ  
-- padj�����ؼ������У�����pֵ  
-- geneID��ע�͵�GO����ϵĲ������ID  
-- geneName��ע�͵�GO����ϵĲ����������  
-- Count��ע�͵�GO����ϵĲ��������  
-- Up: ���Term��ص��ϵ��Ĳ���������  
-- Up_Gene_names: ���Term��ص��ϵ��Ĳ������ID  
-- Down: ���Term��ص��µ��Ĳ���������  
-- Down_Gene_names: ���Term��ص��µ��Ĳ������ID  
+- Category：GO数据库分类，包括生物过程BP、细胞组分CC、分子功能MF  
+- GOID：GO编号  
+- Description：GO编号对应的功能描述  
+- GeneRatio：注释到GO编号上的差异基因数与差异基因总数的比值  
+- BgRatio：注释到GO编号上的背景基因数与背景基因总数的比值  
+- pvalue：显著性检验p值  
+- padj：多重假设检验校正后的p值  
+- geneID：注释到GO编号上的差异基因ID  
+- geneName：注释到GO编号上的差异基因名称  
+- Count：注释到GO编号上的差异基因数  
+- Up: 与该Term相关的上调的差异基因个数  
+- Up_Gene_names: 与该Term相关的上调的差异基因ID  
+- Down: 与该Term相关的下调的差异基因个数  
+- Down_Gene_names: 与该Term相关的下调的差异基因ID  
 
 
 
-&emsp;&emsp;��GO������������У�ѡȡ��������30��Term������״ͼ����չʾ��������30�������������Term������ͼ��ʾ��ͼ�к�����ΪGO Term��������ΪGO Term������������ˮƽ����ֵԽ��Խ��������ͬ��ɫ�ֱ����BP��CC��MF����GO���ࡣ������ļ���Enrichment/GO��  
+&emsp;&emsp;从GO富集分析结果中，选取最显著的30个Term绘制柱状图进行展示，若不足30个，则绘制所有Term，如下图所示。图中横坐标为GO Term，纵坐标为GO Term富集的显著性水平，数值越高越显著，不同颜色分别代表BP，CC，MF三个GO子类。见结果文件：Enrichment/GO。  
 
 
-&emsp;&emsp;��GO������������У�ѡȡ��������30��Term������״ͼ����չʾ��������30�������������Term����������̡�ϸ����ֺͷ��ӹ���������𼰲���������µ����໭����״ͼ��  
+&emsp;&emsp;从GO富集分析结果中，选取最显著的30个Term绘制柱状图进行展示，若不足30个，则绘制所有Term，按生物过程、细胞组分和分子功能三大类别及差异基因上下调分类画的柱状图。  
 
 
-ͼ�к�����ΪGO Term��������ΪGO Term������������ˮƽ  
+图中横坐标为GO Term，纵坐标为GO Term富集的显著性水平  
 
-&emsp;&emsp;��GO������������У�ѡȡ��������30��Term����ɢ��ͼ����չʾ��������30�������������Term������ͼ��ʾ��ͼ�к�����Ϊע�͵�GO Term�ϵĲ���������������������ı�ֵ��������ΪGO Term����Ĵ�С����ע�͵�GO Term�ϵĻ���������ɫ�Ӻ쵽�ϴ��������������Դ�С��������ļ���Enrichment/GO��  
-
-
-ͼ�к�����Ϊע�͵�GO Term�ϵĲ���������������������ı�ֵ��������ΪGO Term  
-
-&emsp;&emsp;�����޻�ͼ(Directed Acyclic Graph��DAG)Ϊ�������GO�������������ͼ�λ�չʾ��ʽ��ͼ�У���֧����������ϵ����������������Ĺ��ܷ�ΧԽ��ԽС��ѡȡÿ������Ƚ���ϵ�GO���������������ǰ5λ��GO Term��Ϊ�����޻�ͼ�����ڵ㣬��ͨ��������ϵ�����������GO Termһ��չʾ����ɫ����ǳ���������̶ȡ����ǵ���Ŀ�зֱ����������̡����ӹ��ܺ�ϸ����ֵ�DAGͼ��������ļ���Enrichment/GO��  
+&emsp;&emsp;从GO富集分析结果中，选取最显著的30个Term绘制散点图进行展示，若不足30个，则绘制所有Term，如下图所示。图中横坐标为注释到GO Term上的差异基因数与差异基因总数的比值，纵坐标为GO Term，点的大小代表注释到GO Term上的基因数，颜色从红到紫代表富集的显著性大小，见结果文件：Enrichment/GO。  
 
 
-ÿ���ڵ����һ��GO�������������Ǹ����̶�ΪTOP5��GO����ɫ����ǳ���������̶ȣ���ɫԽ��ͱ�ʾ�����̶�Խ�ߣ�ÿ���ڵ���չʾ�˸�TERM�����Ƽ�����������padj   
+图中横坐标为注释到GO Term上的差异基因数与差异基因总数的比值，纵坐标为GO Term  
+
+&emsp;&emsp;有向无环图(Directed Acyclic Graph，DAG)为差异基因GO富集分析结果的图形化展示方式。图中，分支代表包含关系，从上至下所定义的功能范围越来越小，选取每个差异比较组合的GO富集结果最显著性前5位的GO Term作为有向无环图的主节点，并通过包含关系，将相关联的GO Term一起展示，颜色的深浅代表富集程度。我们的项目中分别绘制生物过程、分子功能和细胞组分的DAG图。见结果文件：Enrichment/GO。  
+
+
+每个节点代表一个GO术语，方框代表的是富集程度为TOP5的GO，颜色的深浅代表富集程度，颜色越深就表示富集程度越高，每个节点上展示了该TERM的名称及富集分析的padj   
 
 
 
 *****
-### KEGGͨ·��������  
-&emsp;&emsp;KEGG(Kyoto Encyclopedia of Genes and Genomes)�������˻����顢��ѧ��ϵͳ������Ϣ���ۺ������ݿ⡣KEGGͨ·������padjС��0.05��Ϊ�����Ը�������ֵ������������±���ʾ��������ļ���Enrichment/KEGG��  
+### KEGG通路富集分析  
+&emsp;&emsp;KEGG(Kyoto Encyclopedia of Genes and Genomes)是整合了基因组、化学和系统功能信息的综合性数据库。KEGG通路富集以padj小于0.05作为显著性富集的阈值，富集结果如下表所示，见结果文件：Enrichment/KEGG。  
 
 Show  entriesSearch:  
 KEGGID	Description	GeneRatio	BgRatio	pvalue	padj	geneID	geneName	keggID	Count	Up	Up_Gene_names	Down	Down_Gene_names
@@ -935,41 +935,41 @@ mmu04713	Circadian entrainment	23/779	94/6540	0.000501087661033892	0.01714833328
 mmu04724	Glutamatergic synapse	25/779	112/6540	0.00124304738668255	0.0382858595098226	ENSMUSG00000050211/ENSMUSG00000025813/ENSMUSG00000024960/ENSMUSG00000042644/ENSMUSG00000098488/ENSMUSG00000063239/ENSMUSG00000020828/ENSMUSG00000027669/ENSMUSG00000022220/ENSMUSG00000050965/ENSMUSG00000003573/ENSMUSG00000078816/ENSMUSG00000022840/ENSMUSG00000037541/ENSMUSG00000052889/ENSMUSG00000024935/ENSMUSG00000023192/ENSMUSG00000030209/ENSMUSG00000030102/ENSMUSG00000005357/ENSMUSG00000003279/ENSMUSG00000031748/ENSMUSG00000049583/ENSMUSG00000057614/ENSMUSG00000005034	Pla2g4e/Homer2/Plcb3/Itpr3/Pla2g4b/Grm4/Pld2/Gnb4/Adcy4/Prkca/Homer3/Prkcg/Adcy5/Shank2/Prkcb/Slc1a1/Grm2/Grin2b/Itpr1/Slc1a6/Dlgap1/Gnao1/Grm5/Gnai1/Prkacb	mmu:329502/mmu:26557/mmu:18797/mmu:16440/mmu:211429/mmu:268934/mmu:18806/mmu:14696/mmu:104110/mmu:18750/mmu:26558/mmu:18752/mmu:224129/mmu:210274/mmu:18751/mmu:20510/mmu:108068/mmu:14812/mmu:16438/mmu:20513/mmu:224997/mmu:14681/mmu:108071/mmu:14677/mmu:18749	25	19	ENSMUSG00000025813/ENSMUSG00000024960/ENSMUSG00000042644/ENSMUSG00000098488/ENSMUSG00000063239/ENSMUSG00000027669/ENSMUSG00000022220/ENSMUSG00000050965/ENSMUSG00000003573/ENSMUSG00000078816/ENSMUSG00000022840/ENSMUSG00000037541/ENSMUSG00000052889/ENSMUSG00000023192/ENSMUSG00000030209/ENSMUSG00000030102/ENSMUSG00000005357/ENSMUSG00000031748/ENSMUSG00000057614	6	ENSMUSG00000050211/ENSMUSG00000020828/ENSMUSG00000024935/ENSMUSG00000003279/ENSMUSG00000049583/ENSMUSG00000005034
 Showing 1 to 10 of 29 entriesPrevious123Next  
 
-- KEGGID��KEGGͨ·���  
-- Description��KEGGͨ·��Ŷ�Ӧ�Ĺ�������  
-- GeneRatio��ע�͵�KEGGͨ·����ϵĲ���������������������ı�ֵ  
-- BgRatio��ע�͵�KEGGͨ·����ϵı����������뱳�����������ı�ֵ  
-- pvalue�������Լ���pֵ  
-- padj�����ؼ������У�����pֵ  
-- geneID��ע�͵�KEGGͨ·����ϵĲ������ID  
-- geneName��ע�͵�KEGGͨ·����ϵĲ����������  
-- keggID��ע�͵�KEGGͨ·����ϵĲ������keggID  
-- Count��ע�͵�KEGGͨ·����ϵĲ��������  
-- Up: ���Term��ص��ϵ��Ĳ���������  
-- Up_Gene_names: ���Term��ص��ϵ��Ĳ������ID  
-- Down: ���Term��ص��µ��Ĳ���������  
-- Down_Gene_names: ���Term��ص��µ��Ĳ������ID  
+- KEGGID：KEGG通路编号  
+- Description：KEGG通路编号对应的功能描述  
+- GeneRatio：注释到KEGG通路编号上的差异基因数与差异基因总数的比值  
+- BgRatio：注释到KEGG通路编号上的背景基因数与背景基因总数的比值  
+- pvalue：显著性检验p值  
+- padj：多重假设检验校正后的p值  
+- geneID：注释到KEGG通路编号上的差异基因ID  
+- geneName：注释到KEGG通路编号上的差异基因名称  
+- keggID：注释到KEGG通路编号上的差异基因keggID  
+- Count：注释到KEGG通路编号上的差异基因数  
+- Up: 与该Term相关的上调的差异基因个数  
+- Up_Gene_names: 与该Term相关的上调的差异基因ID  
+- Down: 与该Term相关的下调的差异基因个数  
+- Down_Gene_names: 与该Term相关的下调的差异基因ID  
 
 
 
-&emsp;&emsp;��KEGG��������У�ѡȡ��������20��KEGGͨ·������״ͼ����չʾ��������20�������������ͨ·������ͼ��ʾ��ͼ�к�����ΪKEGGͨ·��������Ϊͨ·������������ˮƽ����ֵԽ��Խ������������ļ���Enrichment/KEGG��  
+&emsp;&emsp;从KEGG富集结果中，选取最显著的20个KEGG通路绘制柱状图进行展示，若不足20个，则绘制所有通路，如下图所示。图中横坐标为KEGG通路，纵坐标为通路富集的显著性水平，数值越高越显著，见结果文件：Enrichment/KEGG。  
 
 
-ͼ�к�����ΪKEGGͨ·��������Ϊͨ·������������ˮƽ  
+图中横坐标为KEGG通路，纵坐标为通路富集的显著性水平  
 
-&emsp;&emsp;��KEGG��������У�ѡȡ��������20��KEGGͨ·����ɢ��ͼ����չʾ��������20�������������ͨ·������ͼ��ʾ��ͼ�к�����Ϊע�͵�KEGGͨ·�ϵĲ���������������������ı�ֵ��������ΪKEGGͨ·����Ĵ�С����ע�͵�KEGGͨ·�ϵĻ���������ɫ�Ӻ쵽�ϴ��������������Դ�С��������ļ���Enrichment/KEGG��  
+&emsp;&emsp;从KEGG富集结果中，选取最显著的20个KEGG通路绘制散点图进行展示，若不足20个，则绘制所有通路，如下图所示。图中横坐标为注释到KEGG通路上的差异基因数与差异基因总数的比值，纵坐标为KEGG通路，点的大小代表注释到KEGG通路上的基因数，颜色从红到紫代表富集的显著性大小，见结果文件：Enrichment/KEGG。  
 
 
-ͼ�к�����Ϊע�͵�KEGGͨ·�ϵĲ���������������������ı�ֵ��������ΪKEGGͨ·  
+图中横坐标为注释到KEGG通路上的差异基因数与差异基因总数的比值，纵坐标为KEGG通路  
 
-&emsp;&emsp;html�ļ���ͨ��������ӣ������鿴����������KEGGͨ·ͼ�����У������ϵ������KEGG�ڵ���ɫ�������µ������KEGG�ڵ����ɫ���������µ��ı��ɫ�������ͣ�ڱ�ǵ�KEGG�ڵ㣬�����������ϸ�ڿ򣬱�ɫͬ�ϣ�����������Ϊlog2(Foldchange)�����ϲ�����ѻ�ʵ�֣������ӻ���������������ڵ㣬�������ӵ�KEGG�ٷ����ݿ��и���KEGG�ľ�����Ϣҳ��������ļ���Enrichment/KEGG��  
+&emsp;&emsp;html文件可通过点击链接，交互查看显著富集的KEGG通路图。其中，包含上调基因的KEGG节点标红色，包含下调基因的KEGG节点标绿色，包含上下调的标黄色。鼠标悬停于标记的KEGG节点，弹出差异基因细节框，标色同上，括号中数字为log2(Foldchange)。以上步骤可脱机实现，如连接互联网，点击各个节点，可以连接到KEGG官方数据库中各个KEGG的具体信息页，见结果文件：Enrichment/KEGG。  
 
  
 
 
 *****
-## Reactome���ܸ�������  
-&emsp;&emsp;Reactome���ݿ�㼯�������ģʽ���ָ��Ӧ������ѧͨ·��Reactomeͨ·������padjС��0.05��Ϊ�����Ը�������ֵ������������±���ʾ��������ļ���Enrichment/Reactome��  
+### Reactome功能富集分析  
+&emsp;&emsp;Reactome数据库汇集了人类等模式物种各项反应及生物学通路。Reactome通路富集以padj小于0.05作为显著性富集的阈值，富集结果如下表所示，见结果文件：Enrichment/Reactome。  
 
 Show  entriesSearch:  
 ReactomeID	Description	GeneRatio	BgRatio	pvalue	padj	geneID	geneName	keggID	Count	Up	Up_Gene_names	Down	Down_Gene_names
@@ -985,90 +985,90 @@ R-MMU-1799339	SRP-dependent cotranslational protein targeting to membrane	20/897
 R-MMU-1474228	Degradation of the extracellular matrix	23/897	99/7649	0.000886936492641829	0.0767300387758879	ENSMUSG00000026141/ENSMUSG00000026479/ENSMUSG00000030111/ENSMUSG00000022483/ENSMUSG00000006403/ENSMUSG00000001794/ENSMUSG00000001506/ENSMUSG00000001435/ENSMUSG00000005397/ENSMUSG00000031274/ENSMUSG00000020241/ENSMUSG00000005087/ENSMUSG00000028339/ENSMUSG00000000303/ENSMUSG00000016763/ENSMUSG00000018620/ENSMUSG00000031273/ENSMUSG00000031502/ENSMUSG00000029675/ENSMUSG00000029661/ENSMUSG00000001119/ENSMUSG00000026193/ENSMUSG00000031740	Col19a1/Lamc2/A2m/Col2a1/Adamts4/Capns1/Col1a1/Col18a1/Nid1/Col4a5/Col6a2/Cd44/Col15a1/Cdh1/Scube1/Mmp20/Col4a6/Col4a1/Eln/Col1a2/Col6a1/Fn1/Mmp2	12823/16782/232345/12824/240913/12336/12842/12822/18073/12830/12834/12505/12819/12550/64706/30800/94216/12826/13717/12843/12833/14268/17390	23	22	ENSMUSG00000026141/ENSMUSG00000030111/ENSMUSG00000022483/ENSMUSG00000006403/ENSMUSG00000001794/ENSMUSG00000001506/ENSMUSG00000001435/ENSMUSG00000005397/ENSMUSG00000031274/ENSMUSG00000020241/ENSMUSG00000005087/ENSMUSG00000028339/ENSMUSG00000000303/ENSMUSG00000016763/ENSMUSG00000018620/ENSMUSG00000031273/ENSMUSG00000031502/ENSMUSG00000029675/ENSMUSG00000029661/ENSMUSG00000001119/ENSMUSG00000026193/ENSMUSG00000031740	1	ENSMUSG00000026479
 Showing 1 to 10 of 29 entriesPrevious123Next  
 
-- ReactomeID��Reactomeͨ·���  
-- Description��Reactomeͨ·��Ŷ�Ӧ�Ĺ�������  
-- GeneRatio��ע�͵�Reactomeͨ·����ϵĲ���������������������ı�ֵ  
-- BgRatio��ע�͵�Reactomeͨ·����ϵı����������뱳�����������ı�ֵ  
-- pvalue�������Լ���pֵ  
-- padj�����ؼ������У�����pֵ  
-- geneID��ע�͵�Reactomeͨ·����ϵĲ������ID  
-- geneName��ע�͵�Reactomeͨ·����ϵĲ����������  
-- keggID��ע�͵�Reactomeͨ·����ϵĲ������keggID  
-- Count��ע�͵�Reactomeͨ·����ϵĲ��������  
-- Up: ���Term��ص��ϵ��Ĳ���������  
-- Up_Gene_names: ���Term��ص��ϵ��Ĳ������ID  
-- Down: ���Term��ص��µ��Ĳ���������  
-- Down_Gene_names: ���Term��ص��µ��Ĳ������ID  
+- ReactomeID：Reactome通路编号  
+- Description：Reactome通路编号对应的功能描述  
+- GeneRatio：注释到Reactome通路编号上的差异基因数与差异基因总数的比值  
+- BgRatio：注释到Reactome通路编号上的背景基因数与背景基因总数的比值  
+- pvalue：显著性检验p值  
+- padj：多重假设检验校正后的p值  
+- geneID：注释到Reactome通路编号上的差异基因ID  
+- geneName：注释到Reactome通路编号上的差异基因名称  
+- keggID：注释到Reactome通路编号上的差异基因keggID  
+- Count：注释到Reactome通路编号上的差异基因数  
+- Up: 与该Term相关的上调的差异基因个数  
+- Up_Gene_names: 与该Term相关的上调的差异基因ID  
+- Down: 与该Term相关的下调的差异基因个数  
+- Down_Gene_names: 与该Term相关的下调的差异基因ID  
 
 
 
-&emsp;&emsp;��Reactome������������У�ѡȡ��������20��Reactomeͨ·������״ͼ����չʾ��������20�������������ͨ·������ͼ��ʾ��ͼ�к�����ΪReactomeͨ·��������Ϊͨ·������������ˮƽ����ֵԽ��Խ������������ļ���Enrichment/Reactome  
+&emsp;&emsp;从Reactome富集分析结果中，选取最显著的20个Reactome通路绘制柱状图进行展示，若不足20个，则绘制所有通路，如下图所示。图中横坐标为Reactome通路，纵坐标为通路富集的显著性水平，数值越高越显著。见结果文件：Enrichment/Reactome  
 
 
-ͼ�к�����ΪReactomeͨ·��������Ϊͨ·������������ˮƽ  
+图中横坐标为Reactome通路，纵坐标为通路富集的显著性水平  
 
-&emsp;&emsp;��Reactome������������У�ѡȡ��������20��Reactomeͨ·����ɢ��ͼ����չʾ��������20�������������ͨ·������ͼ��ʾ��ͼ�к�����Ϊע�͵�Reactomeͨ·�ϵĲ���������������������ı�ֵ��������ΪReactomeͨ·����Ĵ�С����ע�͵�Reactomeͨ·�ϵĻ���������ɫ�Ӻ쵽�ϴ��������������Դ�С��������ļ���Enrichment/Reactome  
+&emsp;&emsp;从Reactome富集分析结果中，选取最显著的20个Reactome通路绘制散点图进行展示，若不足20个，则绘制所有通路，如下图所示。图中横坐标为注释到Reactome通路上的差异基因数与差异基因总数的比值，纵坐标为Reactome通路，点的大小代表注释到Reactome通路上的基因数，颜色从红到紫代表富集的显著性大小。见结果文件：Enrichment/Reactome  
 
 
-ͼ�к�����Ϊע�͵�Reactomeͨ·�ϵĲ���������������������ı�ֵ��������ΪReactomeͨ·��������ļ���Enrichment/Reactome  
+图中横坐标为注释到Reactome通路上的差异基因数与差异基因总数的比值，纵坐标为Reactome通路，见结果文件：Enrichment/Reactome  
 
 
 
 *****
-### GSEA��������  
-&emsp;&emsp;����Ļ��ڳ����ηֲ��ĸ������������������ϵ����µ��Ļ���������©���ֲ�����ﲻ����������Ҫ����ѧ����Ļ��򡣻��򸻼�������GSEA������Ҫָ����ȷ�Ĳ��������ֵ���ѻ����������������еĲ������̶Ƚ�������Ȼ�����ͳ��ѧ��������Ԥ���趨�Ļ��򼯺��Ƿ���������Ķ��˻�Ͷθ�����GSEA��Ҫ�����������裺���㸻���÷֣�Enrichment Score�������Ƹ����÷ֵ�������ˮƽ�����ؼ�����顣������ļ���Enrichment/{�Ƚ����}/GSEA  
+### GSEA富集分析  
+&emsp;&emsp;常规的基于超几何分布的富集分析依赖于显著上调或下调的基因，容易遗漏部分差异表达不显著但有重要生物学意义的基因。基因富集分析（GSEA）不需要指定明确的差异基因阈值，把基因按照在两组样本中的差异表达程度进行排序，然后采用统计学方法检验预先设定的基因集合是否在排序表的顶端或低段富集。GSEA主要包括三个步骤：计算富集得分（Enrichment Score）；估计富集得分的显著性水平；多重假设检验。见结果文件：Enrichment/{比较组合}/GSEA  
 
 
 
-&emsp;&emsp;���Ƿֱ�Ը����ֵ�GO��KEGG��Reactome��DO��DisGeNET�����ݼ�����GSEA���������������ʾ��  
+&emsp;&emsp;我们分别对该物种的GO、KEGG、Reactome、DO、DisGeNET等数据集进行GSEA分析，结果如下所示。  
 
  
 
 
 *****
-### ���׻����������  
-&emsp;&emsp;������ҪӦ��STRING�����ʻ������ݿ��еĻ�����ϵ���в�����򵰰׻�������ķ�������������ݿ��а��������֣�ֱ�Ӵ����ݿ�����ȡ��Ŀ�����(�����������б�)�Ļ�����ϵ���������磻��������ݿ��в����������֣��������Ƚ�Ŀ������е�����Ӧ��blastx�ȶԵ�STRING���ݿ��а����Ĳο����ֵĵ����������ϣ������ñȶ��ϵĸòο����ֵĵ����ʻ�����ϵ�����������磬����ļ���Enrichment/PPI��  
+### 蛋白互作网络分析  
+&emsp;&emsp;我们主要应用STRING蛋白质互作数据库中的互作关系进行差异基因蛋白互作网络的分析。针对于数据库中包含的物种，直接从数据库中提取出目标基因集(比如差异基因列表)的互作关系来构建网络；针对于数据库中不包含的物种，我们首先将目标基因集中的序列应用blastx比对到STRING数据库中包含的参考物种的蛋白质序列上，并利用比对上的该参考物种的蛋白质互作关系构建互作网络，结果文件见Enrichment/PPI。  
 
-&emsp;&emsp;�����ṩ������򵰰׻������������ļ������ļ�����ֱ�ӵ���Cytoscape�������п��ӻ��༭��Cytoscape����ʹ�÷����ɲο������ṩ��ʹ��˵���ĵ�CytoscapeQuickStart���ͻ��������һЩ������������Խ���ͳ�ƺͱ�ʾ��ͼ�����磺��������ͼ�нڵ�(node)�Ĵ�С��˽ڵ�Ķ�(degree)�����ȣ�����˽ڵ������ı�Խ�࣬���Ķ�Խ�󣬽ڵ�Ҳ��Խ����Щ�ڵ��������п��ܴ��ڽ�Ϊ���ĵ�λ�á��ڵ����ɫ��˽ڵ�ľۼ�ϵ��(clustering coefficient)��أ���ɫ�ݶ����̵����Ӧ�ۼ�ϵ����ֵ�ɵ͵��ߣ��ۼ�ϵ����ʾ�˽ڵ���ڽӵ�֮�����ͨ�Ժû����ۼ�ϵ��ֵԽ�߱�ʾ�˽ڵ���ڽӵ�֮�����ͨ��Խ�õȵȡ����ݲ�ͬ���о�Ŀ�ĺ����󣬿ͻ�������������ͼ�н��е����ڵ�λ�ú���ɫ����ע������ˮƽ�Ȳ�������Ҫע����ǣ�ͨ��blast�ȶԵõ��Ľ�����ܱ�֤�Ϻõ�׼ȷ�ԣ��ⲿ�ֵĹ��������ο��������ͻ�����һЩ��Ҫ�ĺ�ѡ���򡣰������ṩ��ʹ��˵�����ļ�����Cytoscape�������Ч��ͼ������ʾ��  
+&emsp;&emsp;我们提供差异基因蛋白互作网络数据文件，此文件可以直接导入Cytoscape软件进行可视化编辑。Cytoscape软件使用方法可参考我们提供的使用说明文档CytoscapeQuickStart。客户可以针对一些网络的拓扑属性进行统计和标示作图，比如：互作网络图中节点(node)的大小与此节点的度(degree)成正比，即与此节点相连的边越多，它的度越大，节点也就越大，这些节点在网络中可能处于较为核心的位置。节点的颜色与此节点的聚集系数(clustering coefficient)相关，颜色梯度由绿到红对应聚集系数的值由低到高；聚集系数表示此节点的邻接点之间的连通性好坏，聚集系数值越高表示此节点的邻接点之间的连通性越好等等。根据不同的研究目的和需求，客户还可以在网络图中进行调整节点位置和颜色、标注表达量水平等操作。需要注意的是，通过blast比对得到的结果不能保证较好的准确性，这部分的工作仅供参考，辅助客户发现一些重要的候选基因。按我们提供的使用说明将文件导入Cytoscape软件后的效果图如下所示。  
 
 
 
 
 
 *****
-### ���������������⼰���  
+### 富集分析常见问题及解答  
 
 
 <div class="panel panel-danger">
   <div class="panel-heading">
-��������ԭ��ͼ��n��N��i��M�ĺ��壿  
+富集分析原理图中n，N，i，M的含义？  
   </div>
   <div class="panel-body">
-������������У�GeneRatio����һ�б�ʾ���ǲ��������Ϣ������б���������ֱ�ʾע�͵�ĳ��ͨ·�Ĳ������������ֵ��Ӧ�ڸ���ԭ��ͼ��i(ĳͨ·�������)��б���Ҳ�����ֱ�ʾע�͵�����ͨ·�Ĳ������������Ӧ�ڸ�������ԭ��ͼ��n(�������)��BgRatio����һ�б�ʾ���Ǳ���������Ϣ������б������������ע�͵�ĳ��ͨ·�ı�������������Ӧ�ڸ�������ԭ��ͼ��M(ĳͨ·����������)��б���Ҳ��ע�͵�����ͨ·�ı�������������Ӧ�ڸ�������ԭ��ͼ��N(����ͨ·��������)��  
+富集分析结果中，GeneRatio的这一列表示的是差异基因集信息。其中斜杠左侧的数字表示注释到某个通路的差异基因数，该值对应于富集原理图的i(某通路差异基因集)，斜杠右侧的数字表示注释到所有通路的差异基因数，对应于富集分析原理图的n(差异基因集)。BgRatio的这一列表示的是背景基因集信息，其中斜杠左侧的数字是注释到某个通路的背景基因数，对应于富集分析原理图的M(某通路基背景基因)，斜杠右侧的注释到所有通路的背景基因数，对应于富集分析原理图的N(所以通路背景基因集)。  
   </div>
 </div>
 
 <div class="panel panel-danger">
   <div class="panel-heading">
-�����������ֻ�������Ը�����ͨ·��  
+富集分析结果只看显著性富集的通路吗？  
   </div>
   <div class="panel-body">
-�Ը�����������Ľ����Ӧ�ô�����ѧ����ĽǶ�������pvalue��padjֻ���ṩһ���ο���ֻҪ������Խ��ͣ�������ѧ���壬��Щ������������ͨ·Ҳֵ�������о��ģ�����ִ����pvalue��padj��  
+对富集分析结果的解读，应该从生物学意义的角度来看，pvalue和padj只是提供一个参考，只要结果可以解释，有生物学意义，那些不显著富集的通路也值得深入研究的，不用执着于pvalue或padj。  
   </div>
 </div>
 
 
 *****
-## �ɱ���ӷ���  
-&emsp;&emsp;�ɱ�����ǵ��ڻ������Ͳ���������������Ե���Ҫ���ƣ�Ҳ��RNA-seq����Ҫ�������ݣ�����ʹ��rMATS�������пɱ���ӷ�������Ҫ����SE��RI��MXE��A5SS��A3SS���ֿɱ�����¼�������ͼ��ʾ��  
+## 可变剪接分析  
+&emsp;&emsp;可变剪接是调节基因表达和产生蛋白质组多样性的重要机制，也是RNA-seq的重要分析内容，我们使用rMATS软件进行可变剪接分析，主要包括SE、RI、MXE、A5SS、A3SS五种可变剪接事件，如下图所示：  
 
 
 
 
 
 *****
-### ����ɱ�����¼�  
-&emsp;&emsp;����ʹ��rMATS��������AS�¼��Ķ��������������rMATS�������Խ�AS�¼�����5�ַ��࣬���ҿ��Զ�������ѧ�ظ�����Ʒ���в���AS������ÿ���ɱ�����¼���Ӧ����Isoform���ֱ�ΪExon Inclusion Isoform��Exon Skipping Isoform���ֱ������Isoform���б�����ͳ�ƣ�����������Ч���ȣ��õ�У����ı�������Ȼ�����Exon Inclusion Isoform������Isoform�ܱ������ı�ֵ����ֵ��Ϊ����ļ��е�IncLevel1�������飩��IncLevel2�������飩������ͼ��ʾ�������в��������Է���������ɸѡ���������Կɱ�����¼�����ֵ��FDRС��0.05��SE���Ϳɱ�����¼��Ĳ������������±���ʾ��������ļ���AS/1.daslist��  
+### 差异可变剪接事件  
+&emsp;&emsp;我们使用rMATS软件进行AS事件的定量及差异分析。rMATS软件可以将AS事件进行5种分类，并且可以对有生物学重复的样品进行差异AS分析。每个可变剪接事件对应两个Isoform，分别为Exon Inclusion Isoform和Exon Skipping Isoform，分别对两个Isoform进行表达量统计，并除以其有效长度，得到校正后的表达量，然后计算Exon Inclusion Isoform在两个Isoform总表达量的比值，比值即为结果文件中的IncLevel1（处理组）和IncLevel2（对照组），如下图所示。最后进行差异显著性分析。我们筛选差异显著性可变剪接事件的阈值是FDR小于0.05，SE类型可变剪接事件的差异分析结果如下表所示，见结果文件：AS/1.daslist。  
 
 
 
@@ -1086,63 +1086,63 @@ ENSMUSG00000059518	Znhit1	5	-	136986125	136986255	136984878	136985049	136986810	
 ENSMUSG00000020598	Nrcam	12	+	44583666	44583792	44583045	44583423	44590107	44590239	0,0,3,0	0,1,5,3	0,1,2,6	1,0,1,0	275	149	3.1554765268e-195	1.188888891e-191	NA,0.0,0.245,0.0	0.0,1.0,0.52,1.0	-0.548
 Showing 1 to 10 of 29 entriesPrevious123Next  
 
-- GeneID���ɱ�����¼����ڻ�����  
-- geneSymbol���ɱ�����¼����ڻ�������  
-- chr���ɱ�����¼�����Ⱦɫ��  
-- strand���ɱ�����¼�����Ⱦɫ�����ķ���  
-- exonStart_0base���ɱ�����¼���Ծ��������ʼλ�ã���0��ʼ����  
-- exonEnd���ɱ�����¼���Ծ��������ֹλ��  
-- upstreamES���ɱ�����¼���Ծ�����ӵ�����exon��ʼλ��  
-- upstreamEE���ɱ�����¼���Ծ�����ӵ�����exon��ֹλ��  
-- downstreamES���ɱ�����¼���Ծ�����ӵ�����exon��ʼλ��  
-- downstreamEE���ɱ�����¼���Ծ�����ӵ�����exon��ֹλ��  
-- IC_SAMPLE_1���ɱ�����¼�Exon Inclusion Isoform�ڲ���Ƚ�����д�����ı�����  
-- SC_SAMPLE_1���ɱ�����¼�Exon Skipping Isoform�ڲ���Ƚ�����д�����ı�����  
-- IC_SAMPLE_2���ɱ�����¼�Exon Inclusion Isoform�ڲ���Ƚ�����ж�����ı�����  
-- SC_SAMPLE_2���ɱ�����¼�Exon Skipping Isoform�ڲ���Ƚ�����ж�����ı�����  
-- IncFormLen���ɱ�����¼�Exon Inclusion Isoform����Ч����  
-- SkipFormLen���ɱ�����¼�Exon Skipping Isoform����Ч����  
-- PValue���ɱ�����¼��������������pֵ  
-- FDR���ɱ�����¼��������������FDRֵ  
-- IncLevel1��������ɱ�����¼�Exon Inclusion Isoform������Isoform�ܱ������ı�ֵ  
-- IncLevel2��������ɱ�����¼�Exon Inclusion Isoform������Isoform�ܱ������ı�ֵ  
-- IncLevelDifference��IncLevel1��IncLevel2�Ĳ�ֵ  
+- GeneID：可变剪接事件所在基因编号  
+- geneSymbol：可变剪接事件所在基因名称  
+- chr：可变剪接事件所在染色体  
+- strand：可变剪接事件所在染色体链的方向  
+- exonStart_0base：可变剪接事件跳跃外显子起始位置，以0开始计数  
+- exonEnd：可变剪接事件跳跃外显子终止位置  
+- upstreamES：可变剪接事件跳跃外显子的上游exon起始位置  
+- upstreamEE：可变剪接事件跳跃外显子的上游exon终止位置  
+- downstreamES：可变剪接事件跳跃外显子的下游exon起始位置  
+- downstreamEE：可变剪接事件跳跃外显子的下游exon终止位置  
+- IC_SAMPLE_1：可变剪接事件Exon Inclusion Isoform在差异比较组合中处理组的表达量  
+- SC_SAMPLE_1：可变剪接事件Exon Skipping Isoform在差异比较组合中处理组的表达量  
+- IC_SAMPLE_2：可变剪接事件Exon Inclusion Isoform在差异比较组合中对照组的表达量  
+- SC_SAMPLE_2：可变剪接事件Exon Skipping Isoform在差异比较组合中对照组的表达量  
+- IncFormLen：可变剪接事件Exon Inclusion Isoform的有效长度  
+- SkipFormLen：可变剪接事件Exon Skipping Isoform的有效长度  
+- PValue：可变剪接事件表达差异显著性p值  
+- FDR：可变剪接事件表达差异显著性FDR值  
+- IncLevel1：处理组可变剪接事件Exon Inclusion Isoform在两个Isoform总表达量的比值  
+- IncLevel2：对照组可变剪接事件Exon Inclusion Isoform在两个Isoform总表达量的比值  
+- IncLevelDifference：IncLevel1与IncLevel2的差值  
 
 
 *****
-### ������ӿ��ӻ�  
-&emsp;&emsp;���ڱ�����������ԵĿɱ�����¼������п��ӻ�չʾ��SE���Ϳɱ�����¼��Ŀ��ӻ�չʾ����ͼ��ʾ��ͼ�б���Ϊ�ɱ�����¼��������������ڵ�Ⱦɫ�����꼰��������Ϣ���������ӱȶԵ�readsʹ������������junction�߽�Ļ��߱�ʾ�����ߵĴ�ϸ�ͱȶԵ�junction�ϵ�reads�������ȣ�ͬʱ�����ϵ�����ָ����junction reads����Ŀ�����Ϸ���ע�˸��������ɱ�����¼����ڵĻ���IncLevelֵ��������ļ���AS/2.dasplot��  
+### 差异剪接可视化  
+&emsp;&emsp;对于表达差异显著性的可变剪接事件，进行可视化展示，SE类型可变剪接事件的可视化展示如下图所示：图中标题为可变剪接事件三个外显子所在的染色体坐标及正负链信息，跨外显子比对的reads使用连接外显子junction边界的弧线表示。弧线的粗细和比对到junction上的reads数成正比，同时弧线上的数字指出了junction reads的数目，右上方标注了各个样本可变剪接事件所在的基因及IncLevel值。见结果文件：AS/2.dasplot。  
 
 
 *****
-### �ɱ���ӳ������⼰���  
+### 可变剪接常见问题及解答  
 
 
 <div class="panel panel-info">
   <div class="panel-heading">
-������ʽ���  
+相关名词解释  
   </div>
   <div class="panel-body">
-- SE��Skipped exon ��������Ծ��  
-- RI��Retained intron �ں���������  
-- MXE��Mutually exclusive exon �����ӻ��⡣  
-- A5SS��Alternative 5 splice site 5���������ӷ����ɱ���ӡ�  
-- A3SS��Alternative 3 splice site 3���������ӷ����ɱ���ӡ�  
+- SE：Skipped exon 外显子跳跃。  
+- RI：Retained intron 内含子滞留。  
+- MXE：Mutually exclusive exon 外显子互斥。  
+- A5SS：Alternative 5 splice site 5’端外显子发生可变剪接。  
+- A3SS：Alternative 3 splice site 3’端外显子发生可变剪接。  
   </div>
 </div>
 
 
 *****
-## ����λ�����  
-&emsp;&emsp;����λ�������RNA-seq�ṹ��������Ҫ���ݣ���Ҫ�����������λ��ͺ�����ϸ��ͻ��λ��ļ�⣬���������о�������Ҫ���塣����ʹ��GATK�������������ݽ��б���λ�����������SnpEff�����Ա���λ�����ע�ͣ��������������ͼ��ʾ��  
+## 变异位点分析  
+&emsp;&emsp;变异位点分析是RNA-seq结构分析的重要内容，主要包括先天变异位点和后天体细胞突变位点的检测，对肿瘤等研究具有重要意义。我们使用GATK软件对样本数据进行变异位点分析，并用SnpEff软件对变异位点进行注释，其分析流程如下图所示。  
 
 
 
 
 
 *****
-### ����λ����  
-&emsp;&emsp;����λ����Ҫ��ΪSNP��INDEL��ÿ��λ��Ļ����ͼ�ע�����±���ʾ��������ļ���SNP/2.snpeff��  
+### 变异位点检测  
+&emsp;&emsp;变异位点主要分为SNP与INDEL，每个位点的基因型及注释如下表所示，见结果文件：SNP/2.snpeff。  
 
 Show  entriesSearch:
 CHROM	POS	ID	REF	ALT	QUAL	DP	AD	GT	GeneID	GeneName	FeatureID	Biotype	HGVS_C	HGVS_P	EFFECT	IMPACT
@@ -1158,103 +1158,103 @@ CHROM	POS	ID	REF	ALT	QUAL	DP	AD	GT	GeneID	GeneName	FeatureID	Biotype	HGVS_C	HGVS
 1	3204525	.	GAT	G	2032.73	53	0,46	1/1	ENSMUSG00000051951	Xkr4	ENSMUST00000162897.1	processed_transcript	n.*1374_*1375delAT	.	downstream_gene_variant	MODIFIER
 Showing 1 to 10 of 29 entriesPrevious123Next  
 
-- CHROM������λ�����ڵ�Ⱦɫ����  
-- POS������λ�����ڵ�Ⱦɫ������  
-- ID������λ���ţ�ͬʱ��Ӧ��dbSNP���ݿ��е�ID����û�У���Ĭ��ʹ�á�.��  
-- REF������λ���ڲο��������еļ��  
-- ALT������λ���������е�ʵ�ʼ��  
-- QUAL������λ��������Phred��ʽ����ֵ����ֵԽ�ߣ�����λ������͵Ŀ��Ŷ�Խ��  
-- DP������λ���������еĲ������  
-- AD���ֱ�֧��REF��ALT��reads�����м��Զ������  
-- GT������λ��Ļ�����  
-- GeneID������λ�����ڵĻ�����  
-- GeneName������λ�����ڵĻ�������  
-- FeatureID������λ�����ڵ�ת¼�����  
-- Biotype������λ�����ڵ�ת¼������  
-- HGVS_C������λ����DNAˮƽ��HGVSע��  
-- HGVS_P������λ���ڵ���ˮƽ��HGVSע�ͣ�����Ա��뵰�׻���  
-- EFFECT������λ������ɵ�Ӱ��  
-- IMPACT������λ������ɵ�Ӱ��̶�  
+- CHROM：变异位点所在的染色体编号  
+- POS：变异位点所在的染色体坐标  
+- ID：变异位点编号，同时对应着dbSNP数据库中的ID，若没有，则默认使用‘.’  
+- REF：变异位点在参考基因组中的碱基  
+- ALT：变异位点在样本中的实际碱基  
+- QUAL：变异位点质量，Phred格式的数值，数值越高，变异位点基因型的可信度越高  
+- DP：变异位点在样本中的测序深度  
+- AD：分别支持REF与ALT的reads数，中间以逗号相隔  
+- GT：变异位点的基因型  
+- GeneID：变异位点所在的基因编号  
+- GeneName：变异位点所在的基因名称  
+- FeatureID：变异位点所在的转录本编号  
+- Biotype：变异位点所在的转录本类型  
+- HGVS_C：变异位点在DNA水平的HGVS注释  
+- HGVS_P：变异位点在蛋白水平的HGVS注释，仅针对编码蛋白基因  
+- EFFECT：变异位点所造成的影响  
+- IMPACT：变异位点所造成的影响程度  
 
 
 *****
-### ����λ��ͳ��  
-&emsp;&emsp;ʹ��GATK���б���λ��ļ������ǻ����SnpEffע����Ϣ��ÿ������λ�����ͳ�ƣ���ҪΪ����λ�㹦��ͳ�ơ�����λ������ͳ���Լ�����λ��Ӱ��ͳ�ơ�����λ�㹦�ܣ�snp_function����ͬ��ͻ�䡢����ͻ�䡢����ͻ�������������ͳ�ƺͻ�ͼ������λ������snp_region����EXON��INTRON��INTERGENIC�Ȼ���ṹ�������ͳ�ƺͻ�ͼ������λ��Ӱ�죨snp_impact����HIGH(��)��MODERATE���У���LOW���ͣ���MODIFIER�������ޱ���ЧӦ���ͱ��ͻ��λ��ͬʱ���ڲŻ����Ӱ�죩�ĸ���ν���ͳ�ƺͻ�ͼ��������ļ���SNP/3.stat��  
-
-
-
-
-*****
-### ����λ������������⼰���  
-
-
-<div class="panel panel-info">
-  <div class="panel-heading">
-SNP�����Ĳο�������ʲô����REF��ָʲô��  
-  </div>
-  <div class="panel-body">
-�ο�����REF��ѡȡ�Ĳο����������У�SNP��ͨ����reads�ȶԵ��ο��������ϴӶ�����SNP calling��  
-  </div>
-</div>
-
-<div class="panel panel-info">
-  <div class="panel-heading">
-SNP��һ�����������ֱַ����֧��REF��ALT���ּ����reads��Ŀ��Ϊʲô��Щ����0�أ�  
-  </div>
-  <div class="panel-body">
-��0,12Ϊ������ʾ��0��reads֧��REF�ļ������û��֧�ָü����reads��12��reads֧��ALT�ļ����  
-  </div>
-</div>
-
-<div class="panel panel-info">
-  <div class="panel-heading">
-SNP����ָʲô������InDel�к�����  
-  </div>
-  <div class="panel-body">
-һ����ԣ�SNP��ָ����Ƶ�ʴ���1%�ĵ���������졣InDel(insertion-deletion)���ǲ������ȱʧ��insert����deletion��  
-  </div>
-</div>
-
-<div class="panel panel-info">
-  <div class="panel-heading">
-GT�к��壿  
-  </div>
-  <div class="panel-body">
-GT��ʾ�����Ļ����ͣ�����һ�����������������������������������������������ͬһλ���ǵ�λλ�㣬GTֵ��ʾ��������ĳλ��Я����������λλ�㣬��Ҫ��������ֵ0��1��2��������0��ʾ��REFһ�£�1��ʾ����һ��ALTһ�£�2��ʾ���ڶ���ALTһ�¡�0/0��ʾ���ϣ��Ҹ����������������ĵ�λλ���REFһ�¡�0/1��ʾ�Ӻϣ��Ҹ�������һ��������REFһ�£���һ��������ALTһ�¡�0/2��ʾ�Ӻϣ��Ҹ�������һ��������REFһ�£���һ���������ڶ���ALTһ�¡�1/1��ʾ���ϣ��Ҹ����������������ĵ�λλ���ALTһ�¡�1/2��ʾ�Ӻϣ��Ҹ�������һ����������һ��ALTһ�£���һ���������ڶ���ALTһ�¡�2/2��ʾ���ϣ��Ҹ������������������ڶ���ALTһ�¡������Ŵ�ѧ���ۣ�һ��������������ALT�Ŀ������Ƿǳ��͵ġ�  
-  </div>
-</div>
-
-<div class="panel panel-info">
-  <div class="panel-heading">
-��ΪHGVSע�ͣ�  
-  </div>
-  <div class="panel-body">
-HGVS��Human Genome Variation Society����д��������һ����HGVS�Ƽ�������������Ի���ͻ��λ�����ע�ͣ���������ʾ�����Բο�DNA��protein  
-  </div>
-</div>
-
-
-*****
-## �ںϻ������  
-&emsp;&emsp;�ںϻ�����ָ���������ȫ���򲿷������ں϶��ɵ�Ƕ�ϻ���һ����Ⱦɫ����λ��ȱʧ��ԭ�����¡��ںϻ����״η�����ѪҺϵͳ�Ķ��������У�������������ϸ����Ѫ����BCR-ABL�Ļ����ں���Ϊ���䣬����������ϸ����Ѫ����ҩ����������/�������������ðе���Ǹ��ںϻ��򡣸�ͨ��RNA����������ͨ���ߡ��ɱ��͡���⾫�ȸߺͼ�ⷶΧ����ŵ���ӿ����ںϻ�����о���ŵ����Դʹ��STAR-Fusion���������ںϻ���ļ�⣬STAR-Fusion������STAR�ȶԵ��ں�������������ں�ת¼������������STAR-Fusion������������ͼ��ʾ����ΪSATR�ȶԣ�STAR-Fusion.predict��STAR-Fusion.filter���������¡�  
-
-&emsp;&emsp;STAR�ȶԣ���STAR�ȶԵı�׼�ȶԹ����е�һ�����죬��һ��������MMP�㷨���������ɱȶ�����������������׼ȷ�Ķ�λ���ο��������ϣ���һ����ѡ�������ȶԴ��ڽ��̶������ӽ��о��ࡣ  
-
-&emsp;&emsp;STAR-Fusion.predict����Split reads�ֳ�JunctionReads(�������������ں϶ϵ��reads������ͼ��S=3��ΪSplit reads����Ŀ)��Discordant pair�ֳ�SpanningFrags(��һ�±ȶԵ�reads����reads�����˱ȶԵ���ͬ����������ͼ��J=2��ΪDiscordant pair����Ŀ���ȶԵ��ο��������ע���ļ���STAR-Fusion����֧���ں϶ϵ��Split reads��Discordant pair����ĿӦ������reads֧��׼����ںϻ������ɸѡ��  
-
-&emsp;&emsp;STAR-Fusion.filter����һ�����ںϻ���������һ������Ҫ��ɸѡ����ɿ����ںϻ��򣬹��˵����Ԥ��Ĳ��ɿ��ĺ�ѡ���ںϻ��򡣹��˵Ĺ�����Ҫ���Ȱ��ջ���ԺͶϵ�ľ�����з��࣬Ȼ�������ƶϵĶϵ�reads��֧�ֺͱȶԵķ�Χ�Լ��ƶϵ��ںϻ�������е������ԣ����˵���Ի��ҵ��ںϻ���ԡ�  
-
-&emsp;&emsp;FusionInspector ��һ����֢ת¼�������߰����������STAR-Fusion��Ԥ����ͨ���ټ�⣬�ٴδ�֣���һ�����ںϻ���ķ����������У�����������巽����������ļ���������STAR-Fusion�õ����ںϻ�����б����ο��������ļ�����Ʒ��clean data��FusionInspector�����STAR-Fusion�õ����ںϻ��򣬶�ÿ���ںϻ�����ȡ�ڻ������ϵ����򲢹����ںϻ������С�ںϵ�contig���С���reads�ȶԵ���Щ��ѡ���ںϵ�contig�ϡ�����ÿ���ںϻ���֧�ֵ�JunctionReads��SpanningFrags����ʶ�𡣵õ����յ��ںϻ����б���  
-
-&emsp;&emsp;STAR-Fusion�����Ƽ���STAR-Fusion��Ԥ�����ٴ���У�鹤��FusionInspector���н�һ���Ľ���������ͨ�����εĽ�����֤���ںϻ�������׼ȷ�ԡ������ںϻ�������Ĺ��̾�������FusionInspector��STAR-FusionԤ��������У����  
-
+### 变异位点统计  
+&emsp;&emsp;使用GATK进行变异位点的检测后，我们会根据SnpEff注释信息对每个变异位点进行统计，主要为变异位点功能统计、变异位点区域统计以及变异位点影响统计。变异位点功能（snp_function）从同义突变、错义突变、无义突变三个方面进行统计和绘图。变异位点区域（snp_region）从EXON、INTRON、INTERGENIC等基因结构区域进行统计和绘图。变异位点影响（snp_impact）从HIGH(高)、MODERATE（中）、LOW（低）、MODIFIER（自身无表型效应，和别的突变位点同时存在才会产生影响）四个层次进行统计和绘图，见结果文件：SNP/3.stat。  
 
 
 
 
 *****
-### �ںϻ����б�  
-&emsp;&emsp;�ںϻ����б�������ʾ������JunctionReads��SpanningFrags�Ǽ���ںϻ������Ҫָ�ꣻ��˫�˲����У����԰�read1��read2������һ��fragmentƬ�Σ�250bp-300bp�������ˣ���read1��read2��Խ�ں��¼��Ķϵ㣬������read��ΪJunctionRead��read1��read2�м��gap�������ں��¼��Ķϵ㣬������fragmentƬ�γ�ΪSpanningFrag��������ļ���Fusion/1.fusionlist��  
+### 变异位点分析常见问题及解答  
+
+
+<div class="panel panel-info">
+  <div class="panel-heading">
+SNP分析的参考序列是什么，即REF是指什么？  
+  </div>
+  <div class="panel-body">
+参考序列REF是选取的参考基因组序列，SNP是通过将reads比对到参考基因组上从而进行SNP calling。  
+  </div>
+</div>
+
+<div class="panel panel-info">
+  <div class="panel-heading">
+SNP中一列中两个数字分别代表支持REF和ALT两种碱基的reads数目，为什么有些会是0呢？  
+  </div>
+  <div class="panel-body">
+以0,12为例，表示有0个reads支持REF的碱基，即没有支持该碱基的reads，12个reads支持ALT的碱基。  
+  </div>
+</div>
+
+<div class="panel panel-info">
+  <div class="panel-heading">
+SNP具体指什么？其与InDel有何区别？  
+  </div>
+  <div class="panel-body">
+一般而言，SNP是指变异频率大于1%的单核苷酸变异。InDel(insertion-deletion)则是插入或者缺失，insert或者deletion。  
+  </div>
+</div>
+
+<div class="panel panel-info">
+  <div class="panel-heading">
+GT列含义？  
+  </div>
+  <div class="panel-body">
+GT表示样本的基因型，假如一个二倍体生物样本，其基因组有两个拷贝，两个拷贝的同一位置是等位位点，GT值表示该样本在某位点携带的两个等位位点，主要用三个数值0，1，2来描述。0表示跟REF一致，1表示跟第一个ALT一致，2表示跟第二个ALT一致。0/0表示纯合，且该样本的两个拷贝的等位位点跟REF一致。0/1表示杂合，且该样本的一个拷贝跟REF一致，另一个拷贝跟ALT一致。0/2表示杂合，且该样本的一个拷贝跟REF一致，另一个拷贝跟第二个ALT一致。1/1表示纯合，且该样本的两个拷贝的等位位点跟ALT一致。1/2表示杂合，且该样本的一个拷贝跟第一个ALT一致，另一个拷贝跟第二个ALT一致。2/2表示纯合，且该样本的两个拷贝跟第二个ALT一致。根据遗传学理论，一个样本出现两个ALT的可能性是非常低的。  
+  </div>
+</div>
+
+<div class="panel panel-info">
+  <div class="panel-heading">
+何为HGVS注释？  
+  </div>
+  <div class="panel-body">
+HGVS是Human Genome Variation Society的缩写，国际上一般以HGVS推荐的命令规则来对基因突变位点进行注释，具体规则和示例可以参考DNA和protein  
+  </div>
+</div>
+
+
+*****
+## 融合基因分析  
+&emsp;&emsp;融合基因是指两个基因的全部或部分序列融合而成的嵌合基因，一般由染色体易位、缺失等原因所致。融合基因首次发现于血液系统的恶性肿瘤中，其中以慢性粒细胞白血病中BCR-ABL的基因融合最为经典，治疗慢性粒细胞白血病的药物伊马替尼/格列卫，其作用靶点就是该融合基因。高通量RNA测序技术因其通量高、成本低、检测精度高和检测范围广等优点大大加快了融合基因的研究，诺禾致源使用STAR-Fusion软件进行融合基因的检测，STAR-Fusion是利用STAR比对的融合输出结果来检测融合转录本的软件包，STAR-Fusion分析流程如下图所示。分为SATR比对，STAR-Fusion.predict，STAR-Fusion.filter，具体如下。  
+
+&emsp;&emsp;STAR比对：是STAR比对的标准比对过程中的一个延伸，第一步，利用MMP算法（连续最大可比对种子搜索）将种子准确的定位到参考基因组上，下一步，选择基因组比对窗口将固定的种子进行聚类。  
+
+&emsp;&emsp;STAR-Fusion.predict：将Split reads又称JunctionReads(含有两个基因融合断点的reads，流程图中S=3即为Split reads的数目)和Discordant pair又称SpanningFrags(不一致比对的reads，即reads的两端比对到不同的两个基因，图中J=2即为Discordant pair的数目）比对到参考基因组的注释文件。STAR-Fusion根据支持融合断点的Split reads和Discordant pair的数目应用最少reads支持准则对融合基因进行筛选。  
+
+&emsp;&emsp;STAR-Fusion.filter：这一步是融合基因检测的最后一步，主要是筛选出最可靠的融合基因，过滤到最初预测的不可靠的候选的融合基因。过滤的过程主要是先按照基因对和断点的距离进行分类，然后按照在推断的断点reads的支持和比对的范围以及推断的融合基因的序列的相似性，过滤掉配对混乱的融合基因对。  
+
+&emsp;&emsp;FusionInspector 是一个癌症转录分析工具包，软件会对STAR-Fusion的预测结果通过再检测，再次打分，进一步对融合基因的分析结果进行校正分析。具体方法：输入的文件是我们用STAR-Fusion得到的融合基因的列表，参考基因组文件，样品的clean data。FusionInspector会根据STAR-Fusion得到的融合基因，对每对融合基因提取在基因组上的区域并构建融合基因的最小融合的contig序列。将reads比对到这些候选的融合的contig上。最后对每个融合基因支持的JunctionReads与SpanningFrags进行识别。得到最终的融合基因列表。  
+
+&emsp;&emsp;STAR-Fusion官网推荐对STAR-Fusion的预测结果再次用校验工具FusionInspector进行进一步的矫正分析。通过两次的矫正保证了融合基因结果的准确性。我们融合基因分析的过程就是利用FusionInspector对STAR-Fusion预测结果进行校正。  
+
+
+
+
+
+*****
+### 融合基因列表  
+&emsp;&emsp;融合基因列表如下所示。其中JunctionReads和SpanningFrags是检测融合基因的主要指标；在双端测序中，可以把read1和read2看成是一个fragment片段（250bp-300bp）的两端，若read1或read2跨越融合事件的断点，这样的read称为JunctionRead。read1和read2中间的gap区域横跨融合事件的断点，这样的fragment片段称为SpanningFrag，见结果文件：Fusion/1.fusionlist。  
 
 Show  entriesSearch:
 FusionName	JunctionReadCount	SpanningFragCount	LeftGene	LeftLocalBreakpoint	LeftBreakpoint	RightGene	RightLocalBreakpoint	RightBreakpoint	SpliceType	annots	CDS_LEFT_ID	CDS_LEFT_RANGE	CDS_RIGHT_ID	CDS_RIGHT_RANGE	PROT_FUSION_TYPE	FUSION_MODEL	FUSION_CDS	FUSION_TRANSL	PFAM_LEFT	PFAM_RIGHT
@@ -1270,138 +1270,138 @@ mt-Co1--Gm13340	4	0	mt-Co1^ENSMUSG00000064351.1	2242	chrM:6569:+	Gm13340^ENSMUSG
 Sptbn2--Snhg11	3	1	Sptbn2^ENSMUSG00000067889.4	2616	chr19:4718997:+	Snhg11^ENSMUSG00000044349.15	35588	chr2:158382504:+	INCL_NON_REF_SPLICE	INTERCHROMOSOMAL[chr19--chr2]	.	.	.	.	.	.	.	.	.	.
 Showing 1 to 10 of 29 entriesPrevious123Next  
 
-- FusionName���ں��¼�����  
-- JunctionReadCount��֧���ں��¼�������junction reads��Ŀ  
-- SpanningFragCount��֧���ں��¼�������Spanning fragments��Ŀ  
-- LeftGene���ں��¼������λ��򣬰�������ID�ͻ������ƣ����л���IDΪGENCODE���ݿ�ID��ȥ��С����ͺ�������ּ�����ǰ���һ�¡�  
-- LeftLocalBreakpoint�����λ����ڻ��������ϵĶϵ�λ��(�ϵ�λ���Ǵ�ÿ���������е�5���˿�ʼ)  
-- LeftBreakpoint�����λ���ϵ����ڵĻ�������������λ������ڻ��������������Ϣ  
-- RightGene���ں��¼������λ���  
-- RightLocalBreakpoint�����λ����ڻ��������ϵĶϵ�λ��(�ϵ�λ���Ǵ�ÿ���������е�5���˿�ʼ)  
-- RightBreakpoint�����λ���ϵ����ڵĻ�������������λ������ڻ��������������Ϣ  
-- SpliceType���������ں϶ϵ��Ƿ�λ����֪����ṹ�������Ӽ���λ��  
-- annots���ں��¼������λ���Ĺ���ע����Ϣ  
-- CDS_LEFT_ID�����λ������CDS�����ת¼��ID  
-- CDS_LEFT_RANGE�����λ������CDS�����ת¼���ļ����Χ(bp)  
-- CDS_RIGHT_ID�����λ������CDS�����ת¼����ID  
-- CDS_RIGHT_RANGE�����λ������CDS�����ת¼���ļ����Χ(bp)  
-- PROT_FUSION_TYPE�����������ں����ͣ�FRAMESHIFT(�Ķ���������)��INFRAME(�Ķ���δ��������)  
-- FUSION_CDS���ںϻ����CDS���У�Сд�ļ���������ںϻ����CDS���У���д�Ǽ���������ںϻ����CDS����  
-- FUSION_TRANSL������õ����ںϻ���İ���������  
-- PFAM_LEFT�����λ����PFAMע�ͣ���DUF1515|572-611|0.073������DUF1515ΪPFAMԤ��ĵõ��ĵ��׽ṹ��572-611ΪԤ��Ľṹ��ļ����Χ��0.073��Ԥ���DUF15�����ƶ�  
-- PFAM_RIGHT�����λ����PFAMע��  
+- FusionName：融合事件名称  
+- JunctionReadCount：支持融合事件发生的junction reads数目  
+- SpanningFragCount：支持融合事件发生的Spanning fragments数目  
+- LeftGene：融合事件的上游基因，包括基因ID和基因名称，其中基因ID为GENCODE数据库ID，去掉小数点和后面的数字即可与前面的一致。  
+- LeftLocalBreakpoint：上游基因在基因序列上的断点位置(断点位置是从每个基因序列的5’端开始)  
+- LeftBreakpoint：上游基因断点所在的基因组坐标和上游基因所在基因组的正负链信息  
+- RightGene：融合事件的下游基因  
+- RightLocalBreakpoint：下游基因在基因序列上的断点位置(断点位置是从每个基因序列的5’端开始)  
+- RightBreakpoint：下游基因断点所在的基因组坐标和下游基因所在基因组的正负链信息  
+- SpliceType：鉴定的融合断点是否位于已知基因结构的外显子剪接位点  
+- annots：融合事件上下游基因的功能注释信息  
+- CDS_LEFT_ID：上游基因具有CDS区域的转录本ID  
+- CDS_LEFT_RANGE：上游基因具有CDS区域的转录本的碱基范围(bp)  
+- CDS_RIGHT_ID：下游基因具有CDS区域的转录本的ID  
+- CDS_RIGHT_RANGE：下游基因具有CDS区域的转录本的碱基范围(bp)  
+- PROT_FUSION_TYPE：编码基因的融合类型，FRAMESHIFT(阅读框发生移码)，INFRAME(阅读框未发生移码)  
+- FUSION_CDS：融合基因的CDS序列，小写的碱基是上游融合基因的CDS序列，大写是碱基是下游融合基因的CDS序列  
+- FUSION_TRANSL：翻译得到的融合基因的氨基酸序列  
+- PFAM_LEFT：上游基因的PFAM注释，如DUF1515|572-611|0.073，其中DUF1515为PFAM预测的得到的蛋白结构域，572-611为预测的结构域的碱基范围，0.073是预测和DUF15的相似度  
+- PFAM_RIGHT：下游基因的PFAM注释  
 
 
 *****
-### �ںϻ���Ⱦɫ��ֲ�  
-&emsp;&emsp;�ںϻ����¼���Ⱦɫ���ϵķֲ���circosͼ����չʾ��ͼ�еĻ��ɶ���Ⱦɫ����ɣ�����ÿ���ߴ���һ���ں��¼����ߵ����˴����ں��¼��Ķϵ�λ�ã���ɫ��ʾ�ںϻ���������λ�����Դ��ͬһ��Ⱦɫ�壬��ɫ��ʾ�ںϻ���������λ�����Դ�ڲ�ͬȾɫ�壬�ߵĴ�ϸ�����ںϻ���ı���ˮƽ��������ļ���Fusion/2.circos��  
+### 融合基因染色体分布  
+&emsp;&emsp;融合基因事件在染色体上的分布用circos图进行展示，图中的环由多条染色体组成，环内每条线代表一个融合事件，线的两端代表融合事件的断点位置，红色表示融合基因的上下游基因来源于同一条染色体，蓝色表示融合基因的上下游基因来源于不同染色体，线的粗细代表融合基因的表达水平，见结果文件：Fusion/2.circos。  
 
 
 
 
 *****
-### �ںϻ���IGV���ӻ�չʾ  
-&emsp;&emsp;�ںϻ����¼�����ͨ��IGV�������п��ӻ�������ͼ��ʾ��  
+### 融合基因IGV可视化展示  
+&emsp;&emsp;融合基因事件可以通过IGV软件进行可视化，如下图所示。  
 
 
 
-&emsp;&emsp;������ļ����ںϻ����ļ�����ÿ���������ںϻ��������ļ����ںϻ���ṹע���ļ����ṩbed��gtf���ָ�ʽ��ע���ļ���ʹ������һ�����ɣ����ȶԵ�bam�ļ��ֱ��뵽IGV�����������ļ�˵����������ʾ��������ļ���Fusion/3.IGV��  
+&emsp;&emsp;将结果文件中融合基因文件夹里每个样本的融合基因序列文件，融合基因结构注释文件（提供bed和gtf两种格式的注释文件，使用其中一个即可），比对的bam文件分别导入到IGV软件，具体文件说明，如下所示，见结果文件：Fusion/3.IGV。  
 
-- sample.fa���ںϻ��������ļ���fasta��ʽ  
-- sample.bed���ںϻ���ṹע���ļ���bed��ʽ  
-- sample.gtf���ںϻ���ṹע���ļ���gtf��ʽ  
-- sample.junction_reads.bam��֧���ں��¼���JunctionReads��bam�ļ�  
-- sample.spanning_reads.bam��֧���ں��¼���SpanningFrags��bam�ļ�  
+- sample.fa：融合基因序列文件，fasta格式  
+- sample.bed：融合基因结构注释文件，bed格式  
+- sample.gtf：融合基因结构注释文件，gtf格式  
+- sample.junction_reads.bam：支持融合事件的JunctionReads的bam文件  
+- sample.spanning_reads.bam：支持融合事件的SpanningFrags的bam文件  
 
 
 *****
-### �ںϻ�������������⼰��� 
+### 融合基因分析常见问题及解答 
 
 
 <div class="panel panel-danger">
   <div class="panel-heading">
-�ںϻ�����֤����ѡ��Щ�ںϻ���  
+融合基因验证该挑选哪些融合基因？  
   </div>
   <div class="panel-body">
-������ѡ�߱�����ںϻ��������֤���߱�����ںϻ����¼������Ը��ͣ�Ҳ������ʵ����֤�������ͱ�����ںϻ����¼�ͬ�������о���ֵ������ܶ��ְ������ǵͱ���ģ���Щ�������ںϣ����ܵ�����Ҫ���ܶ�ʧ��  
+优先挑选高表达的融合基因进行验证，高表达的融合基因事件假阳性更低，也更容易实验验证，不过低表达的融合基因事件同样具有研究价值，比如很多抑癌基因都是低表达的，这些基因发生融合，可能导致重要功能丢失。  
   </div>
 </div>
 
 
 *****
-## ��ע 
+## 备注 
 *****
-### ����ļ���ѹ����  
+### 结果文件解压方法  
 <table class="table" style="margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
 <th style="text-align:center;">
-ѹ����ʽ
+压缩格式
 </th>
 <th style="text-align:center;">
-�û�����
+用户类型
 </th>
 <th style="text-align:center;">
-����
+方法
 </th>
 </tr>
 </thead>
 <tbody>
 <tr class="active">
 <td style="text-align:center;font-weight: bold;vertical-align: middle !important;" rowspan="2">
-file.tar.gz��ʽ��ѹ���ļ�
+file.tar.gz形式的压缩文件
 </td>
 <td style="text-align:center;">
-Unix/Linux/Mac�û�
+Unix/Linux/Mac用户
 </td>
 <td style="text-align:center;">
-ʹ��tar -zxvf file.tar.gz����
+使用tar -zxvf file.tar.gz命令
 </td>
 </tr>
 <tr class="active">
 <td style="text-align:center;">
-Windows�û�
+Windows用户
 </td>
 <td style="text-align:center;">
-ʹ�ý�ѹ��������WinRAR��7-Zip��
+使用解压缩软件如WinRAR、7-Zip等
 </td>
 </tr>
 <tr>
 <td style="text-align:center;font-weight: bold;vertical-align: middle !important;" rowspan="2">
-file.gz��ʽ��ѹ���ļ�
+file.gz形式的压缩文件
 </td>
 <td style="text-align:center;">
-Unix/Linux/Mac�û�
+Unix/Linux/Mac用户
 </td>
 <td style="text-align:center;">
-ʹ��gzip -d file.gz����
+使用gzip -d file.gz命令
 </td>
 </tr>
 <tr>
 <td style="text-align:center;">
-Windows�û�
+Windows用户
 </td>
 <td style="text-align:center;">
-ʹ�ý�ѹ��������WinRAR��7-Zip��
+使用解压缩软件如WinRAR、7-Zip等
 </td>
 </tr>
 <tr class="active">
 <td style="text-align:center;font-weight: bold;vertical-align: middle !important;" rowspan="2">
-file.zip��ʽ��ѹ���ļ�
+file.zip形式的压缩文件
 </td>
 <td style="text-align:center;">
-Unix/Linux/Mac�û�
+Unix/Linux/Mac用户
 </td>
 <td style="text-align:center;">
-ʹ��unzip file.zip����
+使用unzip file.zip命令
 </td>
 </tr>
 <tr class="active">
 <td style="text-align:center;">
-Windows�û�
+Windows用户
 </td>
 <td style="text-align:center;">
-ʹ�ý�ѹ��������WinRAR��7-Zip��
+使用解压缩软件如WinRAR、7-Zip等
 </td>
 </tr>
 <tr>
@@ -1416,18 +1416,18 @@ Windows�û�
 </table>
 
 *****
-### ����ļ���ʽ˵��  
+### 结果文件格式说明  
 <table class="table" style="margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
 <th style="text-align:center;">
-�ļ�����
+文件类型
 </th>
 <th style="text-align:center;">
-�ļ�����
+文件描述
 </th>
 <th style="text-align:center;">
-�򿪷�ʽ
+打开方式
 </th>
 </tr>
 </thead>
@@ -1437,15 +1437,15 @@ Windows�û�
 file.fa/fasta
 </td>
 <td style="text-align:center;vertical-align: middle !important;" rowspan="2">
-�����ļ���fasta��ʽ��һ��Ϊ�������л��߻��������С����ļ�һ��ϴ󣬴򿪽�Ϊ����
+序列文件，fasta格式，一般为基因序列或者基因组序列。因文件一般较大，打开较为困难
 </td>
 <td style="text-align:center;">
-unix/Linux/Mac�û�ʹ��less��more����
+unix/Linux/Mac用户使用less或more命令
 </td>
 </tr>
 <tr class="active">
 <td style="text-align:center;">
-windows�û�ʹ�ø߼��ı��༭��Editplus/Notepad++��
+windows用户使用高级文本编辑器Editplus/Notepad++等
 </td>
 </tr>
 <tr>
@@ -1453,15 +1453,15 @@ windows�û�ʹ�ø߼��ı��༭��Editplus/Notepad++��
 file.fq/fastq
 </td>
 <td style="text-align:center;vertical-align: middle !important;" rowspan="2">
-�����ļ���fastq��ʽ��һ��Ϊreads���У����ļ�һ��ϴ󣬴򿪽�Ϊ����
+序列文件，fastq格式，一般为reads序列；因文件一般较大，打开较为困难
 </td>
 <td style="text-align:center;">
-unix/Linux/Mac�û�ʹ�� less �� more ����
+unix/Linux/Mac用户使用 less 或 more 命令
 </td>
 </tr>
 <tr>
 <td style="text-align:center;">
-windows�û�ʹ�ø߼��ı��༭��Editplus/Notepad++��
+windows用户使用高级文本编辑器Editplus/Notepad++等
 </td>
 </tr>
 <tr class="active">
@@ -1469,15 +1469,15 @@ windows�û�ʹ�ø߼��ı��༭��Editplus/Notepad++��
 file.txt/xls
 </td>
 <td style="text-align:center;vertical-align: middle !important;" rowspan="2">
-������ݱ����ļ����ļ����Ʊ���Tab�ָ�
+结果数据表格文件；文件以制表符Tab分隔
 </td>
 <td style="text-align:center;">
-unix/Linux/Mac�û�ʹ��less��more����
+unix/Linux/Mac用户使用less或more命令
 </td>
 </tr>
 <tr class="active">
 <td style="text-align:center;">
-windows�û�ʹ�ø߼��ı��༭��Editplus/Notepad++ �ȣ�Ҳ������Microsoft Excel��
+windows用户使用高级文本编辑器Editplus/Notepad++ 等，也可以用Microsoft Excel打开
 </td>
 </tr>
 <tr>
@@ -1485,15 +1485,15 @@ windows�û�ʹ�ø߼��ı��༭��Editplus/Notepad++ �ȣ�Ҳ������Microsoft Excel��
 file.pdf/svg
 </td>
 <td style="text-align:center;vertical-align: middle !important;" rowspan="2">
-���ͼ���ļ���ʸ��ͼ�����ԷŴ����С����ʧ�棬�����û��鿴�ͱ༭��������ʹ��Adobe Illustrator����ͼƬ�༭���������·�����
+结果图像文件；矢量图，可以放大和缩小而不失真，方便用户查看和编辑处理，可使用Adobe Illustrator进行图片编辑，用于文章发表等
 </td>
 <td style="text-align:center;">
-windows/Mac�û�����ʹ��Adobe Reader/����Ķ���/��ҳ������ȴ�
+windows/Mac用户可以使用Adobe Reader/福昕阅读器/网页浏览器等打开
 </td>
 </tr>
 <tr>
 <td style="text-align:center;">
-unix/Linux�û�ʹ��evince�����
+unix/Linux用户使用evince命令打开
 </td>
 </tr>
 <tr class="active">
@@ -1501,15 +1501,15 @@ unix/Linux�û�ʹ��evince�����
 file.png
 </td>
 <td style="text-align:center;vertical-align: middle !important;" rowspan="2">
-���ͼ���ļ���λͼ������ѹ��
+结果图像文件；位图，无损压缩
 </td>
 <td style="text-align:center;">
-unix/Linux/Mac�û�ʹ��display�����
+unix/Linux/Mac用户使用display命令打开
 </td>
 </tr>
 <tr class="active">
 <td style="text-align:center;">
-windows�û�����ʹ��ͼƬ������򿪣���photoshop��
+windows用户可以使用图片浏览器打开，如photoshop等
 </td>
 </tr>
 <tr>
@@ -1526,25 +1526,25 @@ windows�û�����ʹ��ͼƬ������򿪣���photoshop��
 </table>
 
 *****
-### ���������б����汾  
+### 分析软件列表及版本  
 <table class="table" style="margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
 <th style="text-align:center;">
-����
+分析
 </th>
 <th style="text-align:center;">
-����
+软件
 </th>
 <th style="text-align:center;">
-�汾
+版本
 </th>
 </tr>
 </thead>
 <tbody>
 <tr class="active">
 <td style="text-align:center;font-weight: bold;">
-�ȶԷ���
+比对分析
 </td>
 <td style="text-align:center;">
 hisat2
@@ -1555,7 +1555,7 @@ hisat2
 </tr class="active">
 <tr>
 <td style="text-align:center;font-weight: bold;vertical-align: middle !important;" rowspan="2">
-��������
+定量分析
 </td>
 <td style="text-align:center;">
 featureCounts
@@ -1574,7 +1574,7 @@ stringtie
 </tr>
 <tr class="active">
 <td style="text-align:center;font-weight: bold;vertical-align: middle !important;" rowspan="2">
-�������
+差异分析
 </td>
 <td style="text-align:center;">
 DESeq2
@@ -1593,7 +1593,7 @@ edgeR
 </tr>
 <tr>
 <td style="text-align:center;font-weight: bold;">
-��������
+富集分析
 </td>
 <td style="text-align:center;">
 clusterProfiler
@@ -1604,7 +1604,7 @@ clusterProfiler
 </tr>
 <tr class="active">
 <td style="text-align:center;font-weight: bold;">
-�ɱ����
+可变剪接
 </td>
 <td style="text-align:center;">
 rMATS
@@ -1615,7 +1615,7 @@ rMATS
 </tr>
 <tr>
 <td style="text-align:center;font-weight: bold;vertical-align: middle !important;" rowspan="2">
-�������
+变异分析
 </td>
 <td style="text-align:center;">
 GATK
@@ -1634,7 +1634,7 @@ snpEff
 </tr>
 <tr class="active">
 <td style="text-align:center;font-weight: bold;">
-�ںϻ���
+融合基因
 </td>
 <td style="text-align:center;">
 star-fusion
@@ -1656,19 +1656,19 @@ star-fusion
 
 *****
 ### methods    
-&emsp;&emsp;Ϊ�˷����û�׫д���£�����׼�������ݷ������漰�������İ�methods��Ӣ�İ�methods  
+&emsp;&emsp;为了方便用户撰写文章，我们准备了数据分析所涉及到的中文版methods和英文版methods  
 
 
 
 ********
-## �ο�����  
+## 参考文献  
 <div>
 <ul>
 <li>1.Wang Z, Gerstein M, Snyder M. RNA-Seq: a revolutionary tool for transcriptomics[J]. Nature Reviews Genetics, 2009, 10(1): 57-63.</li>
 <li>2.Parkhomchuk D, Borodina T, Amstislavskiy V, et al. Transcriptome analysis by strand-specific sequencing of complementary DNA[J]. Nucleic acids research, 2009, 37(18): e123-e123.</li>
 <li>3.Andrews S. FastQC: A quality control tool for high throughput sequence data[J]. Reference Source, 2010.</li>
 <li>4.Trapnell C, Pachter L, Salzberg S L. TopHat: discovering splice junctions with RNA-Seq[J]. Bioinformatics, 2009, 25(9): 1105-1111.(TopHat2)</li>
-<li>5.Daehwan Kim, Ben Langmead, Steven L Salzberg.HISAT: a fast spliced aligner with low memory requirements. Nature methods,2015,12, 357�C360.(HISAT)</li>
+<li>5.Daehwan Kim, Ben Langmead, Steven L Salzberg.HISAT: a fast spliced aligner with low memory requirements. Nature methods,2015,12, 357–360.(HISAT)</li>
 <li>6.Mortazavi A, Williams B A, McCue K, et al. Mapping and quantifying mammalian transcriptomes by RNA-Seq[J]. Nature methods, 2008, 5(7): 621-628.</li>
 <li>7.Liao Y1, Smyth GK, Shi W. featureCounts: an efficient general purpose program for assigning sequence reads to genomicfeatures. Bioinformatics. 2014 ,30(7):923-30.(featureCounts)</li>
 <li>8.Mihaela Pertea, Geo M Pertea, Corina M Antonescu1,et al.StringTie enables improved reconstruction of a transcriptome from RNA-seq reads[J].Nat Biotechnol. 2015 March ; 33(3):290-295(StringTie)</li>
@@ -1679,20 +1679,429 @@ star-fusion
 <li>13.Anders S, Huber W. Differential expression analysis for sequence count data[J]. Genome biol, 2010, 11(10): R106.</li>
 <li>14.Love M I, Huber W, Anders S. Moderated estimation of fold change and dispersion for RNA-seq data with DESeq2[J]. Genome biology, 2014, 15(12): 1-21.(DESeq2)</li>
 <li>15.Robinson M D, McCarthy D J, Smyth G K. edgeR: a Bioconductor package for differential expression analysis of digital gene expression data[J]. Bioinformatics, 2010, 26(1): 139-140.(edgeR)</li>
-<li>16.Tarazona S, Garc��a-Alcalde F, Dopazo J, et al. Differential expression in RNA-seq: a matter of depth[J]. Genome research, 2011, 21(12): 2213-2223.(GOseq)</li>
+<li>16.Tarazona S, García-Alcalde F, Dopazo J, et al. Differential expression in RNA-seq: a matter of depth[J]. Genome research, 2011, 21(12): 2213-2223.(GOseq)</li>
 <li>17.Young M D, Wakefield M J, Smyth G K, et al. Method Gene ontology analysis for RNA-seq: accounting for selection bias[J]. Genome Biol, 2010, 11: R14.</li>
 <li>18.Kanehisa M, Goto S. KEGG: kyoto encyclopedia of genes and genomes[J]. Nucleic acids research, 2000, 28(1): 27-30.(KEGG)</li>
 <li>19.Katz Y, Wang E T, Airoldi E M, et al. Analysis and design of RNA sequencing experiments for identifying isoform regulation[J]. Nature methods, 2010, 7(12): 1009-1015.</li>
 <li>20.McKenna A, Hanna M, Banks E, et al. The Genome Analysis Toolkit: a MapReduce framework for analyzing next-generation DNA sequencing data[J]. Genome research, 2010, 20(9): 1297-1303.(GATK)</li>
 <li>21.Jia W, Qiu K, He M, et al. SOAPfuse: an algorithm for identifying fusion transcripts from paired-end RNA-Seq data[J]. Genome Biol, 2013, 14(2): R12.(SOAPfuse)</li>
 <li>22.Pastinen T. Genome-wide allele-specific analysis: insights into regulatory variation[J]. Nature Reviews Genetics, 2010, 11(8): 533-538.</li>
-<li>23.Sun W. A statistical framework for eQTL mapping using RNA�\seq data[J]. Biometrics, 2012, 68(1): 1-111.</li>
+<li>23.Sun W. A statistical framework for eQTL mapping using RNA‐seq data[J]. Biometrics, 2012, 68(1): 1-111.</li>
 <li>24.Giambartolomei C, Vukcevic D, Schadt E E, et al. Bayesian test for colocalisation between pairs of genetic association studies using summary statistics[J]. PLoS Genet, 2014, 10(5): e1004383.</li>
 <li>25.Shen S., Park JW., Lu ZX., Lin L., Henry MD., Wu YN., Zhou Q., Xing Y. rMATS: Robust and Flexible Detection of Differential Alternative Splicing from Replicate RNA-Seq Data.(rMATS).</li>
 <li>26.Jiao Y, Widschwendter M, Teschendorff A E. A systems-level integrative framework for genome-wide DNA methylation and gene expression data identifies differential gene expression modules under epigenetic control[J]. Bioinformatics, 2014, 30(16): 2360-2366.</li>
 <li>27.Lee H, Yang Y, Chae H, et al. BioVLAB-MMIA: a cloud environment for microRNA and mRNA integrated analysis (MMIA) on Amazon EC2[J]. NanoBioscience, IEEE Transactions on, 2012, 11(3): 266-272.</li>
 <li>28.Conesa A, Madrigal P, Tarazona S, et al. A Survey of Best Practices for RNA-seq Data Analysis[J]. 2016.</li>
 <li>29.View ORCID ProfileBrian Haas, Alexander Dobin, Nicolas Stransky,et al. STAR-Fusion: Fast and Accurate Fusion Transcript Detection from RNA-Seq[J]. biorxiv, 2017.(STAR-Fusion)</li>
-<li>30.Janet Pi??ero ��lex Bravo N��ria Queralt-Rosinach, et al. DisGeNET: a comprehensive platform integrating information on human disease-associated genes and variants [J]. Nucleic Acids Research, 2017, 45(D1): D833-D839.</li>
+<li>30.Janet Piñero Àlex Bravo Núria Queralt-Rosinach, et al. DisGeNET: a comprehensive platform integrating information on human disease-associated genes and variants [J]. Nucleic Acids Research, 2017, 45(D1): D833-D839.</li>
 </ul>
+</div>61518/ENSMUSG00000024248/ENSMUSG00000023089/ENSMUSG00000000088/ENSMUSG00000022354/ENSMUSG00000028277/ENSMUSG00000032330/ENSMUSG00000069041/ENSMUSG00000041697/ENSMUSG00000036751/ENSMUSG00000022840/ENSMUSG00000031231/ENSMUSG00000031059/ENSMUSG00000017778/ENSMUSG00000037152/ENSMUSG00000031818/ENSMUSG00000068329/ENSMUSG00000000214/ENSMUSG00000025781/ENSMUSG00000025204/ENSMUSG00000064354/ENSMUSG00000021520/ENSMUSG00000063882/ENSMUSG00000035674/ENSMUSG00000026895/ENSMUSG00000057614/ENSMUSG00000026032/ENSMUSG00000005034/ENSMUSG00000041881	Ndufs5/Cox8a/Ndufc2/Ndufa4/Uqcrc2/Cox7a1/Cox7b2/Cox6c/Ndufa1/Gnal/mt-Nd1/Cox5b/Cox7a2l/Ndufa5/Cox5a/Ndufb9/Ube2j1/Cox7a2/Slc25a31/Cox6a1/Cox6b1/Adcy5/Cox7b/Ndufb11/Cox7c/Ndufc1/Cox4i1/Htra2/Th/Atp5c1/Ndufb8/mt-Co2/Uqcrb/Uqcrh/Ndufa3/Ndufa8/Gnai1/Ndufb3/Prkacb/Ndufa7	mmu:595136/mmu:12868/mmu:68197/mmu:17992/mmu:67003/mmu:12865/mmu:78174/mmu:12864/mmu:54405/mmu:14680/mmu:17716/mmu:12859/mmu:20463/mmu:68202/mmu:12858/mmu:66218/mmu:56228/mmu:12866/mmu:73333/mmu:12861/mmu:110323/mmu:224129/mmu:66142/mmu:104130/mmu:12867/mmu:66377/mmu:12857/mmu:64704/mmu:21823/mmu:11949/mmu:67264/mmu:17709/mmu:67530/mmu:66576/mmu:66091/mmu:68375/mmu:14677/mmu:66495/mmu:18749/mmu:66416	40	8	ENSMUSG00000028648/ENSMUSG00000074218/ENSMUSG00000024524/ENSMUSG00000024248/ENSMUSG00000022840/ENSMUSG00000000214/ENSMUSG00000035674/ENSMUSG00000057614	32	ENSMUSG00000035885/ENSMUSG00000030647/ENSMUSG00000029632/ENSMUSG00000030884/ENSMUSG00000049387/ENSMUSG00000014313/ENSMUSG00000016427/ENSMUSG00000064341/ENSMUSG00000061518/ENSMUSG00000023089/ENSMUSG00000000088/ENSMUSG00000022354/ENSMUSG00000028277/ENSMUSG00000032330/ENSMUSG00000069041/ENSMUSG00000041697/ENSMUSG00000036751/ENSMUSG00000031231/ENSMUSG00000031059/ENSMUSG00000017778/ENSMUSG00000037152/ENSMUSG00000031818/ENSMUSG00000068329/ENSMUSG00000025781/ENSMUSG00000025204/ENSMUSG00000064354/ENSMUSG00000021520/ENSMUSG00000063882/ENSMUSG00000026895/ENSMUSG00000026032/ENSMUSG00000005034/ENSMUSG00000041881
+mmu04932	Non-alcoholic fatty liver disease (NAFLD)	37/779	146/6540	0.00000460212801542703	0.000419640285998543	ENSMUSG00000028648/ENSMUSG00000020484/ENSMUSG00000035885/ENSMUSG00000030647/ENSMUSG00000029632/ENSMUSG00000030884/ENSMUSG00000039936/ENSMUSG00000074218/ENSMUSG00000049387/ENSMUSG00000014313/ENSMUSG00000016427/ENSMUSG00000061518/ENSMUSG00000024248/ENSMUSG00000023089/ENSMUSG00000000088/ENSMUSG00000004056/ENSMUSG00000022354/ENSMUSG00000032330/ENSMUSG00000041697/ENSMUSG00000006699/ENSMUSG00000036751/ENSMUSG00000020538/ENSMUSG00000031231/ENSMUSG00000031059/ENSMUSG00000017778/ENSMUSG00000071369/ENSMUSG00000037152/ENSMUSG00000031818/ENSMUSG00000025204/ENSMUSG00000064354/ENSMUSG00000021520/ENSMUSG00000063882/ENSMUSG00000035674/ENSMUSG00000000817/ENSMUSG00000026895/ENSMUSG00000026032/ENSMUSG00000041881	Ndufs5/Xbp1/Cox8a/Ndufc2/Ndufa4/Uqcrc2/Pik3cd/Cox7a1/Cox7b2/Cox6c/Ndufa1/Cox5b/Cox7a2l/Ndufa5/Cox5a/Akt2/Ndufb9/Cox7a2/Cox6a1/Cdc42/Cox6b1/Srebf1/Cox7b/Ndufb11/Cox7c/Map3k5/Ndufc1/Cox4i1/Ndufb8/mt-Co2/Uqcrb/Uqcrh/Ndufa3/Fasl/Ndufa8/Ndufb3/Ndufa7	mmu:595136/mmu:22433/mmu:12868/mmu:68197/mmu:17992/mmu:67003/mmu:18707/mmu:12865/mmu:78174/mmu:12864/mmu:54405/mmu:12859/mmu:20463/mmu:68202/mmu:12858/mmu:11652/mmu:66218/mmu:12866/mmu:12861/mmu:12540/mmu:110323/mmu:20787/mmu:66142/mmu:104130/mmu:12867/mmu:26408/mmu:66377/mmu:12857/mmu:67264/mmu:17709/mmu:67530/mmu:66576/mmu:66091/mmu:14103/mmu:68375/mmu:66495/mmu:66416	37	8	ENSMUSG00000028648/ENSMUSG00000020484/ENSMUSG00000039936/ENSMUSG00000074218/ENSMUSG00000024248/ENSMUSG00000004056/ENSMUSG00000071369/ENSMUSG00000035674	29	ENSMUSG00000035885/ENSMUSG00000030647/ENSMUSG00000029632/ENSMUSG00000030884/ENSMUSG00000049387/ENSMUSG00000014313/ENSMUSG00000016427/ENSMUSG00000061518/ENSMUSG00000023089/ENSMUSG00000000088/ENSMUSG00000022354/ENSMUSG00000032330/ENSMUSG00000041697/ENSMUSG00000006699/ENSMUSG00000036751/ENSMUSG00000020538/ENSMUSG00000031231/ENSMUSG00000031059/ENSMUSG00000017778/ENSMUSG00000037152/ENSMUSG00000031818/ENSMUSG00000025204/ENSMUSG00000064354/ENSMUSG00000021520/ENSMUSG00000063882/ENSMUSG00000000817/ENSMUSG00000026895/ENSMUSG00000026032/ENSMUSG00000041881
+mmu00190	Oxidative phosphorylation	34/779	130/6540	0.00000532032268994857	0.000419640285998543	ENSMUSG00000024121/ENSMUSG00000028648/ENSMUSG00000035885/ENSMUSG00000030647/ENSMUSG00000029632/ENSMUSG00000030884/ENSMUSG00000074218/ENSMUSG00000049387/ENSMUSG00000014313/ENSMUSG00000016427/ENSMUSG00000064341/ENSMUSG00000061518/ENSMUSG00000024248/ENSMUSG00000023089/ENSMUSG00000000088/ENSMUSG00000022354/ENSMUSG00000032330/ENSMUSG00000041697/ENSMUSG00000036751/ENSMUSG00000031231/ENSMUSG00000031059/ENSMUSG00000017778/ENSMUSG00000037152/ENSMUSG00000031818/ENSMUSG00000025781/ENSMUSG00000025204/ENSMUSG00000064354/ENSMUSG00000021520/ENSMUSG00000063882/ENSMUSG00000035674/ENSMUSG00000050856/ENSMUSG00000026895/ENSMUSG00000026032/ENSMUSG00000041881	Atp6v0c/Ndufs5/Cox8a/Ndufc2/Ndufa4/Uqcrc2/Cox7a1/Cox7b2/Cox6c/Ndufa1/mt-Nd1/Cox5b/Cox7a2l/Ndufa5/Cox5a/Ndufb9/Cox7a2/Cox6a1/Cox6b1/Cox7b/Ndufb11/Cox7c/Ndufc1/Cox4i1/Atp5c1/Ndufb8/mt-Co2/Uqcrb/Uqcrh/Ndufa3/Atp5k/Ndufa8/Ndufb3/Ndufa7	mmu:11984/mmu:595136/mmu:12868/mmu:68197/mmu:17992/mmu:67003/mmu:12865/mmu:78174/mmu:12864/mmu:54405/mmu:17716/mmu:12859/mmu:20463/mmu:68202/mmu:12858/mmu:66218/mmu:12866/mmu:12861/mmu:110323/mmu:66142/mmu:104130/mmu:12867/mmu:66377/mmu:12857/mmu:11949/mmu:67264/mmu:17709/mmu:67530/mmu:66576/mmu:66091/mmu:11958/mmu:68375/mmu:66495/mmu:66416	34	5	ENSMUSG00000024121/ENSMUSG00000028648/ENSMUSG00000074218/ENSMUSG00000024248/ENSMUSG00000035674	29	ENSMUSG00000035885/ENSMUSG00000030647/ENSMUSG00000029632/ENSMUSG00000030884/ENSMUSG00000049387/ENSMUSG00000014313/ENSMUSG00000016427/ENSMUSG00000064341/ENSMUSG00000061518/ENSMUSG00000023089/ENSMUSG00000000088/ENSMUSG00000022354/ENSMUSG00000032330/ENSMUSG00000041697/ENSMUSG00000036751/ENSMUSG00000031231/ENSMUSG00000031059/ENSMUSG00000017778/ENSMUSG00000037152/ENSMUSG00000031818/ENSMUSG00000025781/ENSMUSG00000025204/ENSMUSG00000064354/ENSMUSG00000021520/ENSMUSG00000063882/ENSMUSG00000050856/ENSMUSG00000026895/ENSMUSG00000026032/ENSMUSG00000041881
+mmu05010	Alzheimer disease	41/779	170/6540	0.00000544987384413692	0.000419640285998543	ENSMUSG00000028648/ENSMUSG00000036835/ENSMUSG00000024960/ENSMUSG00000035885/ENSMUSG00000030647/ENSMUSG00000042644/ENSMUSG00000029632/ENSMUSG00000030884/ENSMUSG00000020788/ENSMUSG00000032375/ENSMUSG00000018411/ENSMUSG00000074218/ENSMUSG00000049387/ENSMUSG00000014313/ENSMUSG00000016427/ENSMUSG00000061518/ENSMUSG00000024248/ENSMUSG00000023089/ENSMUSG00000053040/ENSMUSG00000000088/ENSMUSG00000022354/ENSMUSG00000032330/ENSMUSG00000041697/ENSMUSG00000036751/ENSMUSG00000031231/ENSMUSG00000031059/ENSMUSG00000017778/ENSMUSG00000037152/ENSMUSG00000031818/ENSMUSG00000025781/ENSMUSG00000029467/ENSMUSG00000025204/ENSMUSG00000064354/ENSMUSG00000021520/ENSMUSG00000063882/ENSMUSG00000035674/ENSMUSG00000030209/ENSMUSG00000030102/ENSMUSG00000026895/ENSMUSG00000026032/ENSMUSG00000041881	Ndufs5/Psenen/Plcb3/Cox8a/Ndufc2/Itpr3/Ndufa4/Uqcrc2/Atp2a3/Aph1b/Mapt/Cox7a1/Cox7b2/Cox6c/Ndufa1/Cox5b/Cox7a2l/Ndufa5/Aph1c/Cox5a/Ndufb9/Cox7a2/Cox6a1/Cox6b1/Cox7b/Ndufb11/Cox7c/Ndufc1/Cox4i1/Atp5c1/Atp2a2/Ndufb8/mt-Co2/Uqcrb/Uqcrh/Ndufa3/Grin2b/Itpr1/Ndufa8/Ndufb3/Ndufa7	mmu:595136/mmu:66340/mmu:18797/mmu:12868/mmu:68197/mmu:16440/mmu:17992/mmu:67003/mmu:53313/mmu:208117/mmu:17762/mmu:12865/mmu:78174/mmu:12864/mmu:54405/mmu:12859/mmu:20463/mmu:68202/mmu:68318/mmu:12858/mmu:66218/mmu:12866/mmu:12861/mmu:110323/mmu:66142/mmu:104130/mmu:12867/mmu:66377/mmu:12857/mmu:11949/mmu:11938/mmu:67264/mmu:17709/mmu:67530/mmu:66576/mmu:66091/mmu:14812/mmu:16438/mmu:68375/mmu:66495/mmu:66416	41	14	ENSMUSG00000028648/ENSMUSG00000036835/ENSMUSG00000024960/ENSMUSG00000042644/ENSMUSG00000020788/ENSMUSG00000032375/ENSMUSG00000018411/ENSMUSG00000074218/ENSMUSG00000024248/ENSMUSG00000053040/ENSMUSG00000029467/ENSMUSG00000035674/ENSMUSG00000030209/ENSMUSG00000030102	27	ENSMUSG00000035885/ENSMUSG00000030647/ENSMUSG00000029632/ENSMUSG00000030884/ENSMUSG00000049387/ENSMUSG00000014313/ENSMUSG00000016427/ENSMUSG00000061518/ENSMUSG00000023089/ENSMUSG00000000088/ENSMUSG00000022354/ENSMUSG00000032330/ENSMUSG00000041697/ENSMUSG00000036751/ENSMUSG00000031231/ENSMUSG00000031059/ENSMUSG00000017778/ENSMUSG00000037152/ENSMUSG00000031818/ENSMUSG00000025781/ENSMUSG00000025204/ENSMUSG00000064354/ENSMUSG00000021520/ENSMUSG00000063882/ENSMUSG00000026895/ENSMUSG00000026032/ENSMUSG00000041881
+mmu05016	Huntington disease	43/779	187/6540	0.0000118236360776977	0.000728335982386179	ENSMUSG00000028648/ENSMUSG00000028800/ENSMUSG00000024960/ENSMUSG00000035885/ENSMUSG00000030647/ENSMUSG00000029632/ENSMUSG00000030884/ENSMUSG00000074218/ENSMUSG00000049387/ENSMUSG00000014313/ENSMUSG00000016427/ENSMUSG00000061518/ENSMUSG00000024248/ENSMUSG00000023089/ENSMUSG00000000088/ENSMUSG00000022354/ENSMUSG00000032330/ENSMUSG00000069041/ENSMUSG00000041697/ENSMUSG00000101337/ENSMUSG00000036751/ENSMUSG00000061322/ENSMUSG00000031231/ENSMUSG00000031059/ENSMUSG00000017778/ENSMUSG00000037152/ENSMUSG00000031818/ENSMUSG00000025781/ENSMUSG00000053007/ENSMUSG00000025204/ENSMUSG00000064354/ENSMUSG00000021520/ENSMUSG00000063882/ENSMUSG00000035674/ENSMUSG00000028478/ENSMUSG00000030209/ENSMUSG00000030102/ENSMUSG00000026895/ENSMUSG00000022982/ENSMUSG00000048482/ENSMUSG00000049583/ENSMUSG00000026032/ENSMUSG00000041881	Ndufs5/Hdac1/Plcb3/Cox8a/Ndufc2/Ndufa4/Uqcrc2/Cox7a1/Cox7b2/Cox6c/Ndufa1/Cox5b/Cox7a2l/Ndufa5/Cox5a/Ndufb9/Cox7a2/Slc25a31/Cox6a1/Dnah7c/Cox6b1/Dnaic1/Cox7b/Ndufb11/Cox7c/Ndufc1/Cox4i1/Atp5c1/Creb5/Ndufb8/mt-Co2/Uqcrb/Uqcrh/Ndufa3/Clta/Grin2b/Itpr1/Ndufa8/Sod1/Bdnf/Grm5/Ndufb3/Ndufa7	mmu:595136/mmu:433759/mmu:18797/mmu:12868/mmu:68197/mmu:17992/mmu:67003/mmu:12865/mmu:78174/mmu:12864/mmu:54405/mmu:12859/mmu:20463/mmu:68202/mmu:12858/mmu:66218/mmu:12866/mmu:73333/mmu:12861/mmu:100101919/mmu:110323/mmu:68922/mmu:66142/mmu:104130/mmu:12867/mmu:66377/mmu:12857/mmu:11949/mmu:231991/mmu:67264/mmu:17709/mmu:67530/mmu:66576/mmu:66091/mmu:12757/mmu:14812/mmu:16438/mmu:68375/mmu:20655/mmu:12064/mmu:108071/mmu:66495/mmu:66416	43	10	ENSMUSG00000028648/ENSMUSG00000028800/ENSMUSG00000024960/ENSMUSG00000074218/ENSMUSG00000024248/ENSMUSG00000101337/ENSMUSG00000035674/ENSMUSG00000028478/ENSMUSG00000030209/ENSMUSG00000030102	33	ENSMUSG00000035885/ENSMUSG00000030647/ENSMUSG00000029632/ENSMUSG00000030884/ENSMUSG00000049387/ENSMUSG00000014313/ENSMUSG00000016427/ENSMUSG00000061518/ENSMUSG00000023089/ENSMUSG00000000088/ENSMUSG00000022354/ENSMUSG00000032330/ENSMUSG00000069041/ENSMUSG00000041697/ENSMUSG00000036751/ENSMUSG00000061322/ENSMUSG00000031231/ENSMUSG00000031059/ENSMUSG00000017778/ENSMUSG00000037152/ENSMUSG00000031818/ENSMUSG00000025781/ENSMUSG00000053007/ENSMUSG00000025204/ENSMUSG00000064354/ENSMUSG00000021520/ENSMUSG00000063882/ENSMUSG00000026895/ENSMUSG00000022982/ENSMUSG00000048482/ENSMUSG00000049583/ENSMUSG00000026032/ENSMUSG00000041881
+mmu04714	Thermogenesis	49/779	226/6540	0.0000163225375946553	0.000837890263192306	ENSMUSG00000028648/ENSMUSG00000035885/ENSMUSG00000029580/ENSMUSG00000044288/ENSMUSG00000030647/ENSMUSG00000029632/ENSMUSG00000030884/ENSMUSG00000035505/ENSMUSG00000074218/ENSMUSG00000049387/ENSMUSG00000014313/ENSMUSG00000016427/ENSMUSG00000064341/ENSMUSG00000061518/ENSMUSG00000024248/ENSMUSG00000023089/ENSMUSG00000002496/ENSMUSG00000022220/ENSMUSG00000000088/ENSMUSG00000022354/ENSMUSG00000032330/ENSMUSG00000041697/ENSMUSG00000036751/ENSMUSG00000027671/ENSMUSG00000022610/ENSMUSG00000022840/ENSMUSG00000031231/ENSMUSG00000031059/ENSMUSG00000017778/ENSMUSG00000071369/ENSMUSG00000037152/ENSMUSG00000031818/ENSMUSG00000025781/ENSMUSG00000053007/ENSMUSG00000025204/ENSMUSG00000064354/ENSMUSG00000021520/ENSMUSG00000063882/ENSMUSG00000035674/ENSMUSG00000050856/ENSMUSG00000058881/ENSMUSG00000017188/ENSMUSG00000026895/ENSMUSG00000027305/ENSMUSG00000033174/ENSMUSG00000026032/ENSMUSG00000005034/ENSMUSG00000021221/ENSMUSG00000041881	Ndufs5/Cox8a/Actb/Cnr1/Ndufc2/Ndufa4/Uqcrc2/Cox18/Cox7a1/Cox7b2/Cox6c/Ndufa1/mt-Nd1/Cox5b/Cox7a2l/Ndufa5/Tsc2/Adcy4/Cox5a/Ndufb9/Cox7a2/Cox6a1/Cox6b1/Actl6a/Mapk12/Adcy5/Cox7b/Ndufb11/Cox7c/Map3k5/Ndufc1/Cox4i1/Atp5c1/Creb5/Ndufb8/mt-Co2/Uqcrb/Uqcrh/Ndufa3/Atp5k/Zfp516/Coa3/Ndufa8/Ndufaf1/Mgll/Ndufb3/Prkacb/Dpf3/Ndufa7	mmu:595136/mmu:12868/mmu:11461/mmu:12801/mmu:68197/mmu:17992/mmu:67003/mmu:231430/mmu:12865/mmu:78174/mmu:12864/mmu:54405/mmu:17716/mmu:12859/mmu:20463/mmu:68202/mmu:22084/mmu:104110/mmu:12858/mmu:66218/mmu:12866/mmu:12861/mmu:110323/mmu:56456/mmu:29857/mmu:224129/mmu:66142/mmu:104130/mmu:12867/mmu:26408/mmu:66377/mmu:12857/mmu:11949/mmu:231991/mmu:67264/mmu:17709/mmu:67530/mmu:66576/mmu:66091/mmu:11958/mmu:329003/mmu:52469/mmu:68375/mmu:69702/mmu:23945/mmu:66495/mmu:18749/mmu:70127/mmu:66416	49	16	ENSMUSG00000028648/ENSMUSG00000029580/ENSMUSG00000044288/ENSMUSG00000074218/ENSMUSG00000024248/ENSMUSG00000002496/ENSMUSG00000022220/ENSMUSG00000027671/ENSMUSG00000022840/ENSMUSG00000071369/ENSMUSG00000035674/ENSMUSG00000058881/ENSMUSG00000017188/ENSMUSG00000027305/ENSMUSG00000033174/ENSMUSG00000021221	33	ENSMUSG00000035885/ENSMUSG00000030647/ENSMUSG00000029632/ENSMUSG00000030884/ENSMUSG00000035505/ENSMUSG00000049387/ENSMUSG00000014313/ENSMUSG00000016427/ENSMUSG00000064341/ENSMUSG00000061518/ENSMUSG00000023089/ENSMUSG00000000088/ENSMUSG00000022354/ENSMUSG00000032330/ENSMUSG00000041697/ENSMUSG00000036751/ENSMUSG00000022610/ENSMUSG00000031231/ENSMUSG00000031059/ENSMUSG00000017778/ENSMUSG00000037152/ENSMUSG00000031818/ENSMUSG00000025781/ENSMUSG00000053007/ENSMUSG00000025204/ENSMUSG00000064354/ENSMUSG00000021520/ENSMUSG00000063882/ENSMUSG00000050856/ENSMUSG00000026895/ENSMUSG00000026032/ENSMUSG00000005034/ENSMUSG00000041881
+mmu04260	Cardiac muscle contraction	22/779	77/6540	0.0000578872146318605	0.00254703744380186	ENSMUSG00000035885/ENSMUSG00000030884/ENSMUSG00000010066/ENSMUSG00000074218/ENSMUSG00000049387/ENSMUSG00000014313/ENSMUSG00000061518/ENSMUSG00000024248/ENSMUSG00000040373/ENSMUSG00000059412/ENSMUSG00000000088/ENSMUSG00000032330/ENSMUSG00000041697/ENSMUSG00000036751/ENSMUSG00000031231/ENSMUSG00000017778/ENSMUSG00000031818/ENSMUSG00000029467/ENSMUSG00000064354/ENSMUSG00000021520/ENSMUSG00000063882/ENSMUSG00000021991	Cox8a/Uqcrc2/Cacna2d2/Cox7a1/Cox7b2/Cox6c/Cox5b/Cox7a2l/Cacng5/Fxyd2/Cox5a/Cox7a2/Cox6a1/Cox6b1/Cox7b/Cox7c/Cox4i1/Atp2a2/mt-Co2/Uqcrb/Uqcrh/Cacna2d3	mmu:12868/mmu:67003/mmu:56808/mmu:12865/mmu:78174/mmu:12864/mmu:12859/mmu:20463/mmu:140723/mmu:11936/mmu:12858/mmu:12866/mmu:12861/mmu:110323/mmu:66142/mmu:12867/mmu:12857/mmu:11938/mmu:17709/mmu:67530/mmu:66576/mmu:12294	22	5	ENSMUSG00000010066/ENSMUSG00000074218/ENSMUSG00000024248/ENSMUSG00000040373/ENSMUSG00000029467	17	ENSMUSG00000035885/ENSMUSG00000030884/ENSMUSG00000049387/ENSMUSG00000014313/ENSMUSG00000061518/ENSMUSG00000059412/ENSMUSG00000000088/ENSMUSG00000032330/ENSMUSG00000041697/ENSMUSG00000036751/ENSMUSG00000031231/ENSMUSG00000017778/ENSMUSG00000031818/ENSMUSG00000064354/ENSMUSG00000021520/ENSMUSG00000063882/ENSMUSG00000021991
+mmu04723	Retrograde endocannabinoid signaling	34/779	146/6540	0.0000737162396567292	0.00283807522678407	ENSMUSG00000028648/ENSMUSG00000024960/ENSMUSG00000044288/ENSMUSG00000030647/ENSMUSG00000042644/ENSMUSG00000029632/ENSMUSG00000016427/ENSMUSG00000064341/ENSMUSG00000023089/ENSMUSG00000010803/ENSMUSG00000027669/ENSMUSG00000022220/ENSMUSG00000050965/ENSMUSG00000022354/ENSMUSG00000078816/ENSMUSG00000037771/ENSMUSG00000022610/ENSMUSG00000032034/ENSMUSG00000022840/ENSMUSG00000031059/ENSMUSG00000037152/ENSMUSG00000033676/ENSMUSG00000052889/ENSMUSG00000025204/ENSMUSG00000035674/ENSMUSG00000030102/ENSMUSG00000026895/ENSMUSG00000031748/ENSMUSG00000033174/ENSMUSG00000049583/ENSMUSG00000057614/ENSMUSG00000026032/ENSMUSG00000005034/ENSMUSG00000041881	Ndufs5/Plcb3/Cnr1/Ndufc2/Itpr3/Ndufa4/Ndufa1/mt-Nd1/Ndufa5/Gabra1/Gnb4/Adcy4/Prkca/Ndufb9/Prkcg/Slc32a1/Mapk12/Kcnj5/Adcy5/Ndufb11/Ndufc1/Gabrb3/Prkcb/Ndufb8/Ndufa3/Itpr1/Ndufa8/Gnao1/Mgll/Grm5/Gnai1/Ndufb3/Prkacb/Ndufa7	mmu:595136/mmu:18797/mmu:12801/mmu:68197/mmu:16440/mmu:17992/mmu:54405/mmu:17716/mmu:68202/mmu:14394/mmu:14696/mmu:104110/mmu:18750/mmu:66218/mmu:18752/mmu:22348/mmu:29857/mmu:16521/mmu:224129/mmu:104130/mmu:66377/mmu:14402/mmu:18751/mmu:67264/mmu:66091/mmu:16438/mmu:68375/mmu:14681/mmu:23945/mmu:108071/mmu:14677/mmu:66495/mmu:18749/mmu:66416	34	16	ENSMUSG00000028648/ENSMUSG00000024960/ENSMUSG00000044288/ENSMUSG00000042644/ENSMUSG00000027669/ENSMUSG00000022220/ENSMUSG00000050965/ENSMUSG00000078816/ENSMUSG00000037771/ENSMUSG00000022840/ENSMUSG00000052889/ENSMUSG00000035674/ENSMUSG00000030102/ENSMUSG00000031748/ENSMUSG00000033174/ENSMUSG00000057614	18	ENSMUSG00000030647/ENSMUSG00000029632/ENSMUSG00000016427/ENSMUSG00000064341/ENSMUSG00000023089/ENSMUSG00000010803/ENSMUSG00000022354/ENSMUSG00000022610/ENSMUSG00000032034/ENSMUSG00000031059/ENSMUSG00000037152/ENSMUSG00000033676/ENSMUSG00000025204/ENSMUSG00000026895/ENSMUSG00000049583/ENSMUSG00000026032/ENSMUSG00000005034/ENSMUSG00000041881
+mmu04713	Circadian entrainment	23/779	94/6540	0.000501087661033892	0.0171483332887154	ENSMUSG00000024960/ENSMUSG00000042644/ENSMUSG00000041624/ENSMUSG00000027669/ENSMUSG00000022220/ENSMUSG00000050965/ENSMUSG00000030592/ENSMUSG00000078816/ENSMUSG00000020866/ENSMUSG00000032034/ENSMUSG00000022840/ENSMUSG00000057897/ENSMUSG00000028957/ENSMUSG00000021820/ENSMUSG00000052889/ENSMUSG00000038473/ENSMUSG00000030209/ENSMUSG00000030102/ENSMUSG00000021250/ENSMUSG00000031748/ENSMUSG00000057614/ENSMUSG00000005034/ENSMUSG00000022416	Plcb3/Itpr3/Gucy1a2/Gnb4/Adcy4/Prkca/Ryr1/Prkcg/Cacna1g/Kcnj5/Adcy5/Camk2b/Per3/Camk2g/Prkcb/Nos1ap/Grin2b/Itpr1/Fos/Gnao1/Gnai1/Prkacb/Cacna1i	mmu:18797/mmu:16440/mmu:234889/mmu:14696/mmu:104110/mmu:18750/mmu:20190/mmu:18752/mmu:12291/mmu:16521/mmu:224129/mmu:12323/mmu:18628/mmu:12325/mmu:18751/mmu:70729/mmu:14812/mmu:16438/mmu:14281/mmu:14681/mmu:14677/mmu:18749/mmu:239556	23	18	ENSMUSG00000024960/ENSMUSG00000042644/ENSMUSG00000041624/ENSMUSG00000027669/ENSMUSG00000022220/ENSMUSG00000050965/ENSMUSG00000030592/ENSMUSG00000078816/ENSMUSG00000020866/ENSMUSG00000022840/ENSMUSG00000057897/ENSMUSG00000052889/ENSMUSG00000038473/ENSMUSG00000030209/ENSMUSG00000030102/ENSMUSG00000031748/ENSMUSG00000057614/ENSMUSG00000022416	5	ENSMUSG00000032034/ENSMUSG00000028957/ENSMUSG00000021820/ENSMUSG00000021250/ENSMUSG00000005034
+mmu04724	Glutamatergic synapse	25/779	112/6540	0.00124304738668255	0.0382858595098226	ENSMUSG00000050211/ENSMUSG00000025813/ENSMUSG00000024960/ENSMUSG00000042644/ENSMUSG00000098488/ENSMUSG00000063239/ENSMUSG00000020828/ENSMUSG00000027669/ENSMUSG00000022220/ENSMUSG00000050965/ENSMUSG00000003573/ENSMUSG00000078816/ENSMUSG00000022840/ENSMUSG00000037541/ENSMUSG00000052889/ENSMUSG00000024935/ENSMUSG00000023192/ENSMUSG00000030209/ENSMUSG00000030102/ENSMUSG00000005357/ENSMUSG00000003279/ENSMUSG00000031748/ENSMUSG00000049583/ENSMUSG00000057614/ENSMUSG00000005034	Pla2g4e/Homer2/Plcb3/Itpr3/Pla2g4b/Grm4/Pld2/Gnb4/Adcy4/Prkca/Homer3/Prkcg/Adcy5/Shank2/Prkcb/Slc1a1/Grm2/Grin2b/Itpr1/Slc1a6/Dlgap1/Gnao1/Grm5/Gnai1/Prkacb	mmu:329502/mmu:26557/mmu:18797/mmu:16440/mmu:211429/mmu:268934/mmu:18806/mmu:14696/mmu:104110/mmu:18750/mmu:26558/mmu:18752/mmu:224129/mmu:210274/mmu:18751/mmu:20510/mmu:108068/mmu:14812/mmu:16438/mmu:20513/mmu:224997/mmu:14681/mmu:108071/mmu:14677/mmu:18749	25	19	ENSMUSG00000025813/ENSMUSG00000024960/ENSMUSG00000042644/ENSMUSG00000098488/ENSMUSG00000063239/ENSMUSG00000027669/ENSMUSG00000022220/ENSMUSG00000050965/ENSMUSG00000003573/ENSMUSG00000078816/ENSMUSG00000022840/ENSMUSG00000037541/ENSMUSG00000052889/ENSMUSG00000023192/ENSMUSG00000030209/ENSMUSG00000030102/ENSMUSG00000005357/ENSMUSG00000031748/ENSMUSG00000057614	6	ENSMUSG00000050211/ENSMUSG00000020828/ENSMUSG00000024935/ENSMUSG00000003279/ENSMUSG00000049583/ENSMUSG00000005034
+Showing 1 to 10 of 29 entriesPrevious123Next  
+
+- KEGGID：KEGG通路编号  
+- Description：KEGG通路编号对应的功能描述  
+- GeneRatio：注释到KEGG通路编号上的差异基因数与差异基因总数的比值  
+- BgRatio：注释到KEGG通路编号上的背景基因数与背景基因总数的比值  
+- pvalue：显著性检验p值  
+- padj：多重假设检验校正后的p值  
+- geneID：注释到KEGG通路编号上的差异基因ID  
+- geneName：注释到KEGG通路编号上的差异基因名称  
+- keggID：注释到KEGG通路编号上的差异基因keggID  
+- Count：注释到KEGG通路编号上的差异基因数  
+- Up: 与该Term相关的上调的差异基因个数  
+- Up_Gene_names: 与该Term相关的上调的差异基因ID  
+- Down: 与该Term相关的下调的差异基因个数  
+- Down_Gene_names: 与该Term相关的下调的差异基因ID  
+
+
+
+&emsp;&emsp;从KEGG富集结果中，选取最显著的20个KEGG通路绘制柱状图进行展示，若不足20个，则绘制所有通路，如下图所示。图中横坐标为KEGG通路，纵坐标为通路富集的显著性水平，数值越高越显著，见结果文件：Enrichment/KEGG。  
+
+
+图中横坐标为KEGG通路，纵坐标为通路富集的显著性水平  
+
+&emsp;&emsp;从KEGG富集结果中，选取最显著的20个KEGG通路绘制散点图进行展示，若不足20个，则绘制所有通路，如下图所示。图中横坐标为注释到KEGG通路上的差异基因数与差异基因总数的比值，纵坐标为KEGG通路，点的大小代表注释到KEGG通路上的基因数，颜色从红到紫代表富集的显著性大小，见结果文件：Enrichment/KEGG。  
+
+
+图中横坐标为注释到KEGG通路上的差异基因数与差异基因总数的比值，纵坐标为KEGG通路  
+
+&emsp;&emsp;html文件可通过点击链接，交互查看显著富集的KEGG通路图。其中，包含上调基因的KEGG节点标红色，包含下调基因的KEGG节点标绿色，包含上下调的标黄色。鼠标悬停于标记的KEGG节点，弹出差异基因细节框，标色同上，括号中数字为log2(Foldchange)。以上步骤可脱机实现，如连接互联网，点击各个节点，可以连接到KEGG官方数据库中各个KEGG的具体信息页，见结果文件：Enrichment/KEGG。  
+
+ 
+
+
+*****
+## Reactome功能富集分析  
+&emsp;&emsp;Reactome数据库汇集了人类等模式物种各项反应及生物学通路。Reactome通路富集以padj小于0.05作为显著性富集的阈值，富集结果如下表所示，见结果文件：Enrichment/Reactome。  
+
+Show  entriesSearch:  
+ReactomeID	Description	GeneRatio	BgRatio	pvalue	padj	geneID	geneName	keggID	Count	Up	Up_Gene_names	Down	Down_Gene_names
+R-MMU-72689	Formation of a pool of free 40S subunits	24/897	88/7649	0.0000489990539301419	0.029857214802792	ENSMUSG00000048758/ENSMUSG00000048758/ENSMUSG00000025794/ENSMUSG00000043424/ENSMUSG00000027236/ENSMUSG00000007892/ENSMUSG00000057863/ENSMUSG00000034892/ENSMUSG00000090862/ENSMUSG00000041453/ENSMUSG00000025362/ENSMUSG00000060636/ENSMUSG00000060036/ENSMUSG00000061477/ENSMUSG00000041841/ENSMUSG00000041841/ENSMUSG00000046330/ENSMUSG00000022336/ENSMUSG00000027170/ENSMUSG00000071415/ENSMUSG00000071415/ENSMUSG00000071415/ENSMUSG00000057322/ENSMUSG00000070319	Rpl29/Gm8210/Rpl14/Eif3j2/Eif3j1/Rplp1/Rpl36/Rps29/Rps13/Rpl21/Rps26/Rpl35a/Rpl3/Rps7/Rpl37/Rpl37rt/Rpl37a/Eif3e/Eif3m/Rpl23/LOC100044627/LOC100862455/Rpl38/Eif3g	19944/666642/67115/100042807/78655/56040/54217/20090/68052/19933/27370/57808/27367/20115/67281/100502825/19981/16341/98221/65019/100044627/100862455/67671/53356	24	6	ENSMUSG00000048758/ENSMUSG00000025794/ENSMUSG00000027236/ENSMUSG00000090862/ENSMUSG00000025362/ENSMUSG00000061477	14	ENSMUSG00000043424/ENSMUSG00000007892/ENSMUSG00000057863/ENSMUSG00000034892/ENSMUSG00000041453/ENSMUSG00000060636/ENSMUSG00000060036/ENSMUSG00000041841/ENSMUSG00000046330/ENSMUSG00000022336/ENSMUSG00000027170/ENSMUSG00000071415/ENSMUSG00000057322/ENSMUSG00000070319
+R-MMU-156827	L13a-mediated translational silencing of Ceruloplasmin expression	25/897	98/7649	0.000113488712540043	0.029857214802792	ENSMUSG00000048758/ENSMUSG00000048758/ENSMUSG00000025794/ENSMUSG00000043424/ENSMUSG00000027236/ENSMUSG00000007892/ENSMUSG00000057863/ENSMUSG00000034892/ENSMUSG00000090862/ENSMUSG00000041453/ENSMUSG00000025362/ENSMUSG00000060636/ENSMUSG00000060036/ENSMUSG00000058655/ENSMUSG00000061477/ENSMUSG00000041841/ENSMUSG00000041841/ENSMUSG00000046330/ENSMUSG00000022336/ENSMUSG00000027170/ENSMUSG00000071415/ENSMUSG00000071415/ENSMUSG00000071415/ENSMUSG00000057322/ENSMUSG00000070319	Rpl29/Gm8210/Rpl14/Eif3j2/Eif3j1/Rplp1/Rpl36/Rps29/Rps13/Rpl21/Rps26/Rpl35a/Rpl3/Eif4b/Rps7/Rpl37/Rpl37rt/Rpl37a/Eif3e/Eif3m/Rpl23/LOC100044627/LOC100862455/Rpl38/Eif3g	19944/666642/67115/100042807/78655/56040/54217/20090/68052/19933/27370/57808/27367/75705/20115/67281/100502825/19981/16341/98221/65019/100044627/100862455/67671/53356	25	6	ENSMUSG00000048758/ENSMUSG00000025794/ENSMUSG00000027236/ENSMUSG00000090862/ENSMUSG00000025362/ENSMUSG00000061477	15	ENSMUSG00000043424/ENSMUSG00000007892/ENSMUSG00000057863/ENSMUSG00000034892/ENSMUSG00000041453/ENSMUSG00000060636/ENSMUSG00000060036/ENSMUSG00000058655/ENSMUSG00000041841/ENSMUSG00000046330/ENSMUSG00000022336/ENSMUSG00000027170/ENSMUSG00000071415/ENSMUSG00000057322/ENSMUSG00000070319
+R-MMU-72706	GTP hydrolysis and joining of the 60S ribosomal subunit	25/897	99/7649	0.000135302323383612	0.029857214802792	ENSMUSG00000048758/ENSMUSG00000048758/ENSMUSG00000025794/ENSMUSG00000043424/ENSMUSG00000027236/ENSMUSG00000007892/ENSMUSG00000057863/ENSMUSG00000034892/ENSMUSG00000090862/ENSMUSG00000041453/ENSMUSG00000025362/ENSMUSG00000060636/ENSMUSG00000060036/ENSMUSG00000058655/ENSMUSG00000061477/ENSMUSG00000041841/ENSMUSG00000041841/ENSMUSG00000046330/ENSMUSG00000022336/ENSMUSG00000027170/ENSMUSG00000071415/ENSMUSG00000071415/ENSMUSG00000071415/ENSMUSG00000057322/ENSMUSG00000070319	Rpl29/Gm8210/Rpl14/Eif3j2/Eif3j1/Rplp1/Rpl36/Rps29/Rps13/Rpl21/Rps26/Rpl35a/Rpl3/Eif4b/Rps7/Rpl37/Rpl37rt/Rpl37a/Eif3e/Eif3m/Rpl23/LOC100044627/LOC100862455/Rpl38/Eif3g	19944/666642/67115/100042807/78655/56040/54217/20090/68052/19933/27370/57808/27367/75705/20115/67281/100502825/19981/16341/98221/65019/100044627/100862455/67671/53356	25	6	ENSMUSG00000048758/ENSMUSG00000025794/ENSMUSG00000027236/ENSMUSG00000090862/ENSMUSG00000025362/ENSMUSG00000061477	15	ENSMUSG00000043424/ENSMUSG00000007892/ENSMUSG00000057863/ENSMUSG00000034892/ENSMUSG00000041453/ENSMUSG00000060636/ENSMUSG00000060036/ENSMUSG00000058655/ENSMUSG00000041841/ENSMUSG00000046330/ENSMUSG00000022336/ENSMUSG00000027170/ENSMUSG00000071415/ENSMUSG00000057322/ENSMUSG00000070319
+R-MMU-72613	Eukaryotic Translation Initiation	26/897	106/7649	0.000167293732421709	0.029857214802792	ENSMUSG00000048758/ENSMUSG00000048758/ENSMUSG00000025794/ENSMUSG00000043424/ENSMUSG00000027236/ENSMUSG00000007892/ENSMUSG00000057863/ENSMUSG00000034892/ENSMUSG00000090862/ENSMUSG00000041453/ENSMUSG00000025362/ENSMUSG00000060636/ENSMUSG00000028683/ENSMUSG00000060036/ENSMUSG00000058655/ENSMUSG00000061477/ENSMUSG00000041841/ENSMUSG00000041841/ENSMUSG00000046330/ENSMUSG00000022336/ENSMUSG00000027170/ENSMUSG00000071415/ENSMUSG00000071415/ENSMUSG00000071415/ENSMUSG00000057322/ENSMUSG00000070319	Rpl29/Gm8210/Rpl14/Eif3j2/Eif3j1/Rplp1/Rpl36/Rps29/Rps13/Rpl21/Rps26/Rpl35a/Eif2b3/Rpl3/Eif4b/Rps7/Rpl37/Rpl37rt/Rpl37a/Eif3e/Eif3m/Rpl23/LOC100044627/LOC100862455/Rpl38/Eif3g	19944/666642/67115/100042807/78655/56040/54217/20090/68052/19933/27370/57808/108067/27367/75705/20115/67281/100502825/19981/16341/98221/65019/100044627/100862455/67671/53356	26	6	ENSMUSG00000048758/ENSMUSG00000025794/ENSMUSG00000027236/ENSMUSG00000090862/ENSMUSG00000025362/ENSMUSG00000061477	16	ENSMUSG00000043424/ENSMUSG00000007892/ENSMUSG00000057863/ENSMUSG00000034892/ENSMUSG00000041453/ENSMUSG00000060636/ENSMUSG00000028683/ENSMUSG00000060036/ENSMUSG00000058655/ENSMUSG00000041841/ENSMUSG00000046330/ENSMUSG00000022336/ENSMUSG00000027170/ENSMUSG00000071415/ENSMUSG00000057322/ENSMUSG00000070319
+R-MMU-72737	Cap-dependent Translation Initiation	26/897	106/7649	0.000167293732421709	0.029857214802792	ENSMUSG00000048758/ENSMUSG00000048758/ENSMUSG00000025794/ENSMUSG00000043424/ENSMUSG00000027236/ENSMUSG00000007892/ENSMUSG00000057863/ENSMUSG00000034892/ENSMUSG00000090862/ENSMUSG00000041453/ENSMUSG00000025362/ENSMUSG00000060636/ENSMUSG00000028683/ENSMUSG00000060036/ENSMUSG00000058655/ENSMUSG00000061477/ENSMUSG00000041841/ENSMUSG00000041841/ENSMUSG00000046330/ENSMUSG00000022336/ENSMUSG00000027170/ENSMUSG00000071415/ENSMUSG00000071415/ENSMUSG00000071415/ENSMUSG00000057322/ENSMUSG00000070319	Rpl29/Gm8210/Rpl14/Eif3j2/Eif3j1/Rplp1/Rpl36/Rps29/Rps13/Rpl21/Rps26/Rpl35a/Eif2b3/Rpl3/Eif4b/Rps7/Rpl37/Rpl37rt/Rpl37a/Eif3e/Eif3m/Rpl23/LOC100044627/LOC100862455/Rpl38/Eif3g	19944/666642/67115/100042807/78655/56040/54217/20090/68052/19933/27370/57808/108067/27367/75705/20115/67281/100502825/19981/16341/98221/65019/100044627/100862455/67671/53356	26	6	ENSMUSG00000048758/ENSMUSG00000025794/ENSMUSG00000027236/ENSMUSG00000090862/ENSMUSG00000025362/ENSMUSG00000061477	16	ENSMUSG00000043424/ENSMUSG00000007892/ENSMUSG00000057863/ENSMUSG00000034892/ENSMUSG00000041453/ENSMUSG00000060636/ENSMUSG00000028683/ENSMUSG00000060036/ENSMUSG00000058655/ENSMUSG00000041841/ENSMUSG00000046330/ENSMUSG00000022336/ENSMUSG00000027170/ENSMUSG00000071415/ENSMUSG00000057322/ENSMUSG00000070319
+R-MMU-1474244	Extracellular matrix organization	47/897	238/7649	0.000193459275180078	0.029857214802792	ENSMUSG00000026141/ENSMUSG00000020522/ENSMUSG00000055447/ENSMUSG00000026479/ENSMUSG00000006369/ENSMUSG00000026674/ENSMUSG00000030111/ENSMUSG00000016995/ENSMUSG00000045672/ENSMUSG00000027111/ENSMUSG00000018593/ENSMUSG00000002900/ENSMUSG00000022483/ENSMUSG00000022817/ENSMUSG00000006403/ENSMUSG00000042436/ENSMUSG00000001794/ENSMUSG00000001506/ENSMUSG00000050965/ENSMUSG00000001435/ENSMUSG00000032649/ENSMUSG00000048222/ENSMUSG00000005397/ENSMUSG00000001507/ENSMUSG00000070436/ENSMUSG00000036446/ENSMUSG00000031274/ENSMUSG00000020241/ENSMUSG00000031375/ENSMUSG00000005087/ENSMUSG00000051048/ENSMUSG00000000489/ENSMUSG00000028339/ENSMUSG00000016356/ENSMUSG00000030786/ENSMUSG00000000303/ENSMUSG00000016763/ENSMUSG00000018620/ENSMUSG00000031273/ENSMUSG00000053617/ENSMUSG00000031502/ENSMUSG00000029675/ENSMUSG00000029661/ENSMUSG00000001119/ENSMUSG00000026193/ENSMUSG00000021614/ENSMUSG00000031740	Col19a1/Mfap3/Cd47/Lamc2/Fbln1/Ddr2/A2m/Matn4/Col27a1/Itga6/Sparc/Lamb1/Col2a1/Itgb5/Adamts4/Mfap4/Capns1/Col1a1/Prkca/Col18a1/Colgalt2/Mfap1b/Nid1/Itga3/Serpinh1/Lum/Col4a5/Col6a2/Bgn/Cd44/P4ha3/Pdgfb/Col15a1/Col20a1/Itgam/Cdh1/Scube1/Mmp20/Col4a6/Sh3pxd2a/Col4a1/Eln/Col1a2/Col6a1/Fn1/Vcan/Mmp2	12823/216760/16423/16782/14114/18214/232345/17183/373864/16403/20692/16777/12824/16419/240913/76293/12336/12842/18750/12822/269132/100034361/18073/16400/12406/17022/12830/12834/12111/12505/320452/18591/12819/73368/16409/12550/64706/30800/94216/14218/12826/13717/12843/12833/14268/13003/17390	47	41	ENSMUSG00000026141/ENSMUSG00000020522/ENSMUSG00000006369/ENSMUSG00000026674/ENSMUSG00000030111/ENSMUSG00000045672/ENSMUSG00000027111/ENSMUSG00000018593/ENSMUSG00000002900/ENSMUSG00000022483/ENSMUSG00000022817/ENSMUSG00000006403/ENSMUSG00000042436/ENSMUSG00000001794/ENSMUSG00000001506/ENSMUSG00000050965/ENSMUSG00000001435/ENSMUSG00000048222/ENSMUSG00000005397/ENSMUSG00000001507/ENSMUSG00000070436/ENSMUSG00000036446/ENSMUSG00000031274/ENSMUSG00000020241/ENSMUSG00000031375/ENSMUSG00000005087/ENSMUSG00000000489/ENSMUSG00000028339/ENSMUSG00000016356/ENSMUSG00000030786/ENSMUSG00000000303/ENSMUSG00000016763/ENSMUSG00000018620/ENSMUSG00000031273/ENSMUSG00000053617/ENSMUSG00000031502/ENSMUSG00000029675/ENSMUSG00000029661/ENSMUSG00000001119/ENSMUSG00000026193/ENSMUSG00000031740	6	ENSMUSG00000055447/ENSMUSG00000026479/ENSMUSG00000016995/ENSMUSG00000032649/ENSMUSG00000051048/ENSMUSG00000021614
+R-MMU-112316	Neuronal System	57/897	311/7649	0.000336455054261723	0.0445081971780508	ENSMUSG00000015656/ENSMUSG00000025813/ENSMUSG00000024960/ENSMUSG00000037610/ENSMUSG00000035199/ENSMUSG00000027624/ENSMUSG00000024524/ENSMUSG00000062785/ENSMUSG00000010803/ENSMUSG00000039809/ENSMUSG00000022220/ENSMUSG00000050965/ENSMUSG00000054477/ENSMUSG00000045404/ENSMUSG00000045246/ENSMUSG00000003573/ENSMUSG00000078816/ENSMUSG00000035864/ENSMUSG00000059146/ENSMUSG00000000326/ENSMUSG00000037771/ENSMUSG00000018589/ENSMUSG00000024109/ENSMUSG00000032034/ENSMUSG00000049265/ENSMUSG00000022840/ENSMUSG00000057897/ENSMUSG00000021820/ENSMUSG00000032303/ENSMUSG00000037541/ENSMUSG00000033676/ENSMUSG00000052889/ENSMUSG00000027950/ENSMUSG00000033295/ENSMUSG00000024935/ENSMUSG00000047298/ENSMUSG00000021730/ENSMUSG00000037624/ENSMUSG00000001901/ENSMUSG00000038077/ENSMUSG00000046699/ENSMUSG00000024462/ENSMUSG00000052581/ENSMUSG00000030209/ENSMUSG00000027273/ENSMUSG00000027895/ENSMUSG00000051726/ENSMUSG00000020785/ENSMUSG00000005357/ENSMUSG00000092083/ENSMUSG00000003279/ENSMUSG00000040896/ENSMUSG00000049583/ENSMUSG00000068615/ENSMUSG00000057614/ENSMUSG00000005034/ENSMUSG00000026797	Hspa8/Homer2/Plcb3/Kcnmb2/Arl6ip5/Epb41l1/Gnal/Kcnc3/Gabra1/Gabbr2/Adcy4/Prkca/Kcnn2/Kcnk13/Kcng4/Homer3/Prkcg/Syt1/Ntrk3/Comt/Slc32a1/Glra2/Nrxn1/Kcnj5/Kcnk3/Adcy5/Camk2b/Camk2g/Chrna3/Shank2/Gabrb3/Prkcb/Chrnb2/Ptprf/Slc1a1/Kcnv2/Hcn1/Kcnk2/Kcnh6/Kcna6/Slitrk4/Gabbr1/Lrrtm4/Grin2b/Snap25/Kcnc4/Kcnf1/Camkk1/Slc1a6/Kcnb2/Dlgap1/Kcnd3/Grm5/Gjd2/Gnai1/Prkacb/Stxbp1	15481/26557/18797/72413/65106/13821/14680/16504/14394/242425/104110/18750/140492/217826/66733/26558/18752/20979/18213/12846/22348/237213/18189/16521/16527/224129/12323/12325/110834/210274/14402/18751/11444/19268/20510/240595/15165/16526/192775/16494/245446/54393/243499/14812/20614/99738/382571/55984/20513/98741/224997/56543/108071/14617/14677/18749/20910	57	39	ENSMUSG00000015656/ENSMUSG00000025813/ENSMUSG00000024960/ENSMUSG00000027624/ENSMUSG00000024524/ENSMUSG00000062785/ENSMUSG00000039809/ENSMUSG00000022220/ENSMUSG00000050965/ENSMUSG00000045404/ENSMUSG00000045246/ENSMUSG00000003573/ENSMUSG00000078816/ENSMUSG00000035864/ENSMUSG00000059146/ENSMUSG00000000326/ENSMUSG00000037771/ENSMUSG00000018589/ENSMUSG00000024109/ENSMUSG00000049265/ENSMUSG00000022840/ENSMUSG00000057897/ENSMUSG00000032303/ENSMUSG00000037541/ENSMUSG00000052889/ENSMUSG00000027950/ENSMUSG00000047298/ENSMUSG00000037624/ENSMUSG00000038077/ENSMUSG00000024462/ENSMUSG00000030209/ENSMUSG00000027895/ENSMUSG00000051726/ENSMUSG00000020785/ENSMUSG00000005357/ENSMUSG00000092083/ENSMUSG00000040896/ENSMUSG00000068615/ENSMUSG00000057614	18	ENSMUSG00000037610/ENSMUSG00000035199/ENSMUSG00000010803/ENSMUSG00000054477/ENSMUSG00000032034/ENSMUSG00000021820/ENSMUSG00000033676/ENSMUSG00000033295/ENSMUSG00000024935/ENSMUSG00000021730/ENSMUSG00000001901/ENSMUSG00000046699/ENSMUSG00000052581/ENSMUSG00000027273/ENSMUSG00000003279/ENSMUSG00000049583/ENSMUSG00000005034/ENSMUSG00000026797
+R-MMU-8948216	Collagen chain trimerization	13/897	41/7649	0.000550195135410431	0.0636850869237574	ENSMUSG00000026141/ENSMUSG00000045672/ENSMUSG00000022483/ENSMUSG00000001506/ENSMUSG00000001435/ENSMUSG00000031274/ENSMUSG00000020241/ENSMUSG00000028339/ENSMUSG00000016356/ENSMUSG00000031273/ENSMUSG00000031502/ENSMUSG00000029661/ENSMUSG00000001119	Col19a1/Col27a1/Col2a1/Col1a1/Col18a1/Col4a5/Col6a2/Col15a1/Col20a1/Col4a6/Col4a1/Col1a2/Col6a1	12823/373864/12824/12842/12822/12830/12834/12819/73368/94216/12826/12843/12833	13	13	ENSMUSG00000026141/ENSMUSG00000045672/ENSMUSG00000022483/ENSMUSG00000001506/ENSMUSG00000001435/ENSMUSG00000031274/ENSMUSG00000020241/ENSMUSG00000028339/ENSMUSG00000016356/ENSMUSG00000031273/ENSMUSG00000031502/ENSMUSG00000029661/ENSMUSG00000001119	0	
+R-MMU-1799339	SRP-dependent cotranslational protein targeting to membrane	20/897	81/7649	0.00083951834752083	0.0767300387758879	ENSMUSG00000048758/ENSMUSG00000048758/ENSMUSG00000025794/ENSMUSG00000009549/ENSMUSG00000007892/ENSMUSG00000057863/ENSMUSG00000034892/ENSMUSG00000090862/ENSMUSG00000041453/ENSMUSG00000025362/ENSMUSG00000060636/ENSMUSG00000060036/ENSMUSG00000061477/ENSMUSG00000041841/ENSMUSG00000041841/ENSMUSG00000046330/ENSMUSG00000071415/ENSMUSG00000071415/ENSMUSG00000071415/ENSMUSG00000057322	Rpl29/Gm8210/Rpl14/Srp14/Rplp1/Rpl36/Rps29/Rps13/Rpl21/Rps26/Rpl35a/Rpl3/Rps7/Rpl37/Rpl37rt/Rpl37a/Rpl23/LOC100044627/LOC100862455/Rpl38	19944/666642/67115/20813/56040/54217/20090/68052/19933/27370/57808/27367/20115/67281/100502825/19981/65019/100044627/100862455/67671	20	5	ENSMUSG00000048758/ENSMUSG00000025794/ENSMUSG00000090862/ENSMUSG00000025362/ENSMUSG00000061477	11	ENSMUSG00000009549/ENSMUSG00000007892/ENSMUSG00000057863/ENSMUSG00000034892/ENSMUSG00000041453/ENSMUSG00000060636/ENSMUSG00000060036/ENSMUSG00000041841/ENSMUSG00000046330/ENSMUSG00000071415/ENSMUSG00000057322
+R-MMU-1474228	Degradation of the extracellular matrix	23/897	99/7649	0.000886936492641829	0.0767300387758879	ENSMUSG00000026141/ENSMUSG00000026479/ENSMUSG00000030111/ENSMUSG00000022483/ENSMUSG00000006403/ENSMUSG00000001794/ENSMUSG00000001506/ENSMUSG00000001435/ENSMUSG00000005397/ENSMUSG00000031274/ENSMUSG00000020241/ENSMUSG00000005087/ENSMUSG00000028339/ENSMUSG00000000303/ENSMUSG00000016763/ENSMUSG00000018620/ENSMUSG00000031273/ENSMUSG00000031502/ENSMUSG00000029675/ENSMUSG00000029661/ENSMUSG00000001119/ENSMUSG00000026193/ENSMUSG00000031740	Col19a1/Lamc2/A2m/Col2a1/Adamts4/Capns1/Col1a1/Col18a1/Nid1/Col4a5/Col6a2/Cd44/Col15a1/Cdh1/Scube1/Mmp20/Col4a6/Col4a1/Eln/Col1a2/Col6a1/Fn1/Mmp2	12823/16782/232345/12824/240913/12336/12842/12822/18073/12830/12834/12505/12819/12550/64706/30800/94216/12826/13717/12843/12833/14268/17390	23	22	ENSMUSG00000026141/ENSMUSG00000030111/ENSMUSG00000022483/ENSMUSG00000006403/ENSMUSG00000001794/ENSMUSG00000001506/ENSMUSG00000001435/ENSMUSG00000005397/ENSMUSG00000031274/ENSMUSG00000020241/ENSMUSG00000005087/ENSMUSG00000028339/ENSMUSG00000000303/ENSMUSG00000016763/ENSMUSG00000018620/ENSMUSG00000031273/ENSMUSG00000031502/ENSMUSG00000029675/ENSMUSG00000029661/ENSMUSG00000001119/ENSMUSG00000026193/ENSMUSG00000031740	1	ENSMUSG00000026479
+Showing 1 to 10 of 29 entriesPrevious123Next  
+
+- ReactomeID：Reactome通路编号  
+- Description：Reactome通路编号对应的功能描述  
+- GeneRatio：注释到Reactome通路编号上的差异基因数与差异基因总数的比值  
+- BgRatio：注释到Reactome通路编号上的背景基因数与背景基因总数的比值  
+- pvalue：显著性检验p值  
+- padj：多重假设检验校正后的p值  
+- geneID：注释到Reactome通路编号上的差异基因ID  
+- geneName：注释到Reactome通路编号上的差异基因名称  
+- keggID：注释到Reactome通路编号上的差异基因keggID  
+- Count：注释到Reactome通路编号上的差异基因数  
+- Up: 与该Term相关的上调的差异基因个数  
+- Up_Gene_names: 与该Term相关的上调的差异基因ID  
+- Down: 与该Term相关的下调的差异基因个数  
+- Down_Gene_names: 与该Term相关的下调的差异基因ID  
+
+
+
+&emsp;&emsp;从Reactome富集分析结果中，选取最显著的20个Reactome通路绘制柱状图进行展示，若不足20个，则绘制所有通路，如下图所示。图中横坐标为Reactome通路，纵坐标为通路富集的显著性水平，数值越高越显著。见结果文件：Enrichment/Reactome  
+
+
+图中横坐标为Reactome通路，纵坐标为通路富集的显著性水平  
+
+&emsp;&emsp;从Reactome富集分析结果中，选取最显著的20个Reactome通路绘制散点图进行展示，若不足20个，则绘制所有通路，如下图所示。图中横坐标为注释到Reactome通路上的差异基因数与差异基因总数的比值，纵坐标为Reactome通路，点的大小代表注释到Reactome通路上的基因数，颜色从红到紫代表富集的显著性大小。见结果文件：Enrichment/Reactome  
+
+
+图中横坐标为注释到Reactome通路上的差异基因数与差异基因总数的比值，纵坐标为Reactome通路，见结果文件：Enrichment/Reactome  
+
+
+
+*****
+### GSEA富集分析  
+&emsp;&emsp;常规的基于超几何分布的富集分析依赖于显著上调或下调的基因，容易遗漏部分差异表达不显著但有重要生物学意义的基因。基因富集分析（GSEA）不需要指定明确的差异基因阈值，把基因按照在两组样本中的差异表达程度进行排序，然后采用统计学方法检验预先设定的基因集合是否在排序表的顶端或低段富集。GSEA主要包括三个步骤：计算富集得分（Enrichment Score）；估计富集得分的显著性水平；多重假设检验。见结果文件：Enrichment/{比较组合}/GSEA  
+
+
+
+&emsp;&emsp;我们分别对该物种的GO、KEGG、Reactome、DO、DisGeNET等数据集进行GSEA分析，结果如下所示。  
+
+ 
+
+
+*****
+### 蛋白互作网络分析  
+&emsp;&emsp;我们主要应用STRING蛋白质互作数据库中的互作关系进行差异基因蛋白互作网络的分析。针对于数据库中包含的物种，直接从数据库中提取出目标基因集(比如差异基因列表)的互作关系来构建网络；针对于数据库中不包含的物种，我们首先将目标基因集中的序列应用blastx比对到STRING数据库中包含的参考物种的蛋白质序列上，并利用比对上的该参考物种的蛋白质互作关系构建互作网络，结果文件见Enrichment/PPI。  
+
+&emsp;&emsp;我们提供差异基因蛋白互作网络数据文件，此文件可以直接导入Cytoscape软件进行可视化编辑。Cytoscape软件使用方法可参考我们提供的使用说明文档CytoscapeQuickStart。客户可以针对一些网络的拓扑属性进行统计和标示作图，比如：互作网络图中节点(node)的大小与此节点的度(degree)成正比，即与此节点相连的边越多，它的度越大，节点也就越大，这些节点在网络中可能处于较为核心的位置。节点的颜色与此节点的聚集系数(clustering coefficient)相关，颜色梯度由绿到红对应聚集系数的值由低到高；聚集系数表示此节点的邻接点之间的连通性好坏，聚集系数值越高表示此节点的邻接点之间的连通性越好等等。根据不同的研究目的和需求，客户还可以在网络图中进行调整节点位置和颜色、标注表达量水平等操作。需要注意的是，通过blast比对得到的结果不能保证较好的准确性，这部分的工作仅供参考，辅助客户发现一些重要的候选基因。按我们提供的使用说明将文件导入Cytoscape软件后的效果图如下所示。  
+
+
+
+
+
+*****
+### 富集分析常见问题及解答  
+
+
+<div class="panel panel-danger">
+  <div class="panel-heading">
+富集分析原理图中n，N，i，M的含义？  
+  </div>
+  <div class="panel-body">
+富集分析结果中，GeneRatio的这一列表示的是差异基因集信息。其中斜杠左侧的数字表示注释到某个通路的差异基因数，该值对应于富集原理图的i(某通路差异基因集)，斜杠右侧的数字表示注释到所有通路的差异基因数，对应于富集分析原理图的n(差异基因集)。BgRatio的这一列表示的是背景基因集信息，其中斜杠左侧的数字是注释到某个通路的背景基因数，对应于富集分析原理图的M(某通路基背景基因)，斜杠右侧的注释到所有通路的背景基因数，对应于富集分析原理图的N(所以通路背景基因集)。  
+  </div>
 </div>
+
+<div class="panel panel-danger">
+  <div class="panel-heading">
+富集分析结果只看显著性富集的通路吗？  
+  </div>
+  <div class="panel-body">
+对富集分析结果的解读，应该从生物学意义的角度来看，pvalue和padj只是提供一个参考，只要结果可以解释，有生物学意义，那些不显著富集的通路也值得深入研究的，不用执着于pvalue或padj。  
+  </div>
+</div>
+
+
+*****
+## 可变剪接分析  
+&emsp;&emsp;可变剪接是调节基因表达和产生蛋白质组多样性的重要机制，也是RNA-seq的重要分析内容，我们使用rMATS软件进行可变剪接分析，主要包括SE、RI、MXE、A5SS、A3SS五种可变剪接事件，如下图所示：  
+
+
+
+
+
+*****
+### 差异可变剪接事件  
+&emsp;&emsp;我们使用rMATS软件进行AS事件的定量及差异分析。rMATS软件可以将AS事件进行5种分类，并且可以对有生物学重复的样品进行差异AS分析。每个可变剪接事件对应两个Isoform，分别为Exon Inclusion Isoform和Exon Skipping Isoform，分别对两个Isoform进行表达量统计，并除以其有效长度，得到校正后的表达量，然后计算Exon Inclusion Isoform在两个Isoform总表达量的比值，比值即为结果文件中的IncLevel1（处理组）和IncLevel2（对照组），如下图所示。最后进行差异显著性分析。我们筛选差异显著性可变剪接事件的阈值是FDR小于0.05，SE类型可变剪接事件的差异分析结果如下表所示，见结果文件：AS/1.daslist。  
+
+
+
+Show  entriesSearch:  
+GeneID	geneSymbol	chr	strand	exonStart_0base	exonEnd	upstreamES	upstreamEE	downstreamES	downstreamEE	IC_SAMPLE_1	SC_SAMPLE_1	IC_SAMPLE_2	SC_SAMPLE_2	IncFormLen	SkipFormLen	PValue	FDR	IncLevel1	IncLevel2	IncLevelDifference
+ENSMUSG00000020474	Polm	11	-	5837288	5837478	5836277	5836374	5837560	5837752	1,3,0,1	16,15,6,3	9,26,10,17	3,0,8,4	339	149	0	0	0.027,0.081,0.0,0.128	0.569,1.0,0.355,0.651	-0.585
+ENSMUSG00000066568	Lsm14a	7	-	34347925	34347982	34344645	34345958	34351285	34351517	305,221,267,301	63,59,65,53	437,348,511,403	0,0,0,5	206	149	0	0	0.778,0.73,0.748,0.804	1.0,1.0,1.0,0.983	-0.231
+ENSMUSG00000026617	Bpnt1	1	+	185349836	185349881	185348743	185348835	185352181	185352379	200,129,131,177	85,68,87,85	161,169,242,169	22,0,0,11	194	149	0	0	0.644,0.593,0.536,0.615	0.849,1.0,1.0,0.922	-0.346
+ENSMUSG00000034442	Trmt5	12	-	73281004	73281656	73280010	73280632	73282611	73282736	172,129,164,173	0,2,0,0	119,165,164,131	16,11,24,14	801	149	0	0	1.0,0.923,1.0,1.0	0.58,0.736,0.56,0.635	0.353
+ENSMUSG00000028689	Ccdc163	4	+	116709239	116709273	116709007	116709094	116709437	116709619	9,10,10,6	4,0,1,0	3,0,0,0	5,2,12,0	183	149	1.61892399133e-238	1.21992398443e-234	0.647,1.0,0.891,1.0	0.328,0.0,0.0,NA	0.775
+ENSMUSG00000021427	Ssr1	13	-	37983094	37983109	37979742	37979806	37983392	37983486	0,140,0,0	115,73,98,94	107,0,153,170	116,59,126,100	164	149	2.49450512625e-209	1.56642449403e-205	0.0,0.635,0.0,0.0	0.456,0.0,0.525,0.607	-0.238
+ENSMUSG00000079427	Mthfsl	9	-	88715487	88715749	88688691	88688985	88719658	88719813	84,55,71,71	31,7,5,35	75,96,107,92	4,2,3,8	411	149	3.12706278273e-206	1.68311920664e-202	0.496,0.74,0.837,0.424	0.872,0.946,0.928,0.807	-0.264
+ENSMUSG00000032740	Ccdc88a	11	+	29500975	29501056	29499334	29499406	29503382	29503651	109,80,76,91	25,10,6,8	124,111,145,133	3,1,0,0	230	149	5.41369759398e-206	2.5496485531e-202	0.739,0.838,0.891,0.881	0.964,0.986,1.0,1.0	-0.15
+ENSMUSG00000059518	Znhit1	5	-	136986125	136986255	136984878	136985049	136986810	136987232	8,8,16,36	57,49,52,9	3,2,0,4	115,79,106,94	279	149	2.77117994492e-199	1.16010829761e-195	0.07,0.08,0.141,0.681	0.014,0.013,0.0,0.022	0.231
+ENSMUSG00000020598	Nrcam	12	+	44583666	44583792	44583045	44583423	44590107	44590239	0,0,3,0	0,1,5,3	0,1,2,6	1,0,1,0	275	149	3.1554765268e-195	1.188888891e-191	NA,0.0,0.245,0.0	0.0,1.0,0.52,1.0	-0.548
+Showing 1 to 10 of 29 entriesPrevious123Next  
+
+- GeneID：可变剪接事件所在基因编号  
+- geneSymbol：可变剪接事件所在基因名称  
+- chr：可变剪接事件所在染色体  
+- strand：可变剪接事件所在染色体链的方向  
+- exonStart_0base：可变剪接事件跳跃外显子起始位置，以0开始计数  
+- exonEnd：可变剪接事件跳跃外显子终止位置  
+- upstreamES：可变剪接事件跳跃外显子的上游exon起始位置  
+- upstreamEE：可变剪接事件跳跃外显子的上游exon终止位置  
+- downstreamES：可变剪接事件跳跃外显子的下游exon起始位置  
+- downstreamEE：可变剪接事件跳跃外显子的下游exon终止位置  
+- IC_SAMPLE_1：可变剪接事件Exon Inclusion Isoform在差异比较组合中处理组的表达量  
+- SC_SAMPLE_1：可变剪接事件Exon Skipping Isoform在差异比较组合中处理组的表达量  
+- IC_SAMPLE_2：可变剪接事件Exon Inclusion Isoform在差异比较组合中对照组的表达量  
+- SC_SAMPLE_2：可变剪接事件Exon Skipping Isoform在差异比较组合中对照组的表达量  
+- IncFormLen：可变剪接事件Exon Inclusion Isoform的有效长度  
+- SkipFormLen：可变剪接事件Exon Skipping Isoform的有效长度  
+- PValue：可变剪接事件表达差异显著性p值  
+- FDR：可变剪接事件表达差异显著性FDR值  
+- IncLevel1：处理组可变剪接事件Exon Inclusion Isoform在两个Isoform总表达量的比值  
+- IncLevel2：对照组可变剪接事件Exon Inclusion Isoform在两个Isoform总表达量的比值  
+- IncLevelDifference：IncLevel1与IncLevel2的差值  
+
+
+*****
+### 差异剪接可视化  
+&emsp;&emsp;对于表达差异显著性的可变剪接事件，进行可视化展示，SE类型可变剪接事件的可视化展示如下图所示：图中标题为可变剪接事件三个外显子所在的染色体坐标及正负链信息，跨外显子比对的reads使用连接外显子junction边界的弧线表示。弧线的粗细和比对到junction上的reads数成正比，同时弧线上的数字指出了junction reads的数目，右上方标注了各个样本可变剪接事件所在的基因及IncLevel值。见结果文件：AS/2.dasplot。  
+
+
+*****
+### 可变剪接常见问题及解答  
+
+
+<div class="panel panel-info">
+  <div class="panel-heading">
+相关名词解释  
+  </div>
+  <div class="panel-body">
+- SE：Skipped exon 外显子跳跃。  
+- RI：Retained intron 内含子滞留。  
+- MXE：Mutually exclusive exon 外显子互斥。  
+- A5SS：Alternative 5 splice site 5’端外显子发生可变剪接。  
+- A3SS：Alternative 3 splice site 3’端外显子发生可变剪接。  
+  </div>
+</div>
+
+
+*****
+## 变异位点分析  
+&emsp;&emsp;变异位点分析是RNA-seq结构分析的重要内容，主要包括先天变异位点和后天体细胞突变位点的检测，对肿瘤等研究具有重要意义。我们使用GATK软件对样本数据进行变异位点分析，并用SnpEff软件对变异位点进行注释，其分析流程如下图所示。  
+
+
+
+
+
+*****
+### 变异位点检测  
+&emsp;&emsp;变异位点主要分为SNP与INDEL，每个位点的基因型及注释如下表所示，见结果文件：SNP/2.snpeff。  
+
+Show  entriesSearch:
+CHROM	POS	ID	REF	ALT	QUAL	DP	AD	GT	GeneID	GeneName	FeatureID	Biotype	HGVS_C	HGVS_P	EFFECT	IMPACT
+1	3201673	.	T	C	2401.77	67	0,67	1/1	ENSMUSG00000051951	Xkr4	ENSMUST00000162897.1	processed_transcript	n.*4228A>G	.	downstream_gene_variant	MODIFIER
+1	3201673	.	T	C	2401.77	67	0,67	1/1	ENSMUSG00000051951	Xkr4	ENSMUST00000159265.1	processed_transcript	n.*4850A>G	.	downstream_gene_variant	MODIFIER
+1	3201673	.	T	C	2401.77	67	0,67	1/1	ENSMUSG00000064842-ENSMUSG00000051951	Gm26206-Xkr4	ENSMUSG00000064842-ENSMUSG00000051951	.	n.3201673T>C	.	intergenic_region	MODIFIER
+1	3203304	.	T	C	2183.77	57	0,57	1/1	ENSMUSG00000051951	Xkr4	ENSMUST00000162897.1	processed_transcript	n.*2597A>G	.	downstream_gene_variant	MODIFIER
+1	3203304	.	T	C	2183.77	57	0,57	1/1	ENSMUSG00000051951	Xkr4	ENSMUST00000159265.1	processed_transcript	n.*3219A>G	.	downstream_gene_variant	MODIFIER
+1	3203304	.	T	C	2183.77	57	0,57	1/1	ENSMUSG00000064842-ENSMUSG00000051951	Gm26206-Xkr4	ENSMUSG00000064842-ENSMUSG00000051951	.	n.3203304T>C	.	intergenic_region	MODIFIER
+1	3203951	.	C	G	1265.77	34	0,34	1/1	ENSMUSG00000051951	Xkr4	ENSMUST00000162897.1	processed_transcript	n.*1950G>C	.	downstream_gene_variant	MODIFIER
+1	3203951	.	C	G	1265.77	34	0,34	1/1	ENSMUSG00000051951	Xkr4	ENSMUST00000159265.1	processed_transcript	n.*2572G>C	.	downstream_gene_variant	MODIFIER
+1	3203951	.	C	G	1265.77	34	0,34	1/1	ENSMUSG00000064842-ENSMUSG00000051951	Gm26206-Xkr4	ENSMUSG00000064842-ENSMUSG00000051951	.	n.3203951C>G	.	intergenic_region	MODIFIER
+1	3204525	.	GAT	G	2032.73	53	0,46	1/1	ENSMUSG00000051951	Xkr4	ENSMUST00000162897.1	processed_transcript	n.*1374_*1375delAT	.	downstream_gene_variant	MODIFIER
+Showing 1 to 10 of 29 entriesPrevious123Next  
+
+- CHROM：变异位点所在的染色体编号  
+- POS：变异位点所在的染色体坐标  
+- ID：变异位点编号，同时对应着dbSNP数据库中的ID，若没有，则默认使用‘.’  
+- REF：变异位点在参考基因组中的碱基  
+- ALT：变异位点在样本中的实际碱基  
+- QUAL：变异位点质量，Phred格式的数值，数值越高，变异位点基因型的可信度越高  
+- DP：变异位点在样本中的测序深度  
+- AD：分别支持REF与ALT的reads数，中间以逗号相隔  
+- GT：变异位点的基因型  
+- GeneID：变异位点所在的基因编号  
+- GeneName：变异位点所在的基因名称  
+- FeatureID：变异位点所在的转录本编号  
+- Biotype：变异位点所在的转录本类型  
+- HGVS_C：变异位点在DNA水平的HGVS注释  
+- HGVS_P：变异位点在蛋白水平的HGVS注释，仅针对编码蛋白基因  
+- EFFECT：变异位点所造成的影响  
+- IMPACT：变异位点所造成的影响程度  
+
+
+*****
+### 变异位点统计  
+&emsp;&emsp;使用GATK进行变异位点的检测后，我们会根据SnpEff注释信息对每个变异位点进行统计，主要为变异位点功能统计、变异位点区域统计以及变异位点影响统计。变异位点功能（snp_function）从同义突变、错义突变、无义突变三个方面进行统计和绘图。变异位点区域（snp_region）从EXON、INTRON、INTERGENIC等基因结构区域进行统计和绘图。变异位点影响（snp_impact）从HIGH(高)、MODERATE（中）、LOW（低）、MODIFIER（自身无表型效应，和别的突变位点同时存在才会产生影响）四个层次进行统计和绘图，见结果文件：SNP/3.stat。  
+
+
+
+
+*****
+### 变异位点分析常见问题及解答  
+
+
+<div class="panel panel-info">
+  <div class="panel-heading">
+SNP分析的参考序列是什么，即REF是指什么？  
+  </div>
+  <div class="panel-body">
+参考序列REF是选取的参考基因组序列，SNP是通过将reads比对到参考基因组上从而进行SNP calling。  
+  </div>
+</div>
+
+<div class="panel panel-info">
+  <div class="panel-heading">
+SNP中一列中两个数字分别代表支持REF和ALT两种碱基的reads数目，为什么有些会是0呢？  
+  </div>
+  <div class="panel-body">
+以0,12为例，表示有0个reads支持REF的碱基，即没有支持该碱基的reads，12个reads支持ALT的碱基。  
+  </div>
+</div>
+
+<div class="panel panel-info">
+  <div class="panel-heading">
+SNP具体指什么？其与InDel有何区别？  
+  </div>
+  <div class="panel-body">
+一般而言，SNP是指变异频率大于1%的单核苷酸变异。InDel(insertion-deletion)则是插入或者缺失，insert或者deletion。  
+  </div>
+</div>
+
+<div class="panel panel-info">
+  <div class="panel-heading">
+GT列含义？  
+  </div>
+  <div class="panel-body">
+GT表示样本的基因型，假如一个二倍体生物样本，其基因组有两个拷贝，两个拷贝的同一位置是等位位点，GT值表示该样本在某位点携带的两个等位位点，主要用三个数值0，1，2来描述。0表示跟REF一致，1表示跟第一个ALT一致，2表示跟第二个ALT一致。0/0表示纯合，且该样本的两个拷贝的等位位点跟REF一致。0/1表示杂合，且该样本的一个拷贝跟REF一致，另一个拷贝跟ALT一致。0/2表示杂合，且该样本的一个拷贝跟REF一致，另一个拷贝跟第二个ALT一致。1/1表示纯合，且该样本的两个拷贝的等位位点跟ALT一致。1/2表示杂合，且该样本的一个拷贝跟第一个ALT一致，另一个拷贝跟第二个ALT一致。2/2表示纯合，且该样本的两个拷贝跟第二个ALT一致。根据遗传学理论，一个样本出现两个ALT的可能性是非常低的。  
+  </div>
+</div>
+
+<div class="panel panel-info">
+  <div class="panel-heading">
+何为HGVS注释？  
+  </div>
+  <div class="panel-body">
+HGVS是Human Genome Variation Society的缩写，国际上一般以HGVS推荐的命令规则来对基因突变位点进行注释，具体规则和示例可以参考DNA和protein  
+  </div>
+</div>
+
+
+*****
+## 融合基因分析  
+&emsp;&emsp;融合基因是指两个基因的全部或部分序列融合而成的嵌合基因，一般由染色体易位、缺失等原因所致。融合基因首次发现于血液系统的恶性肿瘤中，其中以慢性粒细胞白血病中BCR-ABL的基因融合最为经典，治疗慢性粒细胞白血病的药物伊马替尼/格列卫，其作用靶点就是该融合基因。高通量RNA测序技术因其通量高、成本低、检测精度高和检测范围广等优点大大加快了融合基因的研究，诺禾致源使用STAR-Fusion软件进行融合基因的检测，STAR-Fusion是利用STAR比对的融合输出结果来检测融合转录本的软件包，STAR-Fusion分析流程如下图所示。分为SATR比对，STAR-Fusion.predict，STAR-Fusion.filter，具体如下。  
+
+&emsp;&emsp;STAR比对：是STAR比对的标准比对过程中的一个延伸，第一步，利用MMP算法（连续最大可比对种子搜索）将种子准确的定位到参考基因组上，下一步，选择基因组比对窗口将固定的种子进行聚类。  
+
+&emsp;&emsp;STAR-Fusion.predict：将Split reads又称JunctionReads(含有两个基因融合断点的reads，流程图中S=3即为Split reads的数目)和Discordant pair又称SpanningFrags(不一致比对的reads，即reads的两端比对到不同的两个基因，图中J=2即为Discordant pair的数目）比对到参考基因组的注释文件。STAR-Fusion根据支持融合断点的Split reads和Discordant pair的数目应用最少reads支持准则对融合基因进行筛选。  
+
+&emsp;&emsp;STAR-Fusion.filter：这一步是融合基因检测的最后一步，主要是筛选出最可靠的融合基因，过滤到最初预测的不可靠的候选的融合基因。过滤的过程主要是先按照基因对和断点的距离进行分类，然后按照在推断的断点reads的支持和比对的范围以及推断的融合基因的序列的相似性，过滤掉配对混乱的融合基因对。  
+
+&emsp;&emsp;FusionInspector 是一个癌症转录分析工具包，软件会对STAR-Fusion的预测结果通过再检测，再次打分，进一步对融合基因的分析结果进行校正分析。具体方法：输入的文件是我们用STAR-Fusion得到的融合基因的列表，参考基因组文件，样品的clean data。FusionInspector会根据STAR-Fusion得到的融合基因，对每对融合基因提取在基因组上的区域并构建融合基因的最小融合的contig序列。将reads比对到这些候选的融合的contig上。最后对每个融合基因支持的JunctionReads与SpanningFrags进行识别。得到最终的融合基因列表。  
+
+&emsp;&emsp;STAR-Fusion官网推荐对STAR-Fusion的预测结果再次用校验工具FusionInspector进行进一步的矫正分析。通过两次的矫正保证了融合基因结果的准确性。我们融合基因分析的过程就是利用FusionInspector对STAR-Fusion预测结果进行校正。  
+
+
+
+
+
+*****
+### 融合基因列表  
+&emsp;&emsp;融合基因列表如下所示。其中JunctionReads和SpanningFrags是检测融合基因的主要指标；在双端测序中，可以把read1和read2看成是一个fragment片段（250bp-300bp）的两端，若read1或read2跨越融合事件的断点，这样的read称为JunctionRead。read1和read2中间的gap区域横跨融合事件的断点，这样的fragment片段称为SpanningFrag，见结果文件：Fusion/1.fusionlist。  
+
+Show  entriesSearch:
+FusionName	JunctionReadCount	SpanningFragCount	LeftGene	LeftLocalBreakpoint	LeftBreakpoint	RightGene	RightLocalBreakpoint	RightBreakpoint	SpliceType	annots	CDS_LEFT_ID	CDS_LEFT_RANGE	CDS_RIGHT_ID	CDS_RIGHT_RANGE	PROT_FUSION_TYPE	FUSION_MODEL	FUSION_CDS	FUSION_TRANSL	PFAM_LEFT	PFAM_RIGHT
+Gm38048--Kcnab1	55	20	Gm38048^ENSMUSG00000102437.1	1311	chr3:64949533:+	Kcnab1^ENSMUSG00000027827.16	13188	chr3:65266491:+	ONLY_REF_SPLICE	INTRACHROMOSOMAL[chr3:0.11Mb]	.	.	.	.	.	.	.	.	.	.
+Gm42912--Slc4a4	13	5	Gm42912^ENSMUSG00000105640.1	2161	chr5:88812915:+	Slc4a4^ENSMUSG00000060961.14	8403	chr5:88934749:+	INCL_NON_REF_SPLICE	INTRACHROMOSOMAL[chr5:0.07Mb],NEIGHBORS[73348]	.	.	.	.	.	.	.	.	.	.
+Rps24--Gm2830	11	0	Rps24^ENSMUSG00000025290.17	4845	chr14:24493451:+	Gm2830^ENSMUSG00000086567.1	11691	chr13:54499752:-	INCL_NON_REF_SPLICE	INTERCHROMOSOMAL[chr14--chr13]	.	.	.	.	.	.	.	.	.	.
+Zfp536--Gm45768	9	2	Zfp536^ENSMUSG00000043456.16	16981	chr7:37479281:-	Gm45768^ENSMUSG00000108434.1	22994	chr7:37321100:-	ONLY_REF_SPLICE	INTRACHROMOSOMAL[chr7:0.15Mb]	.	.	.	.	.	.	.	.	.	.
+Rps24-ps2--Gm2830	6	0	Rps24-ps2^ENSMUSG00000069125.2	1347	chr3:3792244:+	Gm2830^ENSMUSG00000086567.1	4733	chr13:54499752:-	INCL_NON_REF_SPLICE	INTERCHROMOSOMAL[chr3--chr13]	.	.	.	.	.	.	.	.	.	.
+Rps24--Gm2830	5	0	Rps24^ENSMUSG00000025290.17	4887	chr14:24493493:+	Gm2830^ENSMUSG00000086567.1	11730	chr13:54499713:-	INCL_NON_REF_SPLICE	INTERCHROMOSOMAL[chr14--chr13]	.	.	.	.	.	.	.	.	.	.
+Tmeff2--Cavin2	5	0	Tmeff2^ENSMUSG00000026109.14	20025	chr1:51181895:+	Cavin2^ENSMUSG00000045954.7	27655	chr1:51300649:+	ONLY_REF_SPLICE	INTRACHROMOSOMAL[chr1:0.10Mb]	ENSMUST00000081851.3	1-1028	ENSMUST00000051572.7	484-1257	FRAMESHIFT	chr1|+|[0]50927948-50928119[0]|[1]50930549-50930658[2]|[0]50938213-50938342[0]|[1]50943197-50943223[0]|[1]51071468-51071564[1]|[2]51132143-51132291[0]|[1]51133059-51133118[0]|[1]51180252-51180375[1]|[2]51181737-51181895[1]<==>chr1|+|[0]51300649-51301422[2]	atggtgctgtgggagtccccgcggcagtgcagcagctggacactttgcgagggcttctgctggctgctgctgctgcccgtgacgctgcttatcatagcccgcccggtaaaactcgctgctttccctacctccttaagtgactgccaaacgcccaccggctggaactgctccggttacgatgacagagaaaatgatctcttcctgtgtgacaccaacacctgtaaatttgacggggaatgtttaaggattggagacactgtgacttgcgtctgtcagttcaagtgtaacagtgactacgtgcctgtgtgtggctccaatggagagagctaccagaatgagtgctacctgaggcaagctgcctgcaaacagcagagtgagatacttgtggtctcagaaggatcctgtgctacagatacaggatcgggatctggagatggagtccatgaaggctctggcgagaccagtcagaaggagacatccacctgtgacatttgccagtttggggcagagtgtgatgaagatgctgaggatgtctggtgtgtgtgcaacatagactgttctcaaaccaacttcaatcccctctgtgcttctgatgggaaatcttatgataatgcatgtcaaatcaaagaagcgtcatgtcagaaacaggagaaaattgaagtcatgtctctgggtcgatgtcaagataacacaactacaaccactaaatctgaagatgggcattatgcaagaacagattatgcagagaatgctaacaaattagaagaaagtgccagagaacaccacataccttgcccagaacattataatggtttctgcatgcatgggaagtgtgaacactccatcaatatgcaggagccatcttgcagatgcgatgctggttacactggtcaacactgtgaaaagaaggactacagtgttctctacgttgttcctggccctgtccggttccagtacgtcttgattgcagctgtgattggaacaattcagattgctgtcatctgcgtggtggtcctctgcatcacaagGAAGAAAGTGAGATCCCTGCCAGTGTGTTTGTGAAGGAGCCAGTTCCCAGCGCTGCAGAAGGCAAGGAGGAGCTTGCTGATGAGAACAAGTCCCTGGAGGAAACTCTGCACAACGTGGACCTCTCCTCTGATGACGAATTGCCCCGTGATGAGGAAGCCCTGGAAGATAGTGCAGAAGAGAAGATGGAAGAAAGCAGGGCAGAAAAAATAAAAAGATCCAGCCTCAAGAAAGTCGATAGCCTCAAGAAAGCGTTTTCTCGTCAGAACATCGAGAAAAAGATGAACAAGCTGGGAACCAAGATCGTATCTGTTGAGAGGAGAGAAAAGATTAAGAAATCGCTCACACCCAACCACCAGAAAGCATCTTCTGGGAAAAGCTCCCCCTTCAAGGTTTCTCCCCTCTCCTTTGGTCGTAAGAAAGTCCGAGAGGGAGAAAGCTCTGTAGAAAATGAGACCAAGTTGGAAGACCAGATGCAGGAGGACCGCGAGGAGGGTTCGTTCACAGAGGGTCTTTCTGAAGCATCCCTCCCCAGTGGCCTGATGGAGGGCAGCGCAGAAGATGCTGAGAAATCAGCAAGGAGAGGGAACAACTCAGCCGTGGGCAGTAATGCGGATCTGACCATTGAGGAAGATGAAGAAGAGGAGCCGGTAGCCCTGCAGCAGGCCCAGCAGGTGCGCTATGAGAGTGGCTACATGCTCAACTCCGAGGAGATGGAGGAACCCAGTGAGAAACAGGTCCAGCCAGCTGTGCTGCATGTGGATCAGACTGCCTGA	MVLWESPRQCSSWTLCEGFCWLLLLPVTLLIIARPVKLAAFPTSLSDCQTPTGWNCSGYDDRENDLFLCDTNTCKFDGECLRIGDTVTCVCQFKCNSDYVPVCGSNGESYQNECYLRQAACKQQSEILVVSEGSCATDTGSGSGDGVHEGSGETSQKETSTCDICQFGAECDEDAEDVWCVCNIDCSQTNFNPLCASDGKSYDNACQIKEASCQKQEKIEVMSLGRCQDNTTTTTKSEDGHYARTDYAENANKLEESAREHHIPCPEHYNGFCMHGKCEHSINMQEPSCRCDAGYTGQHCEKKDYSVLYVVPGPVRFQYVLIAAVIGTIQIAVICVVVLCITRKKVRSLPVCL*RSQFPALQKARRSLLMRTSPWRKLCTTWTSPLMTNCPVMRKPWKIVQKRRWKKAGQKK*KDPASRKSIASRKRFLVRTSRKR*TSWEPRSYLLRGEKRLRNRSHPTTRKHLLGKAPPSRFLPSPLVVRKSEREKAL*KMRPSWKTRCRRTARRVRSQRVFLKHPSPVA*WRAAQKMLRNQQGEGTTQPWAVMRI*PLRKMKKRSR*PCSRPSRCAMRVATCSTPRRWRNPVRNRSSQLCCMWIRLP	EGF_2|48-58|2.3^EGF|48-56|3.4^Kazal_2|68-80|0.22^EGF_2|69-94|0.34^EGF|69-92|0.00014^Kazal_2|91-135|3.4e-13^Kazal_1|94-135|1.7e-08^EGF_2|132-140|3.7^Kazal_2|159-172|0.91^EGF_2|162-183|6^EGF|165-183|0.12^Kazal_2|182-227|8.9e-13^Kazal_1|185-227|1.4e-09^EGF|186-200|2.9^EGF_2|189-203|1.7^EphA2_TM|228-228|5^DUF4834|228-247|0.78^Kazal_1|264-273|0.45^EGF_2|265-300|2.8e-06^EGF|265-299|6.7e-06^DUF4834|319-370|0.00044^EphA2_TM|321-361|0.0002	.
+Hnrnpk--AC160980.1	4	0	Hnrnpk^ENSMUSG00000021546.18	11925	chr13:58392419:-	AC160980.1^ENSMUSG00000114579.1	17156	chr13:91261465:-	INCL_NON_REF_SPLICE	INTRACHROMOSOMAL[chr13:32.86Mb]	.	.	.	.	.	.	.	.	.	.
+mt-Co1--Gm13340	4	0	mt-Co1^ENSMUSG00000064351.1	2242	chrM:6569:+	Gm13340^ENSMUSG00000083563.1	6755	chr2:22588438:-	INCL_NON_REF_SPLICE	INTERCHROMOSOMAL[chrM--chr2]	.	.	.	.	.	.	.	.	.	.
+Sptbn2--Snhg11	3	1	Sptbn2^ENSMUSG00000067889.4	2616	chr19:4718997:+	Snhg11^ENSMUSG00000044349.15	35588	chr2:158382504:+	INCL_NON_REF_SPLICE	INTERCHROMOSOMAL[chr19--chr2]	.	.	.	.	.	.	.	.	.	.
+Showing 1 to 10 of 29 entriesPrevious123Next  
+
+- FusionName：融合事件名称  
+- JunctionReadCount：支持融合事件发生的junction reads数目  
+- SpanningFragCount：支持融合事件发生的Spanning fragments数目  
+- LeftGene：融合事件的上游基因，包括基因ID和基因名称，其中基因ID为GENCODE数据库ID，去掉小数点和后面的数字即可与前面的一致。  
+- LeftLocalBreakpoint：上游基因在基因序列上的断点位置(断点位置是从每个基因序列的5’端开始)  
+- LeftBreakpoint：上游基因断点所在的基因组坐标和上游基因所在基因组的正负链信息  
+- RightGene：融合事件的下游基因  
+- RightLocalBreakpoint：下游基因在基因序列上的断点位置(断点位置是从每个基因序列的5’端开始)  
+- RightBreakpoint：下游基因断点所在的基因组坐标和下游基因所在基因组的正负链信息  
+- SpliceType：鉴定的融合断点是否位于已知基因结构的外显子剪接位点  
+- annots：融合事件上下游基因的功能注释信息  
+- CDS_LEFT_ID：上游基因具有CDS区域的转录本ID  
+- CDS_LEFT_RANGE：上游基因具有CDS区域的转录本的碱基范围(bp)  
+- CDS_RIGHT_ID：下游基因具有CDS区域的转录本的ID  
+- CDS_RIGHT_RANGE：下游基因具有CDS区域的转录本的碱基范围(bp)  
+- PROT_FUSION_TYPE：编码基因的融合类型，FRAMESHIFT(阅读框发生移码)，INFRAME(阅读框未发生移码)  
+- FUSION_CDS：融合基因的CDS序列，小写的碱基是上游融合基因的CDS序列，大写是碱基是下游融合基因的CDS序列  
+- FUSION_TRANSL：翻译得到的融合基因的氨基酸序列  
+- PFAM_LEFT：上游基因的PFAM注释，如DUF1515|572-611|0.073，其中DUF1515为PFAM预测的得到的蛋白结构域，572-611为预测的结构域的碱基范围，0.073是预测和DUF15的相似度  
+- PFAM_RIGHT：下游基因的PFAM注释  
+
+
+*****
+### 融合基因染色体分布  
+&emsp;&emsp;融合基因事件在染色体上的分布用circos图进行展示，图中的环由多条染色体组成，环内每条线代表一个融合事件，线的两端代表融合事件的断点位置，红色表示融合基因的上下游基因来源于同一条染色体，蓝色表示融合基因的上下游基因来源于不同染色体，线的粗细代表融合基因的表达水平，见结果文件：Fusion/2.circos。  
+
+
+
+
+*****
+### 融合基因IGV可视化展示  
+&emsp;&emsp;融合基因事件可以通过IGV软件进行可视化，如下图所示。  
+
+
+
+&emsp;&emsp;将结果文件中融合基因文件夹里每个样本的融合基因序列文件，融合基因结构注释文件（提供bed和gtf两种格式的注释文件，使用其中一个即可），比对的bam文件分别导入到IGV软件，具体文件说明，如下所示，见结果文件：Fusion/3.IGV。  
+
+- sample.fa：融合基因序列文件，fasta格式  
+- sample.bed：融合基因结构注释文件，bed格式  
+- sample.gtf：融合基因结构注释文件，gtf格式  
+- sample.junction_reads.bam：支持融合事件的JunctionReads的bam文件  
+- sample.spanning_reads.bam：支持融合事件的SpanningFrags的bam文件  
+
+
+*****
+### 融合基因分析常见问题及解答 
+
+
+<div class="panel panel-danger">
+  <div class="panel-heading">
+融合基因验证该挑选哪些融合基因？  
+  </div>
+  <div class="panel-body">
+优先挑选高表达的融合基因进行验证，高表达的融合基因事件假阳性更低，也更容易实验验证，不过低表达的融合基因事件同样具有研究价值，比如很多抑癌基因都是低表达的，这些基因发生融合，可能导致重要功能丢失。  
+  </div>
+</div>
+
+
+*****
+## 备注 
+*****
+### 结果文件解压方法  
+<table class="table" sty
