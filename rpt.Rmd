@@ -25,7 +25,7 @@ output:
 
 <div class="fluid-row" id="header">
   <h1 class="title toc-ignore"><center>
-  <strong>诺禾致源医学转录组分析报告</strong>
+  <strong>源医学转录组分析报告</strong>
     </center></h1>
 </div>
 <br>
@@ -33,7 +33,7 @@ output:
 &emsp;  |  &emsp;
 ------- | --------
 <strong>项目编号</strong> | <strong>X101SC19041540-Z01-F001</strong>
-<strong>项目名称</strong> | <strong>陆军军医大学100个小鼠转录组测序分析技术服务（委托）合同</strong>
+<strong>项目名称</strong> | <strong>100个小鼠转录组测序分析技术服务（委托）合同</strong>
 <strong>报告时间</strong> | <strong>2019-05-14</strong>
 <strong>报告编号</strong> | <strong>X101SC19041540-Z01-F001-B1-16</strong>
 &emsp;   | &emsp;
